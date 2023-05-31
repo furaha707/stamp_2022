@@ -1,0 +1,374 @@
+<? include "../include/head.html" ?>
+
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+	<head>
+		<?
+    $P_dp1 = '2';
+    $P_dp2 = '2';
+    $P_dp3 = '2';
+    include "../include/meta.html"
+		?>
+		<link rel="stylesheet" href="../assets/css/display.min.css" />
+	</head>
+	<body class="sub-body">
+		<!-- S : Header -->
+		<? include "../include/header.html" ?>
+		<!-- E : Header -->
+
+		<!-- S : Main -->
+		<main class="main py-10 py-sm-15 py-lg-30" id="contents">
+			<!-- S : Section (타이틀 영역) -->
+			<section class="section">
+				<div class="container text-center mb-8 mb-lg-14">
+					<h1 class="common-title--h1">
+						<span class="ebook-link-wrap">
+							<span class="text"><?=${nav_.$P_dp1._.$P_dp2}?></span>
+							<a href="http://www.ebookand.com/ebook/stampex/ebook.html" class="ebook-link" target="_blank">카달로그 e-Book 보기</a>
+						</span>
+					</h1>
+				</div>
+			</section>
+			<!-- E : Section (타이틀 영역) -->
+
+			<!-- S : Section (리스트) -->
+			<section class="section">
+				<div class="container border-0">
+					<div class="board-search-03">
+						<!-- 검색 영역 03 타입 추가 -->
+						<form id="searchForm" method="post" action="excellent.html">
+							<fieldset>
+								<legend class="hidden">검색</legend>
+								<div class="select-box">
+									<select name="s_field_etc_02" title="search" class="select-type-01" onchange="this.form.submit();">
+										<option value="">작품구분</option>
+
+										<option value="관광주제">관광주제</option>
+										<option value="도안별수집">도안별수집</option>
+										<option value="맥시머필리">맥시머필리</option>
+										<option value="우편사">우편사</option>
+										<option value="우편엽서류">우편엽서류</option>
+										<option value="전통우취">전통우취</option>
+										<option value="청소년A">청소년A</option>
+										<option value="청소년B">청소년B</option>
+										<option value="테마틱우취">테마틱우취</option>
+										<option value="한국우표">한국우표</option>
+										<option value="현대우취">현대우취</option>
+									</select>
+									<!--
+                  <select name="s_field_etc_01" title="search" class="select-type-01" onChange="this.form.submit();">
+                    <option value="">상격</option>
+                    <option value="국무총리">국무총리</option>
+                	<option value="장관상">장관상</option>
+                	<option value="본부장상">본부장상</option>
+                	<option value="진흥원장상">진흥원장상</option>
+                	<option value="연합회장상">연합회장상</option>
+                  </select>-->
+								</div>
+
+								<div class="input-box">
+									<input type="text" title="검색어" placeholder="검색어를 입력해주세요." class="input-type-01" name="search_text" value="" />
+									<input type="submit" value="검색" class="btn btn-color-01" />
+								</div>
+							</fieldset>
+						</form>
+					</div>
+					<ul class="img_board_list type_display">
+						<!-- 클래스 type_display 추가 -->
+
+						<li class="col-xs-6 col-sm-2 col-md-3 col-lg-4">
+							<a href="../archive/excellent-view.html?s_field_etc_01=&amp;s_field_etc_02=&amp;search_text=&amp;gotopage=1&amp;uid=23" class="wrap">
+								<div class="img_box">
+									<span class="field_icon">한국우표</span>
+									<!-- 작품구분 값 표기 -->
+									<!--리스트 이미지 기본 사이즈  400 x 480  -->
+									<span class="img_tag">
+										<img data-src="../assets/images/archive/example-img.jpg" src="../assets/images/archive/example-img.jpg" alt="" class="lazyload" />
+									</span>
+								</div>
+							</a>
+
+							<a href="../archive/excellent-view.html?s_field_etc_01=&amp;s_field_etc_02=&amp;search_text=&amp;gotopage=1&amp;uid=23">
+								<div class="txt_box">
+									<p class="tit">[ 강태효 ] 도자기</p>
+								</div>
+							</a>
+						</li>
+						<li class="col-xs-6 col-sm-2 col-md-3 col-lg-4">
+							<a href="../archive/excellent-view.html?s_field_etc_01=&amp;s_field_etc_02=&amp;search_text=&amp;gotopage=1&amp;uid=22" class="wrap">
+								<div class="img_box">
+									<span class="field_icon">관광주제</span>
+									<!-- 작품구분 값 표기 -->
+									<!--리스트 이미지 기본 사이즈  400 x 480  -->
+									<span class="img_tag">
+										<img data-src="../assets/images/archive/example-img.jpg" src="../assets/images/archive/example-img.jpg" alt="" class="lazyload" />
+									</span>
+								</div>
+							</a>
+
+							<a href="../archive/excellent-view.html?s_field_etc_01=&amp;s_field_etc_02=&amp;search_text=&amp;gotopage=1&amp;uid=22">
+								<div class="txt_box">
+									<p class="tit">[ 한은석 ] 원화(맞춤형엽서)</p>
+								</div>
+							</a>
+						</li>
+						<li class="col-xs-6 col-sm-2 col-md-3 col-lg-4">
+							<a href="../archive/excellent-view.html?s_field_etc_01=&amp;s_field_etc_02=&amp;search_text=&amp;gotopage=1&amp;uid=21" class="wrap">
+								<div class="img_box">
+									<span class="field_icon">도안별수집</span>
+									<!-- 작품구분 값 표기 -->
+									<!--리스트 이미지 기본 사이즈  400 x 480  -->
+									<span class="img_tag">
+										<img data-src="../assets/images/archive/example-img.jpg" src="../assets/images/archive/example-img.jpg" alt="" class="lazyload" />
+									</span>
+								</div>
+							</a>
+
+							<a href="../archive/excellent-view.html?s_field_etc_01=&amp;s_field_etc_02=&amp;search_text=&amp;gotopage=1&amp;uid=21">
+								<div class="txt_box">
+									<p class="tit">[ 장세영 ] 정약용-수원화성-강진-여유당</p>
+								</div>
+							</a>
+						</li>
+						<li class="col-xs-6 col-sm-2 col-md-3 col-lg-4">
+							<a href="../archive/excellent-view.html?s_field_etc_01=&amp;s_field_etc_02=&amp;search_text=&amp;gotopage=1&amp;uid=20" class="wrap">
+								<div class="img_box">
+									<span class="field_icon">맥시머필리</span>
+									<!-- 작품구분 값 표기 -->
+									<!--리스트 이미지 기본 사이즈  400 x 480  -->
+									<span class="img_tag">
+										<img data-src="../assets/images/archive/example-img.jpg" src="../assets/images/archive/example-img.jpg" alt="" class="lazyload" />
+									</span>
+								</div>
+							</a>
+
+							<a href="../archive/excellent-view.html?s_field_etc_01=&amp;s_field_etc_02=&amp;search_text=&amp;gotopage=1&amp;uid=20">
+								<div class="txt_box">
+									<p class="tit">[ 신경식 ] 우편과 통신</p>
+								</div>
+							</a>
+						</li>
+						<li class="col-xs-6 col-sm-2 col-md-3 col-lg-4">
+							<a href="../archive/excellent-view.html?s_field_etc_01=&amp;s_field_etc_02=&amp;search_text=&amp;gotopage=1&amp;uid=19" class="wrap">
+								<div class="img_box">
+									<span class="field_icon">청소년B</span>
+									<!-- 작품구분 값 표기 -->
+									<!--리스트 이미지 기본 사이즈  400 x 480  -->
+									<span class="img_tag">
+										<img data-src="../assets/images/archive/example-img.jpg" src="../assets/images/archive/example-img.jpg" alt="" class="lazyload" />
+									</span>
+								</div>
+							</a>
+
+							<a href="../archive/excellent-view.html?s_field_etc_01=&amp;s_field_etc_02=&amp;search_text=&amp;gotopage=1&amp;uid=19">
+								<div class="txt_box">
+									<p class="tit">[ 김영빈 ] 눈오면 기억하는2018</p>
+								</div>
+							</a>
+						</li>
+						<li class="col-xs-6 col-sm-2 col-md-3 col-lg-4">
+							<a href="../archive/excellent-view.html?s_field_etc_01=&amp;s_field_etc_02=&amp;search_text=&amp;gotopage=1&amp;uid=18" class="wrap">
+								<div class="img_box">
+									<span class="field_icon">청소년A</span>
+									<!-- 작품구분 값 표기 -->
+									<!--리스트 이미지 기본 사이즈  400 x 480  -->
+									<span class="img_tag">
+										<img data-src="../assets/images/archive/example-img.jpg" src="../assets/images/archive/example-img.jpg" alt="" class="lazyload" />
+									</span>
+								</div>
+							</a>
+
+							<a href="../archive/excellent-view.html?s_field_etc_01=&amp;s_field_etc_02=&amp;search_text=&amp;gotopage=1&amp;uid=18">
+								<div class="txt_box">
+									<p class="tit">[ 정사무엘 ] 열두띠 동물이야기</p>
+								</div>
+							</a>
+						</li>
+						<li class="col-xs-6 col-sm-2 col-md-3 col-lg-4">
+							<a href="../archive/excellent-view.html?s_field_etc_01=&amp;s_field_etc_02=&amp;search_text=&amp;gotopage=1&amp;uid=17" class="wrap">
+								<div class="img_box">
+									<span class="field_icon">현대우취</span>
+									<!-- 작품구분 값 표기 -->
+									<!--리스트 이미지 기본 사이즈  400 x 480  -->
+									<span class="img_tag">
+										<img data-src="../assets/images/archive/example-img.jpg" src="../assets/images/archive/example-img.jpg" alt="" class="lazyload" />
+									</span>
+								</div>
+							</a>
+
+							<a href="../archive/excellent-view.html?s_field_etc_01=&amp;s_field_etc_02=&amp;search_text=&amp;gotopage=1&amp;uid=17">
+								<div class="txt_box">
+									<p class="tit">[ 김훈동 ] 제6차 그라비어 인쇄 보통우표</p>
+								</div>
+							</a>
+						</li>
+						<li class="col-xs-6 col-sm-2 col-md-3 col-lg-4">
+							<a href="../archive/excellent-view.html?s_field_etc_01=&amp;s_field_etc_02=&amp;search_text=&amp;gotopage=1&amp;uid=16" class="wrap">
+								<div class="img_box">
+									<span class="field_icon">현대우취</span>
+									<!-- 작품구분 값 표기 -->
+									<!--리스트 이미지 기본 사이즈  400 x 480  -->
+									<span class="img_tag">
+										<img data-src="../assets/images/archive/example-img.jpg" src="../assets/images/archive/example-img.jpg" alt="" class="lazyload" />
+									</span>
+								</div>
+							</a>
+
+							<a href="../archive/excellent-view.html?s_field_etc_01=&amp;s_field_etc_02=&amp;search_text=&amp;gotopage=1&amp;uid=16">
+								<div class="txt_box">
+									<p class="tit">[ 조석훈 ] 220원시기 그라비어인쇄 보통우표</p>
+								</div>
+							</a>
+						</li>
+						<li class="col-xs-6 col-sm-2 col-md-3 col-lg-4">
+							<a href="../archive/excellent-view.html?s_field_etc_01=&amp;s_field_etc_02=&amp;search_text=&amp;gotopage=1&amp;uid=15" class="wrap">
+								<div class="img_box">
+									<span class="field_icon">현대우취</span>
+									<!-- 작품구분 값 표기 -->
+									<!--리스트 이미지 기본 사이즈  400 x 480  -->
+									<span class="img_tag">
+										<img data-src="../assets/images/archive/example-img.jpg" src="../assets/images/archive/example-img.jpg" alt="" class="lazyload" />
+									</span>
+								</div>
+							</a>
+
+							<a href="../archive/excellent-view.html?s_field_etc_01=&amp;s_field_etc_02=&amp;search_text=&amp;gotopage=1&amp;uid=15">
+								<div class="txt_box">
+									<p class="tit">[ 김진철 ] 기본요금 250원 시기 발행 보통우표</p>
+								</div>
+							</a>
+						</li>
+						<li class="col-xs-6 col-sm-2 col-md-3 col-lg-4">
+							<a href="../archive/excellent-view.html?s_field_etc_01=&amp;s_field_etc_02=&amp;search_text=&amp;gotopage=1&amp;uid=14" class="wrap">
+								<div class="img_box">
+									<span class="field_icon">우편엽서류</span>
+									<!-- 작품구분 값 표기 -->
+									<!--리스트 이미지 기본 사이즈  400 x 480  -->
+									<span class="img_tag">
+										<img data-src="../assets/images/archive/example-img.jpg" src="../assets/images/archive/example-img.jpg" alt="" class="lazyload" />
+									</span>
+								</div>
+							</a>
+
+							<a href="../archive/excellent-view.html?s_field_etc_01=&amp;s_field_etc_02=&amp;search_text=&amp;gotopage=1&amp;uid=14">
+								<div class="txt_box">
+									<p class="tit">[ 김헌식 ] 대한민국 연하엽서(1957-1973)</p>
+								</div>
+							</a>
+						</li>
+						<li class="col-xs-6 col-sm-2 col-md-3 col-lg-4">
+							<a href="../archive/excellent-view.html?s_field_etc_01=&amp;s_field_etc_02=&amp;search_text=&amp;gotopage=1&amp;uid=13" class="wrap">
+								<div class="img_box">
+									<span class="field_icon">우편엽서류</span>
+									<!-- 작품구분 값 표기 -->
+									<!--리스트 이미지 기본 사이즈  400 x 480  -->
+									<span class="img_tag">
+										<img data-src="../assets/images/archive/example-img.jpg" src="../assets/images/archive/example-img.jpg" alt="" class="lazyload" />
+									</span>
+								</div>
+							</a>
+
+							<a href="../archive/excellent-view.html?s_field_etc_01=&amp;s_field_etc_02=&amp;search_text=&amp;gotopage=1&amp;uid=13">
+								<div class="txt_box">
+									<p class="tit">[ 방선호 ] 대한민국 우편봉함엽서</p>
+								</div>
+							</a>
+						</li>
+						<li class="col-xs-6 col-sm-2 col-md-3 col-lg-4">
+							<a href="../archive/excellent-view.html?s_field_etc_01=&amp;s_field_etc_02=&amp;search_text=&amp;gotopage=1&amp;uid=12" class="wrap">
+								<div class="img_box">
+									<span class="field_icon">전통우취</span>
+									<!-- 작품구분 값 표기 -->
+									<!--리스트 이미지 기본 사이즈  400 x 480  -->
+									<span class="img_tag">
+										<img data-src="../assets/images/archive/example-img.jpg" src="../assets/images/archive/example-img.jpg" alt="" class="lazyload" />
+									</span>
+								</div>
+							</a>
+
+							<a href="../archive/excellent-view.html?s_field_etc_01=&amp;s_field_etc_02=&amp;search_text=&amp;gotopage=1&amp;uid=12">
+								<div class="txt_box">
+									<p class="tit">[ 안동호 ] 선장보통우표</p>
+								</div>
+							</a>
+						</li>
+						<li class="col-xs-6 col-sm-2 col-md-3 col-lg-4">
+							<a href="../archive/excellent-view.html?s_field_etc_01=&amp;s_field_etc_02=&amp;search_text=&amp;gotopage=1&amp;uid=11" class="wrap">
+								<div class="img_box">
+									<span class="field_icon">테마틱우취</span>
+									<!-- 작품구분 값 표기 -->
+									<!--리스트 이미지 기본 사이즈  400 x 480  -->
+									<span class="img_tag">
+										<img data-src="../assets/images/archive/example-img.jpg" src="../assets/images/archive/example-img.jpg" alt="" class="lazyload" />
+									</span>
+								</div>
+							</a>
+
+							<a href="../archive/excellent-view.html?s_field_etc_01=&amp;s_field_etc_02=&amp;search_text=&amp;gotopage=1&amp;uid=11">
+								<div class="txt_box">
+									<p class="tit">[ 최태윤 ] 원 헬스(one health) : 인간, 동물, 환경 그리고 감염병</p>
+								</div>
+							</a>
+						</li>
+						<li class="col-xs-6 col-sm-2 col-md-3 col-lg-4">
+							<a href="../archive/excellent-view.html?s_field_etc_01=&amp;s_field_etc_02=&amp;search_text=&amp;gotopage=1&amp;uid=10" class="wrap">
+								<div class="img_box">
+									<span class="field_icon">맥시머필리</span>
+									<!-- 작품구분 값 표기 -->
+									<!--리스트 이미지 기본 사이즈  400 x 480  -->
+									<span class="img_tag">
+										<img data-src="../assets/images/archive/example-img.jpg" src="../assets/images/archive/example-img.jpg" alt="" class="lazyload" />
+									</span>
+								</div>
+							</a>
+
+							<a href="../archive/excellent-view.html?s_field_etc_01=&amp;s_field_etc_02=&amp;search_text=&amp;gotopage=1&amp;uid=10">
+								<div class="txt_box">
+									<p class="tit">[ 류상범 ] 서양화의 끝없는 혁신</p>
+								</div>
+							</a>
+						</li>
+						<li class="col-xs-6 col-sm-2 col-md-3 col-lg-4">
+							<a href="../archive/excellent-view.html?s_field_etc_01=&amp;s_field_etc_02=&amp;search_text=&amp;gotopage=1&amp;uid=9" class="wrap">
+								<div class="img_box">
+									<span class="field_icon">청소년B</span>
+									<!-- 작품구분 값 표기 -->
+									<!--리스트 이미지 기본 사이즈  400 x 480  -->
+									<span class="img_tag">
+										<img data-src="../assets/images/archive/example-img.jpg" src="../assets/images/archive/example-img.jpg" alt="" class="lazyload" />
+									</span>
+								</div>
+							</a>
+
+							<a href="../archive/excellent-view.html?s_field_etc_01=&amp;s_field_etc_02=&amp;search_text=&amp;gotopage=1&amp;uid=9">
+								<div class="txt_box">
+									<p class="tit">[ 김소연 ] 미군정 보통우표</p>
+								</div>
+							</a>
+						</li>
+					</ul>
+
+					<!-- S : 페이징 -->
+					<div class="paging-area">
+						<? include "./list_page.php"; ?>
+					</div>
+					<!-- E : 페이징 -->
+				</div>
+			</section>
+			<!-- E : Section (리스트) -->
+		</main>
+		<!-- E : Main -->
+
+		<? include "../include/footer.html" ?>
+
+		<? include "../include/js.html" ?>
+		<script>
+			lazyload();
+			$(document).on('contextmenu', function (e) {
+				e.preventDefault();
+
+				alert('저작권 보호를 위해\n마우스 우클릭은 사용하실 수 없습니다.');
+			});
+		</script>
+	</body>
+</html>

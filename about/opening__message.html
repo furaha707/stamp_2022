@@ -1,0 +1,80 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+	<head>
+		<?
+    $P_dp1 = '1';
+    $P_dp2 = '1';
+    $P_dp3 = '3';
+    include "../include/meta.html"
+		?>
+    <link rel="stylesheet" href="../assets/css/about.min.css"></link>
+	</head>
+	<body class="sub-body">
+		<!-- S : Header -->
+		<? include "../include/header.html" ?>
+		<!-- E : Header -->
+
+		<!-- S : Main -->
+		<main class="main py-10 py-sm-15 py-lg-30" id="contents">
+			<!-- S : Section (타이틀 영역) -->
+			<section class="section">
+				<div class="container text-center mb-8 mb-lg-14">
+					<h1 class="common-title--h1"><?=${nav_.$P_dp1._.$P_dp2}?></h1>
+				</div>
+			</section>
+			<!-- E : Section (타이틀 영역) -->
+
+			<!-- S : Section (탭 메뉴) -->
+			<? include "../include/sub-nav.html" ?>
+			<!-- E : Section (탭 메뉴) -->
+
+			<!-- S : Section -->
+			<section class="section" style="background-color: #e3f4fc; padding:3rem 0;">
+				<div class="container wowrap">
+					<div class="about-txt mb-10 mb-lg-20 wow fadeInUp">
+						<p class="tit">한국우편사업진흥원장 축하메시지</p>
+					</div>
+					<div class="row wow fadeInUp">
+						<div class="col-12 col-lg-5 text-center text-lg-left">
+							<img src="../assets/images/about/ceo-img2.png" alt="회장님사진" />
+						</div>
+						<div class="col-12 col-lg-7 mt-10 mt-lg-0">
+							<div class="inner pl-0 pl-lg-10">
+								<p class="text mb-10">
+                  여러분 반갑습니다, 한국우편사업진흥원장 민재석입니다.<br>
+                  먼저 ‘2022 대한민국 우표전시회’ 의 개최를 진심으로 축하드리며, 전시회가 성공적으로 개최될 수 있도록 노력해주신 모든분들께 진심으로 감사드립니다.<br>
+                  또한 우표에 대한 관심과 열정으로 작품을 출품하여 우수한 성적을 거두신 수상자분들 모두 축하드립니다.<br></p>
+
+                  <p class="text mb-10">
+                  이번 전시회는 온라인 작품 전시와 오프라인 복합문화 체험 전시를 결합하여 이루어진다는 점에서 더욱더 특별하게 느껴집니다.<br>
+                  특히, 황금, 초록, 빨강이라는 색깔을 통해 주제에 맞는 특별테마관을 구분하여 우표의 미래 가치를 살피고, 우표와 함께하는 다양한 콘텐츠를 통해 일상을 치유해나가는 의미가 담겨있습니다.<br>
+                  우표발행 138년의 전통이 깃든 우표의 가치가, 소풍과 같은 2022 대한민국 우표전시회를 통해 나만의 인생 우표를 찾으실 수 있는 계기가 되길 바랍니다.<br>
+                  한국우편사업진흥원도 변함없는 자리에서 국민과 함께, ‘가치있는 우편, 같이하는 행복’을 실천하는<br>
+                  우편서비스 전문기관으로 성장할 수 있도록 노력하겠습니다.<br> 
+                  끝으로, 우표의 가치를 잊지 않으시고 변함없이 사랑해 주시는 국민 여러분들의 가정에 건강과 행복이 가득하길 기원합니다.</p>
+
+                  <p class="text mb-10">
+                  ‘대한민국의 우표의 가치를 알리는 주인공은 바로 여러분입니다.<br>
+                  여러분만의 인생 우표는 무엇인가요?’
+                  </p>
+
+                  <p class="text mb-10">감사합니다.</p>
+
+                  <div class="about-txt">
+                    <p class="name text-left"><b>한국우편사업진흥원장</b> 민 재 석</p>
+                  </div>
+              </div>
+            </div>
+				</div>
+			</section>
+			<!-- E : Section -->
+		</main>
+		<!-- E : Main -->
+
+		<? include "../include/footer.html" ?>
+
+		<? include "../include/js.html" ?>
+	</body>
+</html>
+

@@ -1,0 +1,57 @@
+<?
+	$home = str_replace("\\", "/",$_SERVER["DOCUMENT_ROOT"]);
+	include $home."/include/check.php";
+
+	header("Pragma: no-cache");
+	header("Expires: 0");
+	header("Cache-Control: no-cache,must-revalidate");
+	header("Content-Type: text/html; charset=utf-8");
+?>
+<div class="popup--result result--3-2">
+  <div class="popup-header">
+    <button type="button" class="popup-close" onclick="$.magnificPopup.close()"></button>
+  </div>
+  <div class="popup-body">
+    <div class="winner">
+      <div class="winner-title">당첨자 발표</div>
+      
+      <div class="winner-group">
+        <div class="winner-box">
+<?
+	    $sql = "select * FROM tb_present2_win WHERE event_kind='2' order by uname asc";
+		$rs_row=mysqli_query($Conn,$sql);
+		$total_count = mysqli_num_rows($rs_row); 
+?>        
+          <div class="winner-box__title">
+            <span class="name">우표디자이너가 직접그린 초일봉투</span>
+            <span class="count"><?=$total_count;?>명</span>
+          </div>
+          <ul class="winner-list">
+<?	
+        while($rs_win=mysqli_fetch_array($rs_row)) {
+?>          
+            <li class="winner-list__item"><?=mb_substr($rs_win["uname"],0,1,"UTF-8")."*".mb_substr($rs_win["uname"],2,1,"UTF-8");?> <?=substr($rs_win["utel"],0,3);?>-****-<?=substr($rs_win["utel"],-4,4);?></li>
+<? } ?>
+          </ul>                              
+
+<?
+	    $sql = "select * FROM tb_present2_win WHERE event_kind='1' order by uname asc";
+		$rs_row=mysqli_query($Conn,$sql);
+		$total_count = mysqli_num_rows($rs_row); 
+?>        
+          <div class="winner-box__title mt-5">
+            <span class="name">2021년상반기우표패킷(6~10랜덤제공)</span>
+            <span class="count"><?=$total_count;?>명</span>
+          </div>
+          <ul class="winner-list">
+<?	
+        while($rs_win=mysqli_fetch_array($rs_row)) {
+?>          
+            <li class="winner-list__item"><?=mb_substr($rs_win["uname"],0,1,"UTF-8")."*".mb_substr($rs_win["uname"],2,1,"UTF-8");?> <?=substr($rs_win["utel"],0,3);?>****-<?=substr($rs_win["utel"],-4,4);?></li>
+<? } ?>
+          </ul> 
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

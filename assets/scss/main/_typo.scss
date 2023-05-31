@@ -1,0 +1,88 @@
+@charset "UTF-8";
+
+.main-title {
+	&--h1 {
+		font-size: em(48);
+		font-weight: 700;
+		letter-spacing: letterSpacing(-40);
+		color: #111;
+
+		@include mdq-max(md) {
+			font-size: em(38);
+		}
+
+		@include mdq-max(sm) {
+			font-size: em(30);
+		}
+	}
+
+	&--h2 {
+		font-size: em(26);
+		font-weight: 300;
+		letter-spacing: letterSpacing(-20);
+		color: #333;
+
+		@include mdq-max(md) {
+			font-size: em(22);
+		}
+
+		@include mdq-max(sm) {
+			font-size: em(16);
+		}
+	}
+
+	&--1 {
+		font-size: em(70);
+		font-weight: 300;
+		letter-spacing: letterSpacing(-40);
+		line-height: 1;
+		color: #111;
+
+		.em {
+			font-weight: 700;
+		}
+
+		@include mdq-max(md) {
+			font-size: em(40);
+		}
+
+		@include mdq-max(sm) {
+			font-size: em(30);
+		}
+	}
+
+	&--2 {
+		display: flex;
+		flex-wrap: wrap;
+		font-size: em(26);
+		font-weight: 900;
+		letter-spacing: letterSpacing(500);
+		color: #111;
+		margin-top: em(16, 26);
+
+		@include mdq-max(md) {
+			font-size: em(20);
+			justify-content: space-between;
+		}
+
+		@include mdq-max(sm) {
+			font-size: em(14);
+		}
+
+		.em {
+			padding-top: em(20, 26);
+		}
+
+		.stamp-mark {
+			margin-left: em(72, 26);
+
+			@include mdq-max(md) {
+				margin-left: 0;
+			}
+
+			@include mdq-max(sm) {
+				width: em(120);
+			}
+		}
+	}
+}

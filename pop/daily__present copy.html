@@ -1,0 +1,24 @@
+<div class="popup popup--sm stamp-popup py-10 py-md-20">
+	<div class="popup-body text-center border-0">
+		<div class="img-list">
+			<img src="../assets/images/daily/prize_stamp_1-lg.jpg" alt="스탬프" class="d-none" />
+			<img src="../assets/images/daily/prize_stamp_2-lg.jpg" alt="스탬프" class="d-none" />
+			<img src="../assets/images/daily/prize_stamp_3-lg.jpg" alt="스탬프" class="d-none" />
+			<img src="../assets/images/daily/prize_stamp_4-lg.jpg" alt="스탬프" class="d-none" />
+			<img src="../assets/images/daily/prize_stamp_5-lg.jpg" alt="스탬프" class="d-none" />
+			<img src="../assets/images/daily/prize_stamp_6-lg.jpg" alt="스탬프" class="d-none" />
+		</div>
+	</div>
+</div>
+
+<script>
+	var idx = $('.mfp-data-list').attr('data-stamp');
+
+	$('.mfp-data-list .mfp-close').addClass('d-none');
+
+	$('.img-list').children().addClass('d-none');
+	$('.img-list')
+		.children()
+		.eq(idx - 1)
+		.removeClass('d-none');
+</script>

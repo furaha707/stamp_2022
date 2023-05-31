@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+/////// 약관
+.total_clause_bx {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  text-align: right;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.clause_list {
+  // margin-bottom: 30px;
+  
+  h5 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    font-weight: 500;
+  }
+  
+  li {
+    .textarea_box_border {
+    
+    }
+    
+    .textarea_box {
+      width: 100%;
+      padding: 20px;
+      font-size: em(16);
+      background-color: #f2f2f2;
+      color: #555;
+      
+      .bullet-list--txt {
+        .item {
+          color: #111;
+          
+          &::before {
+            color: #111;
+          }
+        }
+        
+      }
+      
+      
+      @include mdq-max(lg) {
+        
+      }
+    }
+  }
+}

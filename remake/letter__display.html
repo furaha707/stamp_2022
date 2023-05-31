@@ -1,0 +1,426 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+	<head>
+		<?
+    $P_dp1 = '4';
+    $P_dp2 = '3';
+    include "../include/meta.html";
+    include "../../INC/arr_data.php";
+		?>
+		<link rel="stylesheet" href="../assets/css/remake.min.css" />
+	</head>
+	<body class="sub-body">
+		<!-- S : Header -->
+		<? include "../include/header.html" ?>
+		<!-- E : Header -->
+
+		<!-- S : Main -->
+		<main class="main" id="contents">
+			<section class="section letter-bg1 wow fadeInUp">
+				<div class="container border-0">
+					<div class="txt-bx mb-20">
+						<p class="subtit">행복한 마음 편지 쓰기 캠페인</p>
+						<p class="tit mb-5">행복한 마음 소풍 떠나기</p>
+						<p class="des">
+							당신의 오늘은 어떤 마음인가요? <br />
+							일상에서 지친 힘든 마음을 행복하게 하기 위한 행복 편지를 써보세요. <br class="d-none d-lg-block" />
+							나에게 혹은 함께하고 싶은 소중한 사람에게 보내 보세요.
+						</p>
+					</div>
+					<div class="letter-img mb-10">
+						<p class="balloon">
+							<img src="../assets/images/remake/balloon.png" alt="풍선" />
+						</p>
+						<img src="../assets/images/remake/letterbg1.png" alt="배경" class="d-none d-sm-block" />
+						<img src="../assets/images/remake/letterbg1-m.png" alt="배경" class="d-block d-sm-none" />
+						<div class="txt-bx">
+							<p class="tit mb-2 mb-sm-5">
+								편지쓰는 방법
+								<img src="../assets/images/remake/letter-deco.png" alt="" />
+							</p>
+							<p class="des">
+								첫번째, 누구에게 쓸 것인지 정한다.<br />
+								두번째, 체크리스트에서 하고싶은 일 5가지를 정한다.<br class="d-none d-lg-block" />
+								셋째, 편지를 공유하고 인스타그램에<br />
+								해시태그 <strong>#2022우표전시회마음편지</strong> 와 업로드 한다.
+							</p>
+						</div>
+					</div>
+					<div class="letter-img">
+						<img src="../assets/images/remake/letterbg1.png" alt="배경" class="d-none d-sm-block" />
+						<img src="../assets/images/remake/letterbg1-m.png" alt="배경" class="d-block d-sm-none" />
+						<div class="txt-bx">
+							<p class="tit mb-2 mb-sm-5">
+								이벤트 참여
+								<img src="../assets/images/remake/letter-deco.png" alt="" />
+							</p>
+							<p class="des">
+								해시태그와 함께 업로드한 50명을 추첨하여<br />
+								<strong>커피 모바일 상품권</strong>을 발송해드립니다.<br />
+							</p>
+							<p class="des pt-5">당첨자 발표: 9. 30. SNS 메시지 안내</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="section letter-section letter-bg2 wow fadeInUp">
+				<div class="container border-0">
+					<form name="theForm" id="theForm" method="post" autocomplete="off">
+						<p class="tit mb-20">마음 편지 쓰기</p>
+						<div class="step1">
+							<p class="tit mb-3"><img src="../assets/images/remake/step1.png" alt="step1" class="step-img mr-3" />보내는 사람, 받는 사람 이름 적기</p>
+							<table class="letter-table">
+								<colgroup>
+									<col width="40%" />
+									<col width="60%" />
+								</colgroup>
+								<tr>
+									<th>보내는 사람</th>
+									<td><input type="text" name="uname" onkeyup="sethtml('senderT',this.value)" required /></td>
+								</tr>
+								<tr>
+									<th>받는 사람</th>
+									<td><input type="text" name="rname" onkeyup="sethtml('receiverT',this.value)" required /></td>
+								</tr>
+							</table>
+						</div>
+						<div class="step2 mt-25">
+							<div class="tit">
+								<img src="../assets/images/remake/step2.png" alt="step2" class="step-img mr-3" />
+								<p>
+									<span>마음편지에 보낼 내용 선택하기</span>
+									<small>(최대 5개까지 선택할 수 있어요.) </small>
+								</p>
+							</div>
+
+							<div class="step2-inner mt-10 mt-lg-20">
+								<img src="../assets/images/remake/list-bg.png" alt="배경" class="d-none d-md-block" />
+								<img src="../assets/images/remake/list-bg-m.png" alt="배경" class="d-block d-md-none" />
+								<p class="tit">
+									<img src="../assets/images/remake/letter-tit.png" alt="제목" class="ribbon" />
+									<span>오늘 하루 행복 채우기</span>
+								</p>
+								<div class="step2-list">
+									<ul class="step2-wrap">
+										<li class="step2-item">
+											<input type="checkbox" id="list1" name="content[]" data-index="0" value="가장 좋아하는 노래 듣기" />
+											<label for="list1">가장 좋아하는 노래 듣기</label>
+										</li>
+										<li class="step2-item">
+											<input type="checkbox" id="list2" name="content[]" data-index="1" value="맛있는 음식 찾아서 저녁에 먹기" />
+											<label for="list2">맛있는 음식 찾아서 저녁에 먹기</label>
+										</li>
+										<li class="step2-item">
+											<input type="checkbox" id="list3" name="content[]" data-index="2" value="하루 종일 침대에서 빈둥거리기" />
+											<label for="list3">하루 종일 침대에서 빈둥거리기</label>
+										</li>
+										<li class="step2-item">
+											<input type="checkbox" id="list4" name="content[]" data-index="3" value="아무것도 하지 않고 쉬기" />
+											<label for="list4">아무것도 하지 않고 쉬기</label>
+										</li>
+										<li class="step2-item">
+											<input type="checkbox" id="list5" name="content[]" data-index="4" value="따뜻한 햇살 받으며 산책하기" />
+											<label for="list5">따뜻한 햇살 받으며 산책하기</label>
+										</li>
+										<li class="step2-item">
+											<input type="checkbox" id="list6" name="content[]" data-index="5" value="예전부터 눈 여겨 본 물건 사기" />
+											<label for="list6">예전부터 눈 여겨 본 물건 사기</label>
+										</li>
+										<li class="step2-item">
+											<input type="checkbox" id="list7" name="content[]" data-index="6" value="눈이 닿는 주변 공간 청소하기" />
+											<label for="list7">눈이 닿는 주변 공간 청소하기</label>
+										</li>
+									</ul>
+									<ul class="step2-wrap">
+										<li class="step2-item">
+											<input type="checkbox" id="list8" name="content[]" data-index="7" value="읽고 싶었던 책 읽기" />
+											<label for="list8">읽고 싶었던 책 읽기</label>
+										</li>
+										<li class="step2-item">
+											<input type="checkbox" id="list9" name="content[]" data-index="8" value="재미있는 만화 보기" />
+											<label for="list9">재미있는 만화 보기</label>
+										</li>
+										<li class="step2-item">
+											<input type="checkbox" id="list10" name="content[]" data-index="9" value="요즘 핫한 영화, 뮤지컬 보러 가기" />
+											<label for="list10">요즘 핫한 영화, 뮤지컬 보러 가기</label>
+										</li>
+										<li class="step2-item">
+											<input type="checkbox" id="list11" name="content[]" data-index="10" value="꽃 선물하기" />
+											<label for="list11">꽃 선물하기</label>
+										</li>
+										<li class="step2-item">
+											<input type="checkbox" id="list12" name="content[]" data-index="11" value="카페에서 커피 마시기" />
+											<label for="list12">카페에서 커피 마시기</label>
+										</li>
+										<li class="step2-item">
+											<input type="checkbox" id="list13" name="content[]" data-index="12" value="미용실가서 기분전환하기" />
+											<label for="list13">미용실가서 기분전환하기</label>
+										</li>
+										<li class="step2-item">
+											<input type="checkbox" id="list14" name="content[]" data-index="13" value="발길이 닿는 곳으로 캠핑가기" />
+											<label for="list14">발길이 닿는 곳으로 캠핑가기</label>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="step3 mt-10 mt-lg-20" id="sendimage">
+							<div class="step3-inner">
+								<img src="../assets/images/remake/list-bg2.png" alt="배경" class="d-none d-sm-block" />
+								<img src="../assets/images/remake/list-bg2-m.png" alt="배경" class="d-block d-sm-none" />
+								<div class="step3-letter">
+									<div class="txt txt2 mb-5 mb-sm-10 font-weight-bold">받는사람 <span id="receiverT"></span></div>
+									<div class="mt-3 mb-sm-10 mb-lg-20">
+										<p class="txt">오늘 2022 대한민국 우표전시회 관람 왔다가 마음편지를 알게</p>
+										<p class="txt">되어서 이렇게 편지를 써봐.</p>
+										<p class="txt">오늘 내가 행복해지는 방법을 알려줬어. 그 방법은,</p>
+									</div>
+									<ul class="step3-wrap"></ul>
+									<div class="mt-3 mt-sm-10 mt-lg-20">
+										<p class="txt">난 너의 하루가 행복해졌으면 좋겠어.</p>
+										<p class="txt">이만 줄일게.</p>
+									</div>
+									<div class="txt txt2 text-right mt-3 mt-sm-10 font-weight-bold">보내는 사람 <span id="senderT"></span></div>
+								</div>
+							</div>
+						</div>
+						<div class="text-center d-flex justify-content-center mt-20" style="gap: 20px">
+							<button type="button" class="btn-type-01 px-15 py-5 step1class" onclick="form_check(1)">편지 보내기</button>
+							<button type="button" class="btn-type-01 px-15 py-5 step2class" style="display: none" onclick="form_check(2)">저장하기</button>
+
+							<a href="../pop/share.html" class="btn-type-01 btn2 d-block d-sm-inline-block py-5 px-15 popup-link">공유하기</a>
+						</div>
+					</form>
+				</div>
+			</section>
+
+			<section class="section letter-section letter-bg3 wow fadeInUp">
+				<div class="container border-0" id="letterlist">
+					<div class="letter-board">
+						<div class="row">
+							<div class="col-12 col-md-6 col-lg-4 mb-10">
+								<div class="step4-inner">
+									<img src="../assets/images/remake/list-bg2.png" alt="배경" class="d-none d-xl-block" />
+									<img src="../assets/images/remake/list-bg2-m.png" alt="배경" class="d-block d-xl-none" />
+									<div class="step4-letter">
+										<div class="txt txt2 mb-1 mb-sm-3">
+											받는사람 <span><?=$rs_record["rname"];?></span>
+										</div>
+										<div class="mb-3 mb-sm-5">
+											<p class="txt">오늘 2022 대한민국 우표전시회 관람 왔다가 마음편지를 알게 되어서 이렇게 편지를 써봐. 오늘 내가 행복해지는 방법을 알려줬어. 그 방법은,</p>
+										</div>
+										<ul class="step4-wrap">
+											<li class="step4-item">가장 좋아하는 노래 듣기</li>
+											<li class="step4-item">아무것도 하지 않고 쉬기</li>
+											<li class="step4-item">눈이 닿는 주변 공간 청소하기</li>
+											<li class="step4-item">요즘 핫한 영화</li>
+											<li class="step4-item">뮤지컬 보러 가기</li>
+											<li class="step4-item">미용실가서 기분전환하기</li>
+										</ul>
+										<div class="mt-3 mt-sm-5">
+											<p class="txt">난 너의 하루가 행복해졌으면 좋겠어. 이만 줄일게.</p>
+										</div>
+										<div class="txt txt2 text-right mt-3">보내는 사람 <span>홍길동</span></div>
+									</div>
+								</div>
+								<div class="name-bx mt-3 mt-sm-5">
+									<p class="letter-name">홍길동<span>님</span></p>
+									<p class="date">2023.05.23</p>
+								</div>
+							</div>
+							<div class="col-12 col-md-6 col-lg-4 mb-10">
+								<div class="step4-inner">
+									<img src="../assets/images/remake/list-bg2.png" alt="배경" class="d-none d-xl-block" />
+									<img src="../assets/images/remake/list-bg2-m.png" alt="배경" class="d-block d-xl-none" />
+									<div class="step4-letter">
+										<div class="txt txt2 mb-1 mb-sm-3">
+											받는사람 <span><?=$rs_record["rname"];?></span>
+										</div>
+										<div class="mb-3 mb-sm-5">
+											<p class="txt">오늘 2022 대한민국 우표전시회 관람 왔다가 마음편지를 알게 되어서 이렇게 편지를 써봐. 오늘 내가 행복해지는 방법을 알려줬어. 그 방법은,</p>
+										</div>
+										<ul class="step4-wrap">
+											<li class="step4-item">가장 좋아하는 노래 듣기</li>
+											<li class="step4-item">아무것도 하지 않고 쉬기</li>
+											<li class="step4-item">눈이 닿는 주변 공간 청소하기</li>
+											<li class="step4-item">요즘 핫한 영화</li>
+											<li class="step4-item">뮤지컬 보러 가기</li>
+											<li class="step4-item">미용실가서 기분전환하기</li>
+										</ul>
+										<div class="mt-3 mt-sm-5">
+											<p class="txt">난 너의 하루가 행복해졌으면 좋겠어. 이만 줄일게.</p>
+										</div>
+										<div class="txt txt2 text-right mt-3">보내는 사람 <span>홍길동</span></div>
+									</div>
+								</div>
+								<div class="name-bx mt-3 mt-sm-5">
+									<p class="letter-name">홍길동<span>님</span></p>
+									<p class="date">2023.05.23</p>
+								</div>
+							</div>
+							<div class="col-12 col-md-6 col-lg-4 mb-10">
+								<div class="step4-inner">
+									<img src="../assets/images/remake/list-bg2.png" alt="배경" class="d-none d-xl-block" />
+									<img src="../assets/images/remake/list-bg2-m.png" alt="배경" class="d-block d-xl-none" />
+									<div class="step4-letter">
+										<div class="txt txt2 mb-1 mb-sm-3">
+											받는사람 <span><?=$rs_record["rname"];?></span>
+										</div>
+										<div class="mb-3 mb-sm-5">
+											<p class="txt">오늘 2022 대한민국 우표전시회 관람 왔다가 마음편지를 알게 되어서 이렇게 편지를 써봐. 오늘 내가 행복해지는 방법을 알려줬어. 그 방법은,</p>
+										</div>
+										<ul class="step4-wrap">
+											<li class="step4-item">가장 좋아하는 노래 듣기</li>
+											<li class="step4-item">아무것도 하지 않고 쉬기</li>
+											<li class="step4-item">눈이 닿는 주변 공간 청소하기</li>
+											<li class="step4-item">요즘 핫한 영화</li>
+											<li class="step4-item">뮤지컬 보러 가기</li>
+											<li class="step4-item">미용실가서 기분전환하기</li>
+										</ul>
+										<div class="mt-3 mt-sm-5">
+											<p class="txt">난 너의 하루가 행복해졌으면 좋겠어. 이만 줄일게.</p>
+										</div>
+										<div class="txt txt2 text-right mt-3">보내는 사람 <span>홍길동</span></div>
+									</div>
+								</div>
+								<div class="name-bx mt-3 mt-sm-5">
+									<p class="letter-name">홍길동<span>님</span></p>
+									<p class="date">2023.05.23</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="paging-area">
+						<? include "./list_page.php"; ?>
+					</div>
+				</div>
+			</section>
+		</main>
+		<!-- E : Main -->
+
+		<? include "../include/footer.html" ?>
+
+		<? include "../include/js.html" ?>
+		<script type="text/javascript" src="/js/space_check.js"></script>
+		<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+
+		<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+		<script>
+			var chkcount = 0;
+
+			$("[name='content[]']").on('click', function () {
+				var tindex = $(this).attr('data-index');
+				if ($(this).is(':checked')) {
+					if (chkcount == 5) {
+						alert('마음편지에 보낼 내용은 5개까지만 선택가능합니다.');
+						return false;
+					}
+					var insert = '<li class="step3-item" id="stepitem' + tindex + '">';
+					insert += '<img src="../assets/images/remake/check-ico.png" alt="아이콘" class="check-icon">' + $(this).val() + '</label>';
+					insert += '</li>';
+					$('.step3-wrap').append(insert);
+					chkcount++;
+				} else {
+					$('#stepitem' + tindex).remove();
+					chkcount--;
+				}
+			});
+			function sethtml(t, v) {
+				$('#' + t).html(v);
+			}
+
+			function form_check(c) {
+				var result = '';
+				if (isFieldBlank(theForm.uname)) {
+					alert('보내는사람을 입력해주세요.');
+					theForm.uname.focus();
+					return false;
+				}
+
+				if (isFieldBlank(theForm.rname)) {
+					alert('받는사람을 입력해주세요.');
+					theForm.rname.focus();
+					return false;
+				}
+				if ($(":checkbox[name='content[]']:checked").length < 1) {
+					alert('1개이상의 보낼 내용을 선택해주세요.');
+					theForm.content[0].focus();
+					return false;
+				}
+
+				if (c == '1') {
+					var formData = $('#theForm').serialize();
+					$.ajax({
+						url: 'letter_ok.php',
+						type: 'post',
+						async: false,
+						data: formData,
+						success: function (data) {
+							result = $.trim(data);
+						},
+					});
+
+					if (result == 'OK') {
+						$.ajax({
+							type: 'POST',
+							async: false,
+							url: 'letterlist.php',
+							dataType: 'html',
+							data: '',
+							success: function (res) {
+								$('#letterlist').html(res);
+							},
+						});
+						alert('편지가 발송되었습니다.');
+						$('.step1class').hide();
+						$('.step2class').show();
+					} else {
+						alert('등록중 에러가 발생하였습니다.');
+					}
+					return false;
+				} else if (c == '2') {
+					PrintDiv($('#sendimage'));
+					alert('마음 편지가 이미지로 저장되었습니다.');
+				} else if (c == '3') {
+					alert('sns공유');
+					//$('.step3-wrap').html('');
+					//theForm.reset();
+				}
+			}
+
+			function PrintDiv(div) {
+				div = div[0];
+				console.log(div);
+				html2canvas(div).then(function (canvas) {
+					var myImage = canvas.toDataURL();
+					downloadURI(myImage, 'letter.png');
+				});
+			}
+
+			function downloadURI(uri, name) {
+				var link = document.createElement('a');
+				link.download = name;
+				link.href = uri;
+				document.body.appendChild(link);
+				link.click();
+			}
+
+			function onCopy(id) {
+				$(id).select();
+				document.execCommand('copy');
+				alert('복사되었습니다.');
+				$(id).blur();
+			}
+
+			var btn = $('.btn_symbol');
+			var des = $('.symbol_bx');
+			$(btn).click(function () {
+				$(des).toggle(200);
+
+				return false;
+			});
+		</script>
+	</body>
+</html>

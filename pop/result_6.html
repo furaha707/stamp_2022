@@ -1,0 +1,40 @@
+<?
+	$home = str_replace("\\", "/",$_SERVER["DOCUMENT_ROOT"]);
+	include $home."/include/check.php";
+
+	header("Pragma: no-cache");
+	header("Expires: 0");
+	header("Cache-Control: no-cache,must-revalidate");
+	header("Content-Type: text/html; charset=utf-8");
+?>
+<div class="popup--result result--6">
+  <div class="popup-header">
+    <button type="button" class="popup-close" onclick="$.magnificPopup.close()"></button>
+  </div>
+  <div class="popup-body">
+    <div class="winner">
+      <div class="winner-title">당첨자 발표</div>
+      
+      <div class="winner-group">
+        <div class="winner-box">
+<?
+	    $sql = "select * FROM tb_outevent3_win WHERE event_kind='1' order by uname asc";
+		$rs_row=mysqli_query($Conn,$sql);
+		$total_count = mysqli_num_rows($rs_row); 
+?>        
+          <div class="winner-box__title">
+            <span class="name">스타벅스 아메리카노</span>
+            <span class="count"><?=$total_count;?>명</span>
+          </div>
+          <ul class="winner-list">
+<?	
+        while($rs_win=mysqli_fetch_array($rs_row)) {
+?>          
+            <li class="winner-list__item"><?=substr($rs_win["utel"],0,-3);?>***</li>
+<? } ?>
+          </ul> 
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

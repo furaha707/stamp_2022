@@ -1,0 +1,99 @@
+<?
+	$home = str_replace("\\", "/",$_SERVER["DOCUMENT_ROOT"]);
+	include $home."/include/check.php";
+?>
+<div class="popup popup--xxs">
+	<?
+   	$siteDomain2 = (!isset($_SERVER["HTTPS"]) || $_SERVER["HTTPS"] != "on")?"http://":"https://";
+	$siteDomain2 .= $_SERVER['HTTP_HOST'];
+
+	$siteDomain=(!empty($_REQUEST["siteDomain"]))?Decrypt($_REQUEST["siteDomain"]):$siteDomain2;
+	$sitetitle=$_REQUEST["sitetitle"];
+?>
+	<div class="popup-header border-0">
+		<h1 class="common-text--20 font-weight-medium text-gray-1">SNS 공유하기</h1>
+	</div>
+	<div class="popup-body border-0 pt-5">
+		<form name="snsform">
+			<input type="hidden" name="sns_title" value="<?=$sitetitle;?>" />
+			<input type="hidden" name="sns_url" value="<?=$siteDomain;?>" />
+			<div class="row justify-content-center mx-n1">
+				<div class="col-auto p-1">
+					<button type="button" class="sns-link facebook" onclick="snssend('f');"></button>
+				</div>
+				<div class="col-auto p-1">
+					<button type="button" class="sns-link kakao" id="kakao-link-btn"></button>
+				</div>
+				<div class="col-auto p-1">
+					<button type="button" class="sns-link blog" onclick="snssend('bo');"></button>
+				</div>
+				<div class="col-12 p-1">
+					<div class="row mx-n1">
+						<div class="col px-1">
+							<input type="text" name="copy-link__input" id="copyLink" class="w-100" value="<?=$siteDomain;?>" readonly />
+						</div>
+						<div class="col-auto px-1">
+							<button type="button" class="sns-link link" onclick="onCopy('#copyLink');"></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+		<script language="javascript">
+			function snssend(type) {
+				stitle = snsform.sns_title.value;
+				surl = snsform.sns_url.value;
+				var snstitle = encodeURIComponent(stitle);
+				var snsurl = encodeURIComponent(surl);
+				var snstag = encodeURIComponent('glebbangzip');
+				if (type == 't') {
+					//트위터
+					window.open('http://twitter.com/home?status=' + snstitle + ':' + snsurl);
+				} else if (type == 'm') {
+					//미투데이
+					window.open('http://me2day.net/posts/new?new_post[body]=' + snstitle + ':' + snsurl + '&new_post[tags]=' + snstag);
+				} else if (type == 'f') {
+					//페이스북
+					window.open('http://facebook.com/sharer.php?u=' + snsurl + '&t=' + snstitle);
+				} else if (type == 'bd') {
+					//밴드
+					window.open('http://band.us/plugin/share?body=' + snstitle);
+				} else if (type == 'bo') {
+					//블로그
+					window.open('http://blog.naver.com/openapi/share?url=' + snsurl + '&&title=' + snstitle);
+				} else if (type == 'cs') {
+					//카스
+					window.open('https://story.kakao.com/share?url=' + snsurl + '&t=' + snstitle);
+				} else if (type == 'ct') {
+					//카톡
+					window.open('http://facebook.com/sharer.php?u=' + snsurl + '&t=' + snstitle);
+				} else if (type == 'y') {
+					//요즘
+					window.open('http://yozm.daum.net/home?m=' + snsurl + '&t=' + snstitle);
+				}
+			}
+		</script>
+
+		<script type="text/javascript">
+			//<![CDATA[
+			// // 사용할 앱의 JavaScript 키를 설정해 주세요.
+			Kakao.init('f869641dd7d4cfcd47802d4f251960ce');
+			// // 카카오링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
+			Kakao.Link.createDefaultButton({
+				container: '#kakao-link-btn',
+				objectType: 'feed',
+				content: {
+					title: '2022 대한민국 우표전시회',
+					description: '#2022대한민국우표전시회 #나의인생우표찾기 2022 대한민국 우표 전시회에 소풍 오셔서 우표의 미래와 우표가 주는 치유, 메타버스를 포함한 다양한 환경에서의 놀이까지 보물같은 여러분의 인생 우표를 찾을 수 있는 축제를 즐겨보세요.',
+					imageUrl: '<?=$siteDomain2;?>/upload/siteset/<?=$SS[siteimg];?>',
+					link: {
+						mobileWebUrl: '<?=$siteDomain;?>',
+						webUrl: '<?=$siteDomain;?>',
+					},
+				},
+			});
+			//]]>
+		</script>
+	</div>
+</div>
+

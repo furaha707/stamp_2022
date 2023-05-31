@@ -1,0 +1,77 @@
+<?
+	$home = str_replace("\\", "/",$_SERVER["DOCUMENT_ROOT"]);
+	include $home."/include/check.php";
+
+	header("Pragma: no-cache");
+	header("Expires: 0");
+	header("Cache-Control: no-cache,must-revalidate");
+	header("Content-Type: text/html; charset=utf-8");
+?> 
+<div class="view-pop">
+<?
+	$uid=Decrypt($_REQUEST["uid"]);
+    
+    $sql = "select * from tb_influence where viewtype='Y' and uid='".CheckWord($uid)."'";
+    $rs_row=mysqli_query($Conn,$sql);
+    $rs_influence=mysqli_fetch_array($rs_row);	            
+  	if($rs_influence==null) $error_num++;    
+     
+?>
+  <button type="button" class="mfp-close" title="팝업 닫기" onclick="$.magnificPopup.close();"></button>
+  <div class="thumb">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+<?
+    $sql0 = "select * from tb_influence_add where p_uid='".CheckWord($uid)."'";
+    $rs_row0=mysqli_query($Conn,$sql0);
+    $rs_add=mysqli_fetch_array($rs_row0);
+  
+    $influence_img=explode("|",$rs_add["add_file_name"]);                                                
+    if(Trim($influence_img[0])!="") {      
+		for ($j=0;$j<count($influence_img);$j++) { 
+?>        
+        <div class="swiper-slide">
+          <figure class="img">
+            <!-- 이미지 권장사이즈 : 700 x 700 -->
+            <img src="<? echo (Trim($influence_img[$j])!="")?"/upload/influence/".$influence_img[$j]:"../images/board/no_img.jpg";?>" alt="">
+          </figure>
+        </div>
+<?	
+   		}
+	}
+?>
+      </div>      
+      <button type="button" class="swiper-button-prev" title="이전 슬라이드로 이동"></button>
+      <button type="button" class="swiper-button-next" title="다음 슬라이드로 이동"></button>
+    </div>
+  </div>
+  <div class="desc">
+    <div class="inner scrollbar-outer">
+      <h1 class="title"><?=$rs_influence["title"];?></h1>
+      <p class="date text-color-2"><?=$rs_influence["field_etc_02"];?></p>
+      
+      <div class="text-area">
+        <?=$rs_influence["content"];?>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+<? if($error_num >0) { ?>    
+	$.magnificPopup.close();
+<? } ?>
+  $('.inner').scrollbar();
+  
+  var thumb = new Swiper('.view-pop .swiper-container', {
+    loop: true,
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true
+    },
+    navigation: {
+      prevEl: '.swiper-button-prev',
+      nextEl: '.swiper-button-next'
+    }
+  });
+</script>

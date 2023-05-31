@@ -1,0 +1,42 @@
+<div class="popup popup-lg">
+  <div class="popup-header">
+    <h1 class="common-text--20 font-weight-medium text-gray-1">미래캔버스 사용방법</h1>
+  </div>
+  <div class="popup-body border-0 py-5">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <figure class="img">
+            <!-- 이미지 권장 사이즈 : 720 x 720 -->
+            <img src="../images/board/no_img.jpg" alt="" class="w-100">
+          </figure>
+        </div>
+        <div class="swiper-slide">
+          <figure class="img">
+            <!-- 이미지 권장 사이즈 : 720 x 720 -->
+            <img src="../images/board/no_img.jpg" alt="" class="w-100">
+          </figure>
+        </div>
+        <div class="swiper-slide">
+          <figure class="img">
+            <!-- 이미지 권장 사이즈 : 720 x 720 -->
+            <img src="../images/board/no_img.jpg" alt="" class="w-100">
+          </figure>
+        </div>
+      </div>
+      
+      <button type="button" class="swiper-button-prev" title="이전 슬라이드로 이동"></button>
+      <button type="button" class="swiper-button-next" title="다음 슬라이드로 이동"></button>
+    </div>
+  </div>
+</div>
+
+<script>
+  var sampleSwiper = new Swiper('.swiper-container', {
+    loop: true,
+    navigation: {
+      prevEl: '.swiper-button-prev',
+      nextEl: '.swiper-button-next'
+    }
+  });
+</script>

@@ -1,0 +1,475 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+	<head>
+		<?
+    $P_dp1 = '3';
+    $P_dp2 = '1';
+    include "../include/meta.html"
+		?>
+		<link rel="stylesheet" href="../assets/css/daily.min.css" />
+	</head>
+	<body class="sub-body">
+		<!-- S : Header -->
+		<? include "../include/header.html" ?>
+		<!-- E : Header -->
+
+		<!-- S : Sub visual -->
+		<? include "../include/sub-visual.html" ?>
+		<!-- E : Sub visual -->
+
+		<!-- S : Main -->
+		<main class="main py-10 py-sm-15 py-lg-30" id="contents">
+			<!-- S : Section (타이틀 영역) -->
+			<section class="section wow fadeInUp">
+				<div class="container border-0 text-center mb-8 mb-lg-14">
+					<h1 class="common-title--h1 font-weight-bold">신나는 우표메타버스 이벤트</h1>
+					<p class="common-text--26 font-weight-light text-gray-3 mt-2">
+						2022대한민국 우표전시회 메타버스관에서 펼쳐지는<br class="d-none d-md-block" />
+						다양한 이벤트에 참여하고 풍성한 경품 받아가세요.
+					</p>
+				</div>
+			</section>
+			<!-- E : Section (타이틀 영역) -->
+
+			<!-- S : Section (이벤트 정보) -->
+			<section class="section mt-5 mt-lg-17 wow fadeInUp">
+				<div class="container border-0">
+					<div class="row state-intro mt-0 mt-lg-15">
+						<div class="col-12 col-md-3 item">
+							<div class="state-thumb--1"></div>
+							<div class="state-desc">
+								<p class="common-text--24 font-weight-medium text-gray-1 mt-md-2">이벤트 기간</p>
+								<!-- <p class="common-text--22 font-weight-light text-gray-3 mt-1"> -->
+								<p class="common-text--20 font-weight-light text-gray-3 mt-1">
+									이벤트1 : 사전오픈일 ~ 10월 20일<br />
+									이벤트2 : 사전오픈일 ~ 9월 30일<br />
+									이벤트3 : 2022년 9월 20일 ~ 9월 30일
+								</p>
+								<!-- <p class="common-text--18 sub-color-3 font-weight-bold event-open">* 이벤트1,2: 사전오픈~9월30일</p> -->
+							</div>
+						</div>
+						<div class="col-12 col-md-3 item">
+							<div class="state-thumb--2"></div>
+							<div class="state-desc">
+								<p class="common-text--24 font-weight-medium text-gray-1 mt-md-2">이벤트 경품</p>
+								<p class="common-text--22 font-weight-light text-gray-3 mt-1">
+									갤럭시워치5<br />
+									배스킨라빈스 파인트 아이스크림<br />
+									커피 모바일 상품권
+								</p>
+							</div>
+						</div>
+						<div class="col-12 col-md-3 item">
+							<div class="state-thumb--3"></div>
+							<div class="state-desc">
+								<p class="common-text--24 font-weight-medium text-gray-1 mt-md-2">당첨자 수</p>
+								<p class="common-text--22 font-weight-light text-gray-3 mt-1">총 116명</p>
+							</div>
+						</div>
+						<div class="col-12 col-md-3 item">
+							<div class="state-thumb--4"></div>
+							<div class="state-desc">
+								<p class="common-text--24 font-weight-medium text-gray-1 mt-md-2">당첨자 발표</p>
+								<p class="common-text--22 font-weight-light text-gray-3 mt-1">
+									이벤트1 : 2022년 11월 3일<br />
+									이벤트2,3 : 2022년 10월 13일
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="row justify-content-center text-center mt-13">
+						<div class="col-12 col-sm-auto py-2">
+							<a href="../pop/daily-giveaway.html" class="btn-type-01 btn1 d-block d-sm-inline-block py-5 px-15 popup-link">경품 자세히 보기</a>
+						</div>
+						<div class="col-12 col-sm-auto py-2">
+							<a href="../pop/share.html" class="btn-type-02 btn2 d-block d-sm-inline-block py-5 px-15 popup-link">SNS 공유하기</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- E : Section (이벤트 정보) -->
+
+			<!-- S : Section (참여경품안내) -->
+			<section class="section mt-20 wow fadeInUp">
+				<div class="container border-0">
+					<div class="tab tab--box">
+						<div class="tab-header mb-4">
+							<div class="tab-item location-button" data-target="#event1">
+								<a href="javascript:void(0)" class="link">Event1. 우표탐험가이벤트</a>
+							</div>
+							<div class="tab-item location-button" data-target="#event2">
+								<a href="javascript:void(0)" class="link">Event2. 우표퀴즈왕이벤트</a>
+							</div>
+							<div class="tab-item location-button" data-target="#event3">
+								<a href="javascript:void(0)" class="link">Event3. 방문객이벤트</a>
+							</div>
+						</div>
+						<div class="tab-body">
+							<div class="tab-content mb-10" id="event1">
+								<div class="text-center">
+									<h1 class="event-tit mt-5 mt-lg-15">우표<span class="sub-color-3">탐험가</span>이벤트</h1>
+									<h2 class="event-date mt-4 mb-5">이벤트 기간 : 사전오픈 ~ 10월 20일</h2>
+									<p class="common-text--26 text-gray-3">메타버스 우표놀이동산에서 "초록우표"를 찾아 인증해주세요.</p>
+
+									<div class="mt-10 p-10" style="border: 3px solid #ddd">
+										<h2 class="event-subtit">참여경품안내</h2>
+										<div class="row mt-5 mx-n3">
+											<div class="col-6 col-md-4 p-3">
+												<div class="vote-inner">
+													<img src="../assets/images/sample/attendance_img_1.png" alt="" />
+													<div class="vote-txt">
+														<p class="common-text--22 font-weight-bold text-gray-1 mt-2">갤럭시워치5</p>
+														<div class="common-text--18 text-gray-3 mt-1">(1명)</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-6 col-md-4 p-3">
+												<div class="vote-inner">
+													<img src="../assets/images/sample/attendance_img_2.png" alt="" />
+													<div class="vote-txt">
+														<p class="common-text--22 font-weight-bold text-gray-1 mt-2">아이스크림쿠폰</p>
+														<div class="common-text--18 text-gray-3 mt-1">(5명)</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-6 col-md-4 p-3">
+												<div class="vote-inner">
+													<img src="../assets/images/sample/attendance_img_3.png" alt="" />
+													<div class="vote-txt">
+														<p class="common-text--22 font-weight-bold text-gray-1 mt-2">커피 모바일 상품권</p>
+														<div class="common-text--18 text-gray-3 mt-1">(20명)</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="guide-box mt-5">
+									<div class="row">
+										<div class="col-12 col-md-auto">
+											<h2 class="guide-title">
+												참여<br />
+												방법
+											</h2>
+										</div>
+										<div class="col-12 col-md">
+											<div class="d-flex align-items">
+												<p class="common-text--22 font-weight-light text-gray-3 d-flex">
+													<span class="font-weight-bold text-color-5 text-nowrap">Step 1.</span>
+													<span class="pl-2">인스타그램 korea.stamp 검색 후 인스타그램 팔로잉</span>
+												</p>
+											</div>
+											<p class="common-text--22 font-weight-light text-gray-3 mt-2 d-flex">
+												<span class="font-weight-bold text-color-5 text-nowrap">Step 2.</span>
+												<span class="pl-2"
+													>우표놀이동산 내 “초록우표: 초록이미지우표”를 찾아 인증샷을 본인의 피드에 업로드<br />
+													★★피드 업로드시 korea.stamp 계정 태그 + 필수 해시태그 + 함께할 친구 1명 이상 태그★★
+												</span>
+											</p>
+											<div class="d-flex align-items-center font-weight-medium text-color-2 mt-5">
+												<span class="border border-color-2 py-1 px-3" style="border-width: 2px !important">필수 해시태그</span>
+												<span class="common-text--20 ml-4">@korea.stamp #2022대한민국우표전시회 #초록우표 #메타버스</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row justify-content-center text-center mt-13">
+									<div class="col-12 col-sm-auto py-2">
+										<a href="https://zep.us/play/8Z3AOJ" class="btn-type-01 btn1 d-block d-sm-inline-block py-5 px-10" target="_blank">우표놀이동산 놀러가기 <i class="xi-angle-right"></i></a>
+									</div>
+									<div class="col-12 col-sm-auto py-2">
+										<a href="https://www.instagram.com/korea.stamp/" class="btn-type-02 btn2 d-block d-sm-inline-block py-5 px-10" target="_blank">인스타그램 바로가기 <i class="xi-angle-right"></i></a>
+									</div>
+								</div>
+							</div>
+							<div class="tab-content mb-10" id="event2">
+								<div class="text-center">
+									<h1 class="event-tit mt-15">우표<span class="sub-color-3">퀴즈왕</span>이벤트</h1>
+									<h2 class="event-date mt-4 mb-5">이벤트 기간 : 사전오픈 ~ 9월30일</h2>
+									<p class="common-text--26 text-gray-3">메타버스 해저우체국에서 우표퀴즈 응모하고 우표퀴즈왕 되자!</p>
+
+									<div class="border mt-10 p-10">
+										<h2 class="event-subtit">참여경품안내</h2>
+										<div class="row mt-5 mx-n3 justify-content-center">
+											<div class="col-6 col-md-4 p-3">
+												<div class="vote-inner">
+													<img src="../assets/images/sample/attendance_img_2.png" alt="" />
+													<div class="vote-txt">
+														<p class="common-text--22 font-weight-bold text-gray-1 mt-2">아이스크림쿠폰</p>
+														<div class="common-text--18 text-gray-3 mt-1">(10명)</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-6 col-md-4 p-3">
+												<div class="vote-inner">
+													<img src="../assets/images/sample/attendance_img_3.png" alt="" />
+													<div class="vote-txt">
+														<p class="common-text--22 font-weight-bold text-gray-1 mt-2">커피 모바일 상품권</p>
+														<div class="common-text--18 text-gray-3 mt-1">(30명)</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="guide-box mt-5">
+									<div class="row align-items-center">
+										<div class="col-12 col-md-auto">
+											<h2 class="guide-title">
+												참여<br />
+												방법
+											</h2>
+										</div>
+										<div class="col-12 col-md">
+											<div class="d-flex align-items">
+												<p class="common-text--22 font-weight-light text-gray-3 d-flex">
+													<span class="font-weight-bold text-color-5 text-nowrap">Step 1.</span>
+													<span class="pl-2">2022대한민국 우표전시회 메타버스 접속</span>
+												</p>
+											</div>
+											<p class="common-text--22 font-weight-light text-gray-3 mt-2 d-flex">
+												<span class="font-weight-bold text-color-5 text-nowrap">Step 2.</span>
+												<span class="pl-2">메타버스 해저우체국 내 우표퀴즈 배너 클릭</span>
+											</p>
+											<p class="common-text--22 font-weight-light text-gray-3 mt-2 d-flex">
+												<span class="font-weight-bold text-color-5 text-nowrap">Step 3.</span>
+												<span class="pl-2">우표퀴즈 정답 입력 후 제출</span>
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="row justify-content-center text-center mt-13">
+									<div class="col-12 col-sm-auto py-2">
+										<a href="https://zep.us/play/yVvBO4" class="btn-type-01 btn1 d-block d-sm-inline-block py-5 px-10" target="_blank">해저우체국 방문하기 <i class="xi-angle-right"></i></a>
+									</div>
+								</div>
+							</div>
+							<div class="tab-content" id="event3">
+								<div class="text-center">
+									<h1 class="event-tit mt-15">우표메타버스관<br class="d-block d-sm-none" /><span class="sub-color-3">방문객</span>이벤트</h1>
+									<p class="common-text--26 text-gray-3 mt-2">2022대한민국 우표전시회 우표메타버스관에 방문만 해도 경품을 드려요.</p>
+
+									<div class="border mt-10 p-10">
+										<h2 class="event-subtit">참여경품안내</h2>
+										<div class="row mt-5 mx-n3 justify-content-center">
+											<div class="col-6 col-md-4 p-3">
+												<div class="vote-inner">
+													<img src="../assets/images/sample/attendance_img_3.png" alt="" />
+													<div class="vote-txt">
+														<p class="common-text--22 font-weight-bold text-gray-1 mt-2">커피 모바일 상품권</p>
+														<div class="common-text--18 text-gray-3 mt-1">(50명)</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="guide-box mt-5">
+									<div class="row align-items-center">
+										<div class="col-12 col-md-auto">
+											<h2 class="guide-title">
+												참여<br />
+												방법
+											</h2>
+										</div>
+										<div class="col-12 col-md">
+											<div class="d-flex align-items">
+												<p class="common-text--22 font-weight-light text-gray-3 d-flex">
+													<span class="font-weight-bold text-color-5 text-nowrap">Step 1.</span>
+													<span class="pl-2">아래 정보입력 후 우표메타버스관 방문하기</span>
+												</p>
+											</div>
+											<p class="common-text--22 font-weight-light text-gray-3 mt-2 d-flex">
+												<span class="font-weight-bold text-color-5 text-nowrap">Step 2.</span>
+												<span class="pl-2">이벤트 참여 끝! 참쉽죠~^^</span>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- E : Section (참여경품안내) -->
+
+			<!-- S : Section (투표참여) -->
+			<section class="section mt-17 wow fadeInUp">
+				<div class="container border-0">
+					<!-- S : 폼 -->
+					<form name="theForm" id="theForm" method="post" autocomplete="off">
+						<h1 class="event-tit font-weight-bold text-gray-1 my-10 my-lg-15 text-center">우표메타버스관 방문하기</h1>
+
+						<div class="bullet-list-box mt-5">
+							<ul class="bullet-list bullet-list--txt bullet-type--js">
+								<li class="item" data-bullet="*">Event3. 방문객이벤트는 버튼을 통해 우표메타버스관으로 이동하시면 자동응모됩니다.</li>
+								<li class="item" data-bullet="*">모든 항목 필수 입력입니다.</li>
+								<li class="item" data-bullet="*">정보가 맞지 않을 경우 이벤트 당첨이 취소 될 수 있습니다. 정확히 입력해주세요.</li>
+								<li class="item" data-bullet="*">수집된 개인정보는 이벤트 당첨자는 당첨자 발표 2주 후 삭제됩니다.</li>
+							</ul>
+						</div>
+
+						<div class="border p-5 mt-10">
+							<table class="table-form-01">
+								<colgroup>
+									<col width="50%" />
+									<col width="50%" />
+								</colgroup>
+								<tbody>
+									<tr>
+										<td>
+											<h2 class="common-text--22 font-weight-medium text-gray-1 mb-3">이름</h2>
+											<input type="text" name="uname" id="uname" title="이름" maxlength="50" class="w-100" required="" />
+										</td>
+										<td>
+											<h2 class="common-text--22 font-weight-medium text-gray-1 mb-3">연락처</h2>
+											<input type="tel" name="utel" id="utel" title="연락처" maxlength="11" class="w-100 input_num" required="" placeholder="'-'을 제외 후 입력해주세요." />
+											<p class="font-weight-light sub-color-1 mt-2">* 이벤트 당첨시 안내받으실 전화번호를 입력해주세요.</p>
+										</td>
+									</tr>
+									<tr>
+										<td colspan="2">
+											<ul class="clause_list">
+												<li>
+													<h5>개인정보처리방침</h5>
+													<div class="textarea_box_border">
+														<div class="textarea_box">
+															2022 대한민국 온라인 우표전시회 홈페이지는 이벤트 운영에 필요한 최소한의 개인정보만을 취득하며, 수집된 개인정보는 당첨자 확인, 경품 배송 등 이벤트 운영을 위한 용도로만 사용됩니다. 이와 같은 개인정보 수집·이용 목적에 대해 동의하실 경우에만 참여 부탁드립니다. 이벤트 당첨자가 제공하는 개인정보(성명, 연락처)는 개인정보보호법에 따라 수집·이용 시 정보주체 본인의 동의를 얻어야 하는 정보이며, 보유 및 이용기간 동안 안전하게 보호됩니다.
+
+															<ul class="bullet-list bullet-list--txt mt-5 bullet-type--js">
+																<li class="item" data-bullet="1.">개인정보 수집 및 이용목적- 이벤트 당첨자 확인 및 경품 발송</li>
+																<li class="item" data-bullet="2.">개인정보 수집 항목 - 필수항목: 성명, 연락처, 주소</li>
+																<li class="item" data-bullet="3.">개인정보 보유 및 이용기간- 수집한 개인정보는 경품 수령 관련 분쟁이 있을 경우를 대비해 이벤트 종료(2022. 11. 03)후 2주까지 보관 후 모두 파기합니다. 또한 이벤트 발송 문자에는 만족도 설문조사가 함께 발송될 예정입니다.</li>
+																<li class="item" data-bullet="4.">수집된 전화번호로 우표전시회 만족도 조사 참여문자가 전송됩니다.</li>
+																<li class="item" data-bullet="5.">개인정보 수집 동의 거부의 권리- 귀하는 개인정보 수집·이용에 동의하지 않을 권리가 있습니다. 다만, 귀하가 필수 기재사항을 입력하지 않으실 경우 이벤트 응모가 불가능함을 양지하시기 바랍니다.</li>
+																<li class="item" data-bullet="6.">개인정보를 정확하게 적지 않았을 경우 이벤트 당첨 및 발송이 취소될 수 있으며, 연락처 1개당 1번의 참여가 가능합니다.</li>
+																<li class="item" data-bullet="7.">이벤트 성격에 맞지 않는 내용이나 과도한 도배성 댓글은 임의 삭제할 수 있습니다.</li>
+															</ul>
+														</div>
+													</div>
+													<div class="agree_box mt_10">
+														<input type="checkbox" name="yark" value="ok" id="yark" title="개인정보처리방침에 동의" class="mr_05" required="" />
+														<label for="yark">개인정보처리방침 동의</label>
+													</div>
+												</li>
+											</ul>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<div class="row justify-content-center text-center mt-13">
+							<div class="col-12 col-sm-auto py-2">
+								<a href="javascript:;void(0);" onclick="alert('이벤트가 종료되었습니다.');" class="btn-type-01 btn1 d-block d-sm-inline-block py-5 px-10 h-100">
+									Event3. 방문객 이벤트<br />
+									응모하기 <i class="xi-angle-right"></i>
+								</a>
+							</div>
+							<div class="col-12 col-sm-auto py-2">
+								<a href="https://zep.us/play/yWVvOn" class="btn-type-02 btn2 d-block d-sm-inline-block py-5 px-10" target="_blank">2022대한민국 우표전시회<br />메타버스관 바로가기 <i class="xi-angle-right"></i></a>
+							</div>
+						</div>
+					</form>
+					<!-- E : 폼 -->
+				</div>
+			</section>
+			<!-- E : Section (투표참여) -->
+		</main>
+		<!-- E : Main -->
+
+		<? include "../include/footer.html" ?>
+
+		<? include "../include/js.html" ?>
+
+		<script>
+			$(document).ready(function () {
+				$('.location-button').on('click', function () {
+					let target = $(this).attr('data-target');
+					let scrollPosition = $(target).offset().top - $('header').outerHeight();
+
+					$('html, body').stop().animate(
+						{
+							scrollTop: scrollPosition,
+						},
+						500
+					);
+
+					console.log(target);
+					console.log(scrollPosition);
+				});
+			});
+		</script>
+		<script type="text/javascript" src="/js/space_check.js"></script>
+		<script type="text/javascript" language="JavaScript">
+			$(document).ready(function () {
+				$('.input_num').on('keyup', function () {
+					$(this).val(
+						$(this)
+							.val()
+							.replace(/[^0-9]/g, '')
+					);
+				});
+			});
+			function form_check() {
+				var result = '';
+				if (isFieldBlank(theForm.uname)) {
+					alert('이름을 입력해주세요.');
+					theForm.uname.focus();
+					return false;
+				}
+
+				if (numValue(theForm.utel)) {
+					alert('연락처를 숫자로만 입력해주세요.');
+					theForm.utel.focus();
+					return false;
+				}
+
+				if (theForm.yark.checked != true) {
+					alert('개인정보처리방침에 동의하셔야 이벤트에 참여 가능합니다.');
+					return false;
+				}
+
+				var formData = $('#theForm').serialize();
+				$.ajax({
+					url: 'metabus_ok.php',
+					type: 'post',
+					async: false,
+					data: formData,
+					success: function (data) {
+						result = $.trim(data);
+					},
+				});
+
+				if (result == 'OK') {
+					theForm.reset();
+					alert('등록이 완료되었습니다.');
+				} else if (result == 'OK2') {
+					alert('이미 이벤트에 참여하였습니다.\n이벤트에 중복참여가 불가능합니다.');
+				} else {
+					alert('등록중 에러가 발생하였습니다.');
+				}
+				return false;
+			}
+		</script>
+		<script>
+			function onCopy(id) {
+				$(id).select();
+				document.execCommand('copy');
+				alert('복사되었습니다.');
+				$(id).blur();
+			}
+
+			var btn = $('.btn_symbol');
+			var des = $('.symbol_bx');
+			$(btn).click(function () {
+				$(des).toggle(200);
+
+				return false;
+			});
+		</script>
+		<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+	</body>
+</html>

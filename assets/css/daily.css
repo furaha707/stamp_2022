@@ -1,0 +1,301 @@
+/* Made by Masstige */
+.bullet-list-box {
+  padding: 1em 0;
+  border-top: 2px solid #333;
+  border-bottom: 1px solid #c1c1c1;
+}
+
+.sub-color-1 {
+  color: #ffb400;
+}
+
+.sub-color-2 {
+  color: #808080;
+}
+
+.sub-color-3 {
+  color: #ff9600;
+}
+
+@media screen and (max-width: 1024px) {
+  .tab--box > .tab-header {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .tab--box > .tab-header .tab-item {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 50%;
+            flex: 1 0 50%;
+    max-width: 50%;
+    display: inline-block;
+    width: auto;
+    padding: 5px;
+    text-align: center;
+  }
+}
+.tab--box > .tab-header .tab-item .link {
+  border: 0;
+  background-color: #eef0f0;
+}
+.tab--box > .tab-header .tab-item .link:hover, .tab--box > .tab-header .tab-item .link.on {
+  color: white !important;
+  background-color: #ffb400;
+}
+
+.border-3 {
+  border: 3px solid #ddd;
+}
+
+@media screen and (max-width: 576px) {
+  .event-open {
+    margin-bottom: 2.25em;
+  }
+}
+
+.event-tit {
+  font-size: 2.8125rem;
+  color: #111;
+}
+@media screen and (max-width: 1024px) {
+  .event-tit {
+    font-size: 2rem;
+  }
+}
+
+.event-subtit {
+  font-size: 2.25rem;
+  color: #111;
+}
+@media screen and (max-width: 1024px) {
+  .event-subtit {
+    font-size: 1.375rem;
+  }
+}
+
+.event-date {
+  font-size: 1.5rem;
+  font-weight: 500;
+  background-color: #ffb400;
+  color: #111111;
+  border-radius: 30px;
+  padding: 5px 22px;
+  display: inline-block;
+}
+@media screen and (max-width: 1024px) {
+  .event-date {
+    font-size: 1rem;
+  }
+}
+
+.btn1 {
+  background-color: #ffb400;
+  width: 100%;
+  display: inline;
+}
+@media screen and (max-width: 576px) {
+  .btn1 {
+    display: block;
+  }
+}
+
+.btn2 {
+  background-color: #808080;
+  width: 100%;
+  display: inline;
+}
+@media screen and (max-width: 576px) {
+  .btn2 {
+    display: block;
+  }
+}
+
+.sub-nav--bar .link:hover, .sub-nav--bar .link.on {
+  background-color: #ffb400 !important;
+}
+
+.bullet-list.bullet-list--txt > .item:before {
+  color: #ffb400;
+}
+
+input:focus {
+  border-color: #ffb400 !important;
+}
+
+.vote-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media screen and (max-width: 1200px) {
+  .vote-inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.vote-txt {
+  text-align: left;
+  margin-left: 1.25rem;
+}
+@media screen and (max-width: 1200px) {
+  .vote-txt {
+    text-align: center;
+    margin-left: 0;
+  }
+}
+
+.paging-area a.active {
+  background-color: #ffb400;
+}
+
+.book-section {
+  background: url("../images/daily/book-bg.jpg") no-repeat;
+  background-size: contain;
+  background-position: center 75px;
+}
+.book-section .book-wrap {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #694d43;
+  padding-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+@media screen and (max-width: 576px) {
+  .book-section .book-wrap {
+    padding-top: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .book-section .book-wrap .col-6 {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+.book-section .book-wrap .book-item {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.book-section .book-wrap .book-item::after {
+  content: "";
+  display: block;
+  padding-bottom: 135.5048859935%;
+}
+.book-section .book-wrap .book-item > img {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  height: auto;
+  min-width: 1000%;
+  min-height: 1000%;
+  max-width: none;
+  max-height: none;
+  -webkit-transform: translate(-50%, -50%) scale(0.1);
+          transform: translate(-50%, -50%) scale(0.1);
+}
+@media screen and (max-width: 576px) {
+  .book-section .book-wrap .book-item {
+    margin-bottom: 10px;
+  }
+}
+.book-section .book-wrap .book-item .inner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.book-section .book-wrap .book-item .inner .thumb-bx {
+  position: relative;
+}
+.book-section .book-wrap .book-item .inner .thumb-bx .thumb2 {
+  position: absolute;
+  left: 50%;
+  bottom: -30px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+@media screen and (max-width: 576px) {
+  .book-section .book-wrap .book-item .inner .thumb-bx {
+    width: 50%;
+    height: 38%;
+    margin: 0 auto;
+  }
+  .book-section .book-wrap .book-item .inner .thumb-bx .thumb2 {
+    bottom: -10px;
+    width: 2.5rem;
+  }
+}
+.book-section .book-wrap .book-item .inner .name-bx {
+  text-align: center;
+  padding-top: 3rem;
+}
+.book-section .book-wrap .book-item .inner .name-bx .tit {
+  font-size: 1.375rem;
+  font-weight: 500;
+}
+.book-section .book-wrap .book-item .inner .name-bx .name {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.book-section .book-wrap .book-item .inner .name-bx .name .eng {
+  font-family: "GmarketSansMedium", -apple-system, BlinkMacSystemFont, "Times New Roman", "Palatino Linotype", "Book Antiqua", Georgia, Times, Palatino, serif;
+  font-weight: 300;
+}
+@media screen and (max-width: 1024px) {
+  .book-section .book-wrap .book-item .inner .name-bx .name {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+@media screen and (max-width: 576px) {
+  .book-section .book-wrap .book-item .inner .name-bx {
+    padding-top: 1rem;
+  }
+  .book-section .book-wrap .book-item .inner .name-bx .tit {
+    font-size: 15px;
+  }
+  .book-section .book-wrap .book-item .inner .name-bx .name {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .book-section .book-wrap .book-item .inner {
+    width: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .book-section .book-wrap .book-item .inner {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+/*# sourceMappingURL=daily.css.map */

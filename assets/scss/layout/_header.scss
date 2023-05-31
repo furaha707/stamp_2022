@@ -1,0 +1,501 @@
+@charset "UTF-8";
+$header-fix: true; //true: 헤더가 상단 고정일 경우입니다.
+
+.header {
+	// border-bottom: 1px solid #ddd;
+	background-color: transparent;
+	width: 100%;
+	z-index: 500;
+	transition: background-color 0.3s;
+
+	@if ($header-fix == true) {
+		position: fixed;
+		top: 0;
+		left: 0;
+
+		@at-root html {
+			scroll-padding-top: $nav-height + $container-gutter-width/2; //input required 브라우저 메시지 포커싱 위치를 맞춰줍니다.
+		}
+
+		@include mdq-max(lg) {
+			position: absolute;
+
+			&.scrolled {
+				position: fixed;
+			}
+		}
+	}
+
+	@at-root {
+		@media screen and (max-width: 1800px) and (max-height: 900px) {
+			.main-body .header.scrolled {
+				background-color: #fff;
+				box-shadow: 0 0 10px rgba(#000, 0.1);
+			}
+		}
+
+		.sub-body .header.scrolled {
+			background-color: #fff;
+			box-shadow: 0 0 10px rgba(#000, 0.1);
+		}
+	}
+
+	&.sitemap-on {
+		background-color: #fff;
+	}
+
+	@include mdq-max(lg) {
+		// height: $nav-height-lg;
+		height: auto;
+
+		@at-root html {
+			scroll-padding-top: $nav-height-lg + $container-gutter-width/2; //input required 브라우저 메시지 포커싱 위치를 맞춰줍니다.
+		}
+		@if ($header-fix != true) {
+			position: fixed;
+			top: 0;
+			left: 0;
+		}
+
+		.nav-left {
+			.logo {
+				width: 76px;
+				.w-logo {
+					display: block;
+				}
+				.b-logo {
+					display: none;
+				}
+			}
+		}
+		.nav-right {
+			margin-right: 5vw !important;
+			.header-translate {
+				background-image: none !important;
+				background-color: transparent !important;
+
+				#google_translate_element {
+					height: 35px !important;
+					.goog-te-gadget .goog-te-combo {
+						width: 100px !important;
+						color: white !important;
+						background-image: url(../images/icon/select_icon_w.svg) !important;
+						background-color: #3dc1b3 !important;
+						border-radius: 20px !important;
+					}
+				}
+			}
+			@include mdq-max(sm) {
+				margin-right: 7vw !important;
+			}
+			@include mdq-max(xs) {
+				position: absolute;
+				right: 60px;
+				margin-right: 0 !important;
+			}
+		}
+		.nav-mobile__btn {
+			color: white;
+		}
+	}
+
+	.header-wrap {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: 80px;
+		max-width: 1840px;
+		width: 100%;
+		margin: 0 auto;
+		padding-left: 20px;
+		padding-right: 20px;
+		//padding-right: 0 !important;
+
+		@include mdq-max(lg) {
+			height: $nav-height-lg;
+		}
+
+		.logo {
+			flex: 0 0 em(102);
+			width: em(102);
+
+			@include mdq-max(lg) {
+				flex: 0 0 em(100);
+				width: em(100);
+			}
+
+			@include mdq-max(sm) {
+				flex: 0 0 em(96);
+				width: em(96);
+			}
+		}
+
+		.header-util {
+			flex: 0 0 auto;
+			width: auto;
+
+			@include mdq-max(xxl) {
+				display: none;
+			}
+		}
+
+		.header-translate {
+			// flex: 0 0 190px;
+			// max-width: 190px;
+			// background-color: white;
+			// border-radius: 30px;
+			// background: url(../images/main/google-img.png) no-repeat;
+			// background-color: white;
+			// border-radius: 30px;
+			// background-position: 20% center;
+
+			#google_translate_element {
+				width: 100%;
+				height: 40px;
+				float: none !important;
+				margin: 0 !important;
+				top: 0 !important;
+				width: 180px;
+
+				.skiptranslate {
+					display: block;
+					color: transparent;
+
+					& > :not(div) {
+						display: none;
+					}
+				}
+
+				.goog-te-gadget .goog-te-combo {
+					position: absolute;
+					top: 0;
+					left: 88px;
+					width: 90px;
+					height: 100%;
+					max-width: 100%;
+					padding-left: 12px;
+					border: 0;
+					background-color: white;
+					color: #3dc1b3;
+					border-radius: 30px;
+					margin: 0;
+					background-image: url(../images/icon/select_icon_c.png);
+
+					option {
+						color: #333;
+						background-color: #fff;
+					}
+				}
+			}
+
+			// @media screen and (max-width: 1760px) {
+			// 	flex: 0 0 em(100);
+			// 	width: em(80);
+			// }
+
+			@include mdq-max(lg) {
+				// width: 90px;
+				// height: 60px;
+				// position: absolute;
+				// top: 0;
+				// right: 60px;
+			}
+		}
+	}
+
+	.header-util {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		// margin-right: em(40);
+
+		@media screen and (max-width: 1760px) {
+			margin-right: em(20);
+		}
+
+		.item {
+			position: relative;
+			padding-left: 8px;
+			padding-right: 8px;
+			font-size: em(13);
+			color: #555;
+
+			& + .item::before {
+				content: '';
+				display: block;
+				position: absolute;
+				top: 50%;
+				left: 0;
+				transform: translateY(-50%);
+				width: 1px;
+				height: em(12, 13);
+				background-color: rgba(#555, 0.5);
+			}
+		}
+	}
+
+	.header-shortcuts {
+		position: absolute;
+		top: 50%;
+		right: em(80);
+		transform: translateY(-50%);
+		width: 100%;
+		max-width: 400px;
+
+		@include mdq-max(xxxl) {
+			display: none;
+		}
+
+		.depth-img {
+			display: block;
+			width: 100%;
+			@include img-to-bg(percentage(120/400));
+
+			img {
+				display: none;
+			}
+
+			img.on {
+				display: block;
+			}
+		}
+
+		.icon {
+			height: em(40);
+		}
+	}
+
+	&.gnb-hover {
+		background-color: white;
+		.nav {
+			.depth-1 {
+				> .link {
+					color: #222;
+				}
+			}
+		}
+		.nav-left {
+			.logo {
+				.w-logo {
+					display: none;
+				}
+				.b-logo {
+					display: block;
+				}
+			}
+		}
+		.nav-right {
+			.util-list {
+				.util-item {
+					.link {
+						color: #222;
+					}
+				}
+			}
+			.header-translate {
+				// background-image: url(../images/main/google-color.png);
+				// background-repeat: no-repeat;
+				// background-color: #3dc1b3;
+				// background-position: 20% center;
+
+				#google_translate_element {
+					.goog-te-gadget .goog-te-combo {
+						color: white;
+						background-image: url(../images/icon/select_icon_w.svg);
+						background-color: #3dc1b3;
+					}
+				}
+			}
+			// .lang-btn {
+			// 	background-color: #3dc1b3;
+			// 	color: white;
+			// 	.g-white {
+			// 		display: block;
+			// 	}
+			// 	.g-color {
+			// 		display: none;
+			// 	}
+			// }
+			.nav-all__btn {
+				.hamburger-inner {
+					background-color: #333;
+					&:before {
+						background-color: #333;
+					}
+					&:after {
+						background-color: #333;
+					}
+				}
+			}
+		}
+	}
+}
+
+.main-body,
+.sub-body {
+	@if ($header-fix == true) {
+		padding-top: $nav-height;
+		@include mdq-max(lg) {
+			padding-top: 60px;
+		}
+	}
+}
+
+.main-body {
+	padding-top: 0 !important;
+	.header {
+		&.scrolled {
+			.nav-mobile__btn {
+				color: black !important;
+			}
+		}
+	}
+	.nav-mobile__btn {
+		color: white !important;
+	}
+}
+
+.sub-body {
+	.nav-mobile__btn {
+		color: black !important;
+	}
+}
+
+.sub-body {
+	.header {
+		background-color: white;
+		.nav {
+			.depth-1 {
+				> .link {
+					color: #222;
+				}
+			}
+		}
+		.nav-left {
+			.logo {
+				.w-logo {
+					display: none;
+				}
+				.b-logo {
+					display: block;
+				}
+			}
+		}
+		.nav-right {
+			.util-list {
+				.util-item {
+					.link {
+						color: #222;
+					}
+				}
+			}
+			// .lang-btn {
+			// 	background-color: #3dc1b3;
+			// 	color: white;
+			// 	.g-white {
+			// 		display: block;
+			// 	}
+			// 	.g-color {
+			// 		display: none;
+			// 	}
+			// }
+			.header-translate {
+				// background-image: url(../images/main/google-color.png);
+				// background-repeat: no-repeat;
+				// background-color: #3dc1b3;
+				// background-position: 20% center;
+
+				#google_translate_element {
+					.goog-te-gadget .goog-te-combo {
+						background-color: #3dc1b3;
+						color: white;
+						background-image: url(../images/icon/select_icon_w.svg);
+					}
+				}
+			}
+			.nav-all__btn {
+				.hamburger-inner {
+					background-color: #333;
+					&:before {
+						background-color: #333;
+					}
+					&:after {
+						background-color: #333;
+					}
+				}
+			}
+		}
+	}
+}
+
+.main-body {
+	.header {
+		&.scrolled {
+			background-color: white;
+			.nav {
+				.depth-1 {
+					> .link {
+						color: #222;
+						&:hover {
+							color: #3dc1b3;
+						}
+					}
+				}
+			}
+			.nav-left {
+				.logo {
+					.w-logo {
+						display: none;
+					}
+					.b-logo {
+						display: block;
+					}
+				}
+			}
+			.nav-right {
+				.util-list {
+					.util-item {
+						.link {
+							color: #222;
+						}
+					}
+				}
+				.header-translate {
+					// background-image: url(../images/main/google-color.png);
+					// background-repeat: no-repeat;
+					// background-color: #3dc1b3;
+					// background-position: 20% center;
+
+					#google_translate_element {
+						.goog-te-gadget .goog-te-combo {
+							color: white;
+							background-image: url(../images/icon/select_icon_w.svg);
+							background-color: #3dc1b3;
+						}
+					}
+				}
+				// .lang-btn {
+				// 	background-color: #3dc1b3;
+				// 	color: white;
+				// 	.g-white {
+				// 		display: block;
+				// 	}
+				// 	.g-color {
+				// 		display: none;
+				// 	}
+				// }
+				.nav-all__btn {
+					.hamburger-inner {
+						background-color: #333;
+						&:before {
+							background-color: #333;
+						}
+						&:after {
+							background-color: #333;
+						}
+					}
+				}
+			}
+		}
+	}
+}

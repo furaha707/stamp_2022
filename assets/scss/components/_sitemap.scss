@@ -1,0 +1,122 @@
+@charset "UTF-8";
+
+.sitemap {
+	display: none;
+	position: absolute;
+	top: 80px;
+	left: 0;
+	height: calc(100vh - 80px);
+	max-height: calc(100vh - 80px);
+	background-color: #fff;
+	width: 100%;
+	z-index: 10;
+	padding-top: em(80);
+	padding-bottom: em(80);
+	overflow-y: auto;
+
+	&.on {
+		display: block;
+	}
+
+	&-title-box {
+		text-align: center;
+		position: relative;
+		.site-close {
+			position: absolute;
+			right: 10%;
+			top: 0;
+			font-size: rem(26);
+			@include mdq-max(lg) {
+				right: -10px;
+				top: -50px;
+			}
+		}
+	}
+
+	&-sub-title {
+		color: #111;
+		font-size: em(26);
+		font-weight: 300;
+		letter-spacing: letterSpacing(-20);
+	}
+
+	&-title {
+		color: #111;
+		font-size: em(38);
+		font-weight: 700;
+		letter-spacing: letterSpacing(-20);
+	}
+
+	.nav-list--depth1 {
+		display: flex;
+		align-items: stretch;
+		justify-content: center;
+		flex-wrap: wrap;
+		margin-left: em(-20);
+		margin-right: em(-20);
+
+		> .nav-list__item {
+			flex: 1 0 percentage(1/6);
+			max-width: percentage(1/6);
+			padding-left: em(20);
+			padding-right: em(20);
+
+			@include mdq-max(lg) {
+				flex: 1 0 percentage(3/6);
+				max-width: percentage(3/6);
+			}
+
+			@include mdq-max(xs) {
+				flex: 1 0 percentage(6/6);
+				max-width: percentage(6/6);
+			}
+
+			> .link {
+				display: block;
+				width: 100%;
+				color: #111;
+				font-size: em(20);
+				font-weight: 700;
+				letter-spacing: 0;
+				border-top: 1px solid #111;
+				border-bottom: 1px solid #b2b2b2;
+				text-align: center;
+				padding: em(16, 20);
+			}
+		}
+	}
+
+	.nav-list--depth2 {
+		padding: em(40) 0;
+
+		> .nav-list__item {
+			> .link {
+				display: block;
+				width: 100%;
+				font-size: 1em;
+				line-height: 2;
+				font-weight: 500;
+				color: #111;
+				text-align: center;
+			}
+
+			& + .nav-list__item {
+				margin-top: em(16);
+			}
+		}
+	}
+
+	.nav-list--depth3 {
+		> .nav-list__item {
+			> .link {
+				display: block;
+				width: 100%;
+				font-size: 1em;
+				line-height: 2;
+				font-weight: 300;
+				color: #666;
+				text-align: center;
+			}
+		}
+	}
+}

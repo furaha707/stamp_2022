@@ -1,0 +1,191 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+	<head>
+		<?
+    $P_dp1 = '3';
+    $P_dp2 = '4';
+    $P_dp3 = '1';
+    include "../include/meta.html"
+		?>
+		<link rel="stylesheet" href="../assets/css/daily.min.css" />
+	</head>
+	<body class="sub-body">
+		<!-- S : Header -->
+		<? include "../include/header.html" ?>
+		<!-- E : Header -->
+
+		<!-- S : Sub visual -->
+		<? include "../include/sub-visual.html" ?>
+		<!-- E : Sub visual -->
+
+		<!-- S : Main -->
+		<main class="main py-10 py-sm-15 py-lg-30" id="contents">
+			<!-- S : Section (탭 메뉴) -->
+			<? include "../include/sub-nav.html" ?>
+			<!-- E : Section (탭 메뉴) -->
+
+			<!-- S : Section (타이틀 영역) -->
+			<section class="section wow fadeInUp">
+				<div class="container border-0 text-center mb-8 mb-lg-14">
+					<h1 class="common-title--h1"><?=${nav_.$P_dp1._.$P_dp2._.$P_dp3}?></h1>
+				</div>
+			</section>
+			<!-- E : Section (타이틀 영역) -->
+
+			<!-- S : Section (디자인 목록) -->
+			<section class="section mt-15 mt-lg-20 wow fadeInUp">
+				<div class="container border-0">
+					<div class="design-wrap">
+						<ul class="design-list">
+							<li class="item">
+								<div class="inner">
+									<div class="thumb">
+										<img src="../assets/images/daily/prize_stamp_1.jpg" alt="" />
+
+										<a href="../pop/daily__present.html" class="stamp-view popup-link" data-stamp="1">
+											<i class="mi-search type-white"></i>
+										</a>
+									</div>
+
+									<div class="desc">
+										<!-- 디자이너명 -->
+										<h2 class="common-text--24 font-weight-medium text-gray-1">우표디자이너 신재용</h2>
+										<!-- 우표명 -->
+										<p class="common-text--24 font-weight-medium text-gray-1">우표명: 제20대 대통령 취임</p>
+										<!-- 상세내용 -->
+										<p class="common-text--22 font-weight-light text-gray-3 mt-2">
+											약 20년동안 우표를 디자인했지만, 대통령 취임우표를 만든 것은 이번이 처음이었습니다. <br />대통령 당선일부터 취임일까지의 시간이 너무 짧았기에<br />
+											우표를 디자인하고 인쇄하기까지 한시도 긴장을 늦출 수 없었습니다. <br />여담이지만, 혹시라도 코로나에 걸리면 일정에 차질을 일으킬 수도 있었기에<br />
+											두 달 가까이 점심을 항상 혼자 해결해야 했습니다. <br />다행히 우표는 문제없이 발행이 되었고, 제가 맡은 일에 따르는 책임감과 보람을 새삼 더 느끼게 되었습니다.
+										</p>
+									</div>
+								</div>
+							</li>
+							<li class="item">
+								<div class="inner">
+									<div class="thumb">
+										<img src="../assets/images/daily/prize_stamp_2.jpg" alt="" />
+
+										<a href="../pop/daily__present.html" class="stamp-view popup-link" data-stamp="2">
+											<i class="mi-search type-white"></i>
+										</a>
+									</div>
+
+									<div class="desc">
+										<!-- 디자이너명 -->
+										<h2 class="common-text--24 font-weight-medium text-gray-1">포토그래퍼 김창환</h2>
+										<!-- 우표명 -->
+										<p class="common-text--24 font-weight-medium text-gray-1">우표명: 한국의 옛 건축</p>
+										<!-- 상세내용 -->
+										<p class="common-text--22 font-weight-light text-gray-3 mt-2">
+											건축물 내․외부가 사실적으로 표현되어 우표로써 성당의 특색있는 모습을<br />
+											보여주어 여행지로도 좋을 것 같아 선택하였습니다.
+										</p>
+									</div>
+								</div>
+							</li>
+							<li class="item">
+								<div class="inner">
+									<div class="thumb">
+										<img src="../assets/images/daily/prize_stamp_3.jpg" alt="" />
+
+										<a href="../pop/daily__present.html" class="stamp-view popup-link" data-stamp="3">
+											<i class="mi-search type-white"></i>
+										</a>
+									</div>
+
+									<div class="desc">
+										<!-- 디자이너명 -->
+										<h2 class="common-text--24 font-weight-medium text-gray-1">우표디자이너 박은경</h2>
+										<!-- 우표명 -->
+										<p class="common-text--24 font-weight-medium text-gray-1">우표명: 취타대</p>
+										<!-- 상세내용 -->
+										<p class="common-text--22 font-weight-light text-gray-3 mt-2">
+											최근 나온 우표 중에 모처럼 손으로 그린 디자인으로 여러 가지 귀여운 캐릭터로<br />
+											표현되는 영국의 근위대처럼 우리나라의 전통 중에 친근한 문화를 표현하고 싶었습니다.
+										</p>
+									</div>
+								</div>
+							</li>
+							<li class="item">
+								<div class="inner">
+									<div class="thumb">
+										<img src="../assets/images/daily/prize_stamp_4.jpg" alt="" />
+
+										<a href="../pop/daily__present.html" class="stamp-view popup-link" data-stamp="4">
+											<i class="mi-search type-white"></i>
+										</a>
+									</div>
+
+									<div class="desc">
+										<!-- 디자이너명 -->
+										<h2 class="common-text--24 font-weight-medium text-gray-1">우표디자이너 유지형</h2>
+										<!-- 우표명 -->
+										<p class="common-text--24 font-weight-medium text-gray-1">우표명: 민속놀이</p>
+										<!-- 상세내용 -->
+										<p class="common-text--22 font-weight-light text-gray-3 mt-2">즐겁게 투호를 던지고 신나게 응원하는 아이들의 모습 속에 세대를 아우르는 민속놀이의 즐거움을 볼 수 있습니다.</p>
+									</div>
+								</div>
+							</li>
+							<li class="item">
+								<div class="inner">
+									<div class="thumb">
+										<img src="../assets/images/daily/prize_stamp_5.jpg" alt="" />
+
+										<a href="../pop/daily__present.html" class="stamp-view popup-link" data-stamp="5">
+											<i class="mi-search type-white"></i>
+										</a>
+									</div>
+
+									<div class="desc">
+										<!-- 디자이너명 -->
+										<h2 class="common-text--24 font-weight-medium text-gray-1">우표디자이너 정은영</h2>
+										<!-- 우표명 -->
+										<p class="common-text--24 font-weight-medium text-gray-1">우표명: 헌혈</p>
+										<!-- 상세내용 -->
+										<p class="common-text--22 font-weight-light text-gray-3 mt-2">
+											헌혈 기념우표 캐릭터들처럼 어렵고 힘든 이웃들에게 헌혈 참여로<br />
+											따뜻한 사랑의 온기를 함께 나누길 바라는 마음으로 선택하였습니다.
+										</p>
+									</div>
+								</div>
+							</li>
+							<li class="item">
+								<div class="inner">
+									<div class="thumb">
+										<img src="../assets/images/daily/prize_stamp_6.jpg" alt="" />
+
+										<a href="../pop/daily__present.html" class="stamp-view popup-link" data-stamp="6">
+											<i class="mi-search type-white"></i>
+										</a>
+									</div>
+
+									<div class="desc">
+										<!-- 디자이너명 -->
+										<h2 class="common-text--24 font-weight-medium text-gray-1">우표디자이너 김미화</h2>
+										<!-- 우표명 -->
+										<p class="common-text--24 font-weight-medium text-gray-1">우표명: 자연으로 돌아온 멸종위기 동물</p>
+										<!-- 상세내용 -->
+										<p class="common-text--22 font-weight-light text-gray-3 mt-2">
+											전문기관과 소통하면서 소재선정, 원화작업 등 모든 부분에 애정을 쏟았고,<br />
+											동물을 좋아해서 작업하는 내내 기분이 좋았습니다.<br />
+											우표에 처음으로 등장한 따오기가 우리나라 창공을 훨훨 날기를 바랍니다.
+										</p>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<!-- E : Section (디자인 목록) -->
+		</main>
+		<!-- E : Main -->
+
+		<? include "../include/footer.html" ?>
+
+		<? include "../include/js.html" ?>
+	</body>
+</html>
+

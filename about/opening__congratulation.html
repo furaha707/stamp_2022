@@ -1,0 +1,89 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+	<head>
+		<?
+    $P_dp1 = '1';
+    $P_dp2 = '1';
+    $P_dp3 = '1';
+    include "../include/meta.html"
+		?>
+    <link rel="stylesheet" href="../assets/css/about.min.css"></link>
+	</head>
+	<body class="sub-body">
+		<!-- S : Header -->
+		<? include "../include/header.html" ?>
+		<!-- E : Header -->
+
+		<!-- S : Main -->
+		<main class="main py-10 py-sm-15 py-lg-30" id="contents">
+			<!-- S : Section (타이틀 영역) -->
+			<section class="section">
+				<div class="container text-center mb-8 mb-lg-14">
+					<h1 class="common-title--h1"><?=${nav_.$P_dp1._.$P_dp2}?></h1>
+				</div>
+			</section>
+			<!-- E : Section (타이틀 영역) -->
+
+			<!-- S : Section (탭 메뉴) -->
+			<? include "../include/sub-nav.html" ?>
+			<!-- E : Section (탭 메뉴) -->
+
+			<!-- S : Section -->
+			<section class="section" style="background-color: #e3f4fc; padding:3rem 0;">
+				<div class="container wowrap">
+					<div class="about-txt mb-10 mb-lg-20 wow fadeInUp">
+						<p class="tit">우정사업본부장 개회사</p>
+					</div>
+					<div class="row wow fadeInUp">
+						<div class="col-12 col-lg-5 text-center text-lg-left">
+							<img src="../assets/images/about/ceo-3.png" alt="회장님사진" />
+						</div>
+						<div class="col-12 col-lg-7 mt-10 mt-lg-0">
+							<div class="inner pl-0 pl-lg-10">
+								<p class="text mb-10">
+									안녕하세요, 우정사업본부장 손승현입니다. <br />
+									68년의 우표 역사를 담아온 2022년 대한민국 우표전시회를 찾아주신 여러분, 진심으로 환영합니다. 
+								</p>
+
+								<p class="text mb-10">
+                  1954년 “우표전람회”를 시작으로 오랜 전통을 이어가고 있는 대한민국 우표전시회는 우표의 문화적 가치를 제고하고 우취 문화 저변을 확대하는데 기여하고 있습니다.
+								</p>
+
+                <p class="text mb-10">
+                  우표의 새로운 모습을 통해 우표의 미래적 가치를 되새길 수 있는 소풍같은 2022년 대한민국 우표전시회로 여러분을 초대합니다.
+								</p>
+
+                <p class="text mb-10">
+                  이번 전시회는 ‘컬러를 통해 찾는 인생 우표’라는 주제로 다양한 특별테마관이 구성되어 있습니다. NFT, 목소리 우표 등을 활용한 우표 콘텐츠를 통해 우표의 미래를 살피고 우표를 통해 일상을 치유하실 수 있는 계기가 되길 바랍니다.
+								</p>
+
+                <p class="text mb-10">
+                  소풍과 같은 2022년 대한민국 우표전시회를 통해 여러분만의 색깔이 깃든 인생 우표를 찾으실 수 있길 기원합니다.
+								</p>
+
+                <p class="text">
+                  감사합니다.
+								</p>
+							</div>
+						</div>
+					</div>
+					<!-- <div class="inner mt-5 wow fadeInUp">
+						<p class="text">대한민국전시회도 내년부터는 접근성이 좋고 쾌적한 환경에서 개최하게 되었으니 우취인 모두가 한자리에 모여 작품도 전시하고 정보도 교환하는 만남의 날 행사와 우취지식 함양을 위한 세미나도 개최할 것입니다. 우표전시회를 통해 한국우표의 역사를 알리고, 교육적·문화적 가치를 소개하는 행사를 개최하여 국민들이 보다 더 쉽고 재미있게 우표를 이해하고 즐길 수 있도록 노력하겠습니다. 앞으로도 우표가 작지만 큰 문화콘텐츠로 국민으로부터 계속 사랑받을 수 있도록 재미있는 소재를 발굴하여 전시회를 개최할 것을 약속드립니다. 끝으로 이번 전시회 개최를 위하여 애쓰신 우정사업본부 및 한국우편사업진흥원 관계자 여러분께 다시 한번 깊은 감사의 말씀을 드리며, 우취인 여러분 모두의 건강과 행운, 발전을 기원합니다. 감사합니다.</p>
+						<div class="about-txt mt-3">
+							<p class="date">2022년 9월 22일</p>
+							<p class="name"><b>한국우취연합 회장</b> 라 제 안</p>
+						</div>
+					</div> -->
+				</div>
+			</section>
+			<!-- E : Section -->
+		</main>
+		<!-- E : Main -->
+
+		<? include "../include/footer.html" ?>
+
+		<? include "../include/js.html" ?>
+	</body>
+</html>
+

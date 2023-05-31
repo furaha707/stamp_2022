@@ -1,0 +1,25 @@
+.horse-section--mobile{
+  display: none;
+}
+@media screen and (max-width: 1200px) {
+  .sns-section{
+    position: relative;
+  }
+  .horse-section--pc{
+    display: none;
+  }
+  .horse-section--mobile{
+    display: block;
+    top: 140%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .horse-section--mobile{
+    top: 140%;
+  }
+}
+@media screen and (max-width: 376px) {
+  .horse-section--mobile{
+    top: 216%;
+  }
+}

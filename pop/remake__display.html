@@ -1,0 +1,23 @@
+<div class="popup popup--sm stamp-popup py-10 py-md-20">
+	<div class="popup-body text-center border-0">
+		<div class="img-list">
+			<img src="../assets/images/remake/remake_display_1-lg.jpg" alt="작품" class="d-none" />
+			<img src="../assets/images/remake/remake_display_2-lg.jpg" alt="작품" class="d-none" />
+			<img src="../assets/images/remake/remake_display_3-lg.jpg" alt="작품" class="d-none" />
+			<img src="../assets/images/remake/remake_display_4-lg.jpg" alt="작품" class="d-none" />
+			<img src="../assets/images/remake/remake_display_5-lg.jpg" alt="작품" class="d-none" />
+		</div>
+	</div>
+</div>
+
+<script>
+	var idx = $('.mfp-data-list').attr('data-stamp');
+
+	$('.mfp-data-list .mfp-close').addClass('d-none');
+
+	$('.img-list').children().addClass('d-none');
+	$('.img-list')
+		.children()
+		.eq(idx - 1)
+		.removeClass('d-none');
+</script>

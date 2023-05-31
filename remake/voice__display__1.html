@@ -1,0 +1,66 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+	<head>
+		<?
+    $P_dp1 = '4';
+    $P_dp2 = '2';
+    include "../include/meta.html"
+		?>
+		<link rel="stylesheet" href="../assets/css/remake.css" />
+	</head>
+	<body class="sub-body">
+		<!-- S : Header -->
+		<? include "../include/header.html" ?>
+		<!-- E : Header -->
+
+		<!-- S : Main -->
+		<main class="main py-10 py-sm-15 py-lg-30" id="contents">
+			<!-- S : Section (음성) -->
+			<section class="section">
+				<div class="container border-0 text-center">
+					<div class="wrap">
+						<div class="img">
+							<img src="../assets/images/remake/voice-01-1.jpg" alt="img" />
+							<div class="name">
+								너는 멋있는 사람<br />
+								<audio src="../assets/images/remake/1.wav" controls></audio>
+							</div>
+						</div>
+
+						<div class="text-bx pt-10 pt-lg-16">
+							<p class="common-text--28 font-weight-medium">세상에 존재하는 예쁜 단어들을 모두 모아 전해도 부족할만큼 너는 충분히 멋있는 사람이야.</p>
+							<p class="common-text--22 pt-5 font-weight-light">
+								본 목소리 우표 내용은 2021년 대한민국 편지쓰기 공모전 수상작에서 각색한 내용과<br class="d-none d-lg-block" />
+								한국우편사업진흥원 직원들의 재능기부로 만들어 졌습니다.
+							</p>
+						</div>
+
+						<div class="next-wrap">
+							<p class="common-text--24 font-weight-medium pb-3 text-left">다음 목소리 우표 듣기</p>
+							<div class="contents-bx">
+								<a href="../remake/voice__display__2.html">
+									<div class="bx">
+										<div class="img">
+											<img src="../assets/images/remake/voice-thumb2.png" alt="img" />
+										</div>
+										<div class="txt">
+											<p class="common-text--20 font-weight-medium text-left">남들은 나를 몰라</p>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- E : Section (음성) -->
+		</main>
+		<!-- E : Main -->
+
+		<? include "../include/footer.html" ?>
+
+		<? include "../include/js.html" ?>
+	</body>
+	<script></script>
+</html>

@@ -1,0 +1,141 @@
+<? include "../include/head.html" ?>
+
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+  <head>
+    <?
+    $P_dp1 = '2';
+    $P_dp2 = '4';
+    $P_dp3 = '1';
+    include "../include/meta.html"
+		?>
+  </head>
+  <body class="sub-body">
+    <!-- S : Header -->
+    <? include "../include/header.html" ?>
+    <!-- E : Header -->
+
+    <!-- S : Main -->
+    <main class="main py-10 py-sm-15 py-lg-30" id="contents">
+      <!-- S : Section (타이틀 영역) -->
+      <section class="section">
+        <div class="container text-center mb-8 mb-lg-14">
+          <h1 class="common-title--h1">
+            <span class="ebook-link-wrap">
+              <span class="text"><?=${nav_.$P_dp1._.$P_dp2}?></span>
+              <a href="http://www.ebookand.com/ebook/stampex/ebook.html" class="ebook-link" target="_blank">카달로그 e-Book 보기</a>
+            </span>
+          </h1>
+        </div>
+      </section>
+      <!-- E : Section (타이틀 영역) -->
+
+      <!-- S : Section (탭 메뉴) -->
+      <? include "../include/sub-nav.html" ?>
+      <!-- E : Section (탭 메뉴) -->
+
+       <!-- S : Section (리스트) -->
+      <section class="section">
+        <div class="container border-0">
+          <!-- S : 검색영역 -->
+          <div class="board-search-03"> <!-- 검색 영역 03 타입 추가 -->
+            <form id="searchForm" method="post" action="<?=$board_list_url;?>">
+              <fieldset>
+                <legend class="hidden">검색</legend>
+
+                <div class="select-box">
+                  <select name="s_field_etc_02" title="search" class="select-type-01" onChange="this.form.submit();">
+                    <option value="">작품구분</option>
+                    <option value="관광인-주제별"<? echo (Trim($s_field_etc_02)=="관광인-주제별")?" selected=\"selected\"":"";?>>관광인-주제별</option>
+                    <option value="그림엽서"<? echo (Trim($s_field_etc_02)=="그림엽서")?" selected=\"selected\"":"";?>>그림엽서</option>
+                    <option value="맥시머필리"<? echo (Trim($s_field_etc_02)=="맥시머필리")?" selected=\"selected\"":"";?>>맥시머필리</option>
+                    <option value="어린이_우취"<? echo (Trim($s_field_etc_02)=="어린이_우취")?" selected=\"selected\"":"";?>>어린이_우취</option>
+                    <option value="열린우취"<? echo (Trim($s_field_etc_02)=="열린우취")?" selected=\"selected\"":"";?>>열린우취</option>
+                    <option value="우편사"<? echo (Trim($s_field_etc_02)=="우편사")?" selected=\"selected\"":"";?>>우편사</option>
+                    <option value="우편엽서류"<? echo (Trim($s_field_etc_02)=="우편엽서류")?" selected=\"selected\"":"";?>>우편엽서류</option>
+                    <option value="전통우취"<? echo (Trim($s_field_etc_02)=="전통우취")?" selected=\"selected\"":"";?>>전통우취</option>
+                    <option value="청소년A"<? echo (Trim($s_field_etc_02)=="청소년A")?" selected=\"selected\"":"";?>>청소년A</option>
+                    <option value="테마틱"<? echo (Trim($s_field_etc_02)=="테마틱")?" selected=\"selected\"":"";?>>테마틱</option>
+                    <option value="한국우표"<? echo (Trim($s_field_etc_02)=="한국우표")?" selected=\"selected\"":"";?>>한국우표</option>
+                    <option value="한틀-관광인"<? echo (Trim($s_field_etc_02)=="한틀-관광인")?" selected=\"selected\"":"";?>>한틀-관광인</option>
+                    <option value="한틀-전통"<? echo (Trim($s_field_etc_02)=="한틀-전통")?" selected=\"selected\"":"";?>>한틀-전통</option>
+                    <option value="한틀-테마틱"<? echo (Trim($s_field_etc_02)=="한틀-테마틱")?" selected=\"selected\"":"";?>>한틀-테마틱</option>
+                    <option value="현대우취"<? echo (Trim($s_field_etc_02)=="현대우취")?" selected=\"selected\"":"";?>>현대우취</option>
+                  </select>
+                  <!--
+                  <select name="s_field_etc_01" title="search" class="select-type-01" onChange="this.form.submit();">
+                    <option value="">상격</option>
+                    <option value="금은"<? echo (Trim($s_field_etc_01)=="금은")?" selected=\"selected\"":"";?>>금은</option>
+                    <option value="대은"<? echo (Trim($s_field_etc_01)=="대은")?" selected=\"selected\"":"";?>>대은</option>
+                    <option value="은"<? echo (Trim($s_field_etc_01)=="은")?" selected=\"selected\"":"";?>>은</option>
+                    <option value="은동"<? echo (Trim($s_field_etc_01)=="은동")?" selected=\"selected\"":"";?>>은동</option>
+                    <option value="동"<? echo (Trim($s_field_etc_01)=="동")?" selected=\"selected\"":"";?>>동</option>
+                    <option value="우수"<? echo (Trim($s_field_etc_01)=="우수")?" selected=\"selected\"":"";?>>우수</option>
+                    <option value="준우수"<? echo (Trim($s_field_etc_01)=="준우수")?" selected=\"selected\"":"";?>>준우수</option>
+                    <option value="장려"<? echo (Trim($s_field_etc_01)=="장려")?" selected=\"selected\"":"";?>>장려</option>
+                    <option value="장관상_으뜸"<? echo (Trim($s_field_etc_01)=="장관상_으뜸")?" selected=\"selected\"":"";?>>장관상_으뜸</option>
+                    <option value="본부장상_으뜸"<? echo (Trim($s_field_etc_01)=="본부장상_으뜸")?" selected=\"selected\"":"";?>>본부장상_으뜸</option>
+                    <option value="본부장상_버금"<? echo (Trim($s_field_etc_01)=="본부장상_버금")?" selected=\"selected\"":"";?>>본부장상_버금</option>
+                    <option value="일반상_버금"<? echo (Trim($s_field_etc_01)=="일반상_버금")?" selected=\"selected\"":"";?>>일반상_버금</option>
+                  </select>-->
+                </div>
+
+                <div class="input-box">
+                  <input type="text" title="검색어" placeholder="검색어를 입력해주세요." class="input-type-01" name="search_text" value="<?=Trim($search_text)?>">
+                  <input type="submit" value="검색" class="btn btn-color-01">
+                </div>
+              </fieldset>
+            </form>
+          </div>
+          <!-- E : 검색영역 -->
+
+
+          <!-- S : 목록 -->
+          <ul class="img_board_list type_display"> <!-- 클래스 type_display 추가 -->
+
+
+
+            <li class="col-xs-6 col-sm-2 col-md-3 col-lg-4">
+              <a href="../archive/awards-view.html" class="wrap">
+                <div class="img_box">
+                  <span class="field_icon"><?=$rs_record["field_etc_02"];?></span> <!-- 작품구분 값 표기 -->
+                  <!--리스트 이미지 기본 사이즈  400 x 480  -->
+                  <span class="img_tag">
+                    <img data-src="" src="" alt="" class="lazyload">
+                  </span>
+                </div>
+              </a>
+
+              <a href="../archive/awards-view.html">
+                <div class="txt_box">
+                  <p class="tit">제목</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <!-- E : 목록 -->
+
+          <!-- S : 페이징 -->
+          <div class="paging-area">
+            <? include "./list_page.php"; ?>
+          </div>
+          <!-- E : 페이징 -->
+        </div>
+      </section>
+      <!-- E : Section (리스트) -->
+    </main>
+    <!-- E : Main -->
+
+    <? include "../include/footer.html" ?>
+
+    <? include "../include/js.html" ?>
+    <script>
+      lazyload();
+      $(document).on('contextmenu', function (e) {
+        e.preventDefault();
+
+        alert('저작권 보호를 위해\n마우스 우클릭은 사용하실 수 없습니다.');
+      });
+    </script>
+  </body>
+</html>

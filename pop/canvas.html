@@ -1,0 +1,111 @@
+<div class="popup popup--lg">
+  <div class="popup-body border-0">
+    <div class="tab tab--box">
+      <div class="tab-header justify-content-center mb-4">
+        <div class="tab-item">
+          <a class="link on">미리캔버스 사용방법</a>
+        </div>
+        <div class="tab-item">
+          <a class="link">에디터 주요 기능 안내</a>
+        </div>
+      </div>
+      <div class="tab-body">
+        <div class="tab-content">
+          <div class="scrollbar-outer canvas-content">
+            <div class="py-10 py-lg-15">
+              <div class="text-center">
+                <h2 class="common-title--h2 text-gray-1">
+                  미리캔버스 에디터에서 시작<br>
+                  → 완성된 디자인을 파일 형태로 제출
+                </h2>
+              </div>
+              
+              <div class="guide-box mt-10">
+                <div class="row align-items-center">
+                  <div class="col-12 col-md-auto">
+                    <h2 class="guide-title">
+                      안내<br>
+                      사항
+                    </h2>
+                  </div>
+                  <div class="col-12 col-md">
+                    <p class="common-text--22 font-weight-light text-gray-3">
+                      <span class="font-weight-bold text-color-5">우표 카드뉴스 주제</span>
+                      <span>‘특별한 날’, ‘우표시간여행’</span>
+                    </p>
+                    <p class="common-text--22 font-weight-light text-gray-3">
+                      <span class="font-weight-bold text-color-5">우표 이미지</span>
+                      <span>한국우표포털이나 네이버 등에서 다운 후 사용 가능</span>
+                    </p>
+                    
+                    <p class="common-text--18 font-weight-light text-gray-3 mt-5 pt-5 border-top">
+                      * 카드뉴스 제작툴은 자유롭게 사용하여 제작 가능
+                    </p>
+                    <p class="font-weight-light text-gray-3">
+                      (본 예시의 미리캔버스는 이미지 무료 편집 에디터로 필수 사용 사항은 아닙니다 .)
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="mt-5 mt-lg-10">
+                <!-- PC -->
+                <div class="d-none d-lg-block">
+                  <img src="../assets/images/remake/p_01.jpg" alt="">
+                </div>
+                <!-- 태블릿 -->
+                <div class="d-none d-md-block d-lg-none">
+                  <img src="../assets/images/remake/t_01.jpg" alt="">
+                </div>
+                <!-- 모바일 -->
+                <div class="d-md-none">
+                  <img src="../assets/images/remake/m_01.jpg" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-content d-none">
+          <div class="scrollbar-outer canvas-content">
+            <div class="py-10 py-lg-15">
+              <div class="text-center">
+                <h2 class="common-title--h2 text-gray-1">
+                  에디터 주요 기능 안내
+                </h2>
+              </div>
+              
+              <div class="mt-5 mt-lg-10">
+                <!-- PC -->
+                <div class="d-none d-lg-block">
+                  <img src="../assets/images/remake/p_02.jpg" alt="">
+                </div>
+                <!-- 태블릿 -->
+                <div class="d-none d-md-block d-lg-none">
+                  <img src="../assets/images/remake/t_02.jpg" alt="">
+                </div>
+                <!-- 모바일 -->
+                <div class="d-md-none">
+                  <img src="../assets/images/remake/m_02.jpg" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  $('.scrollbar-outer').scrollbar();
+  
+  $('.tab-header .tab-item').on('click', function () {
+    var idx = $(this).index();
+    
+    $(this).siblings().children('.link').removeClass('on');
+    $(this).children('.link').addClass('on');
+    
+    $('.tab-body .tab-content').addClass('d-none');
+    $('.tab-body .tab-content').eq(idx).removeClass('d-none');
+  });
+</script>

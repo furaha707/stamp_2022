@@ -1,0 +1,151 @@
+<ul class="skip">
+	<li>
+		<a class="link" href="#contents">본문내용 바로가기</a>
+	</li>
+	<li>
+		<a class="link" href="#header">헤더 바로가기</a>
+	</li>
+	<li>
+		<a class="link" href="#footer">푸터 바로가기</a>
+	</li>
+</ul>
+
+<header id="header" class="header">
+	<div class="header-wrap">
+		<div class="nav-left">
+			<a href="../main/main.html" class="logo d-inline-flex align-items-center h-100" title="메인으로">
+				<img src="../assets/images/main/logo.png" alt="<?=$SS[sitename]?>" class="w-logo" />
+				<img src="../assets/images/main/logo-main.png" alt="<?=$SS[sitename]?>" class="b-logo" />
+			</a>
+			<div class="nav__bg"></div>
+			<!-- <div class="header-shortcuts">
+
+		<div class="depth-img">
+
+            메뉴별 대표 이미지 등록 권장 사이즈 : 400 x 120
+            GNB 각 1 depth 메뉴 마우스 오버 시 인덱스 값 기준으로 변경
+          
+          <img src="../assets/images/sample/depth_1_img.jpg" alt="" class="on">
+          <img src="../assets/images/sample/depth_2_img.jpg" alt="">
+          <img src="../assets/images/sample/depth_3_img.jpg" alt="">
+          <img src="../assets/images/sample/depth_4_img.jpg" alt="">
+          <img src="../assets/images/sample/depth_5_img.jpg" alt="">
+        </div>
+
+					<div class="row text-center mt-6">
+						<div class="col-4">
+							<a href="../etc/event.html" class="link">
+								<img src="../assets/images/main/event_ico_1.svg" alt="" class="icon" />
+								<p class="font-weight-light color-gray-1 mt-2">이벤트</p>
+							</a>
+						</div>
+						<div class="col-4 border-left">
+							<a href="../etc/survey.html" class="link">
+								<img src="../assets/images/main/event_ico_2.svg" alt="" class="icon" />
+								<p class="font-weight-light color-gray-1 mt-2">만족도 조사</p>
+							</a>
+						</div>
+						<div class="col-4 border-left">
+							<a href="../etc/notice.html" class="link">
+								<img src="../assets/images/main/event_ico_3.svg" alt="" class="icon" />
+								<p class="font-weight-light color-gray-1 mt-2">공지사항</p>
+							</a>
+						</div>
+					</div>
+				</div> -->
+
+			<!-- S : navigation -->
+			<nav class="nav">
+				<? include "../include/nav.html" ?>
+			</nav>
+		</div>
+		<!-- E : navigation -->
+
+		<!-- S : Util -->
+		<!-- <div class="header-util">
+			<div class="item">
+				<a href="../main/main.html" class="link">홈</a>
+			</div>
+			<div class="item">
+				<a href="<?=$nav_6_1_href?>" class="link">이벤트 당첨발표</a>
+			</div>
+			<div class="item">
+				<a href="<?=$nav_6_2_href?>" class="link">만족도 조사</a>
+			</div>
+			<div class="item">
+				<a href="javascript:void(0)" class="link link-sitemap">사이트맵</a>
+			</div>
+		</div> -->
+
+		<div class="nav-right">
+			<ul class="util-list">
+				<li class="util-item"><a href="../main/main.html" class="link">홈</a></li>
+				<li class="util-item"><a href="../etc/notice.html" class="link">공지사항</a></li>
+				<li class="util-item"><a href="<?=$nav_6_1_href?>" class="link">이벤트 모음</a></li>
+				<!-- <li class="util-item"><a href="<?=$nav_6_2_href?>" class="link">만족도 조사</a></li> -->
+				<li class="util-item"><a href="javascript:void(0)" class="link link-sitemap">사이트맵</a></li>
+			</ul>
+			<!-- S : Tranlate -->
+			<!-- <div class="header-translate">
+				<div id="google_translate_element" class="hd_lang" style="float: right; position: relative; top: -4px; margin-left: 10px"></div>
+				<script>
+					function googleTranslateElementInit() {
+						new google.translate.TranslateElement(
+							{
+								pageLanguage: 'ko',
+								includedLanguages: 'ko,en,zh-CN,zh-TW,ja',
+								//layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+								autoDisplay: false,
+							},
+							'google_translate_element'
+						);
+					}
+				</script>
+				<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+			</div> -->
+			<!-- E : Tranlate -->
+			<!-- <div class="lang-btn">
+				<img src="../assets/images/main/google-img.png" alt="google" class="g-color" />
+				<img src="../assets/images/main/google-color.png" alt="google" class="g-white" />
+				Translate <i class="xi-angle-down"></i>
+			</div> -->
+			<button type="button" class="nav-all__btn hamburger hamburger--spin" title="전체메뉴 보기">
+				<div class="hamburger-box">
+					<div class="hamburger-inner"></div>
+				</div>
+			</button>
+		</div>
+		<!-- E : Util -->
+
+		<!-- <button type="button" title="사이트맵 열기" class="nav-sitemap">
+			<span class="nav-bar">
+				<span></span>
+				<span></span>
+				<span></span>
+			</span>
+		</button> -->
+
+		<button class="nav-mobile__btn" type="button">
+			<i class="xi-bars"></i>
+		</button>
+	</div>
+
+	<? include "../include/sitemap.html" ?>
+</header>
+
+<!-- S : mobile navigation -->
+<? include "../include/aside.html" ?>
+<!-- E : mobile navigation -->
+
+<!-- S : loading image -->
+<div class="loading-image">
+	<img src="../assets/images/icon/loading.svg" alt="" />
+</div>
+<!-- E : loading image -->
+
+<script>
+	function siteClose() {
+		let siteMap = $('.sitemap');
+		siteMap.removeClass('on');
+	}
+</script>

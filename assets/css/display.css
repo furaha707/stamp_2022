@@ -1,0 +1,109 @@
+/* Made by Masstige */
+.bullet-list-box {
+  padding: 1em 0;
+  border-top: 2px solid #333;
+  border-bottom: 1px solid #c1c1c1;
+}
+
+.display-view {
+  text-align: center;
+}
+.display-view__img {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+.display-view__img::after {
+  content: "";
+  display: block;
+  padding-bottom: 118.4210526316%;
+}
+.display-view__img > img {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  height: auto;
+  min-width: 1000%;
+  min-height: 1000%;
+  max-width: none;
+  max-height: none;
+  -webkit-transform: translate(-50%, -50%) scale(0.1);
+          transform: translate(-50%, -50%) scale(0.1);
+}
+
+.display-swiper {
+  position: relative;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.display-swiper .swiper-navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.display-swiper .swiper-navigation .bar {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 1px;
+          flex: 0 0 1px;
+  width: 1px;
+  height: 0.875em;
+  margin: 0 1.625em;
+  background-color: #3b3b3b;
+}
+
+.display-swiper-prev,
+.display-swiper-next {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1em;
+  letter-spacing: -0.02em;
+  color: #3b3b3b;
+}
+
+.display-swiper-prev::before {
+  content: "";
+  display: block;
+  width: 2.5em;
+  height: 2.5em;
+  margin-right: 1.25em;
+  background-image: url(../images/icon/display_swiper_prev.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+@media screen and (max-width: 1024px) {
+  .display-swiper-prev::before {
+    background-image: url(../images/icon/display_swiper_prev-m.png);
+  }
+}
+
+.display-swiper-next::after {
+  content: "";
+  display: block;
+  width: 2.5em;
+  height: 2.5em;
+  margin-left: 1.25em;
+  background-image: url(../images/icon/display_swiper_next.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+@media screen and (max-width: 1024px) {
+  .display-swiper-next::after {
+    background-image: url(../images/icon/display_swiper_next-m.png);
+  }
+}
+/*# sourceMappingURL=display.css.map */

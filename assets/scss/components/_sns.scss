@@ -1,0 +1,111 @@
+@charset "UTF-8";
+
+.sns-link {
+  width: em(50);
+  max-width: 100%;
+  height: em(50);
+  border: 1px solid #ddd;
+  background: {
+    color: #fff;
+    repeat: no-repeat;
+    position: center;
+  }
+  
+  &::after {
+    content: '';
+    display: block;
+    padding-bottom: 100%;
+  }
+  
+  &.facebook {
+    background: {
+      image: url(../images/icon/facebook.png);
+      size: em(10) em(22);
+    };
+    
+    &:hover {
+      background-image: url(../images/icon/facebook_on.png);
+      background-color: #4267b2;
+      border-color: #4267b2;
+    }
+    
+    @include mdq-max(lg){
+      background-image: url(../images/icon/facebook_on-m.png);
+      background-color: #4267b2;
+      border-color: #4267b2;
+      
+      &:hover {
+        background-image: url(../images/icon/facebook_on-m.png);
+      }
+    }
+  }
+  
+  &.kakao {
+    background: {
+      image: url(../images/icon/kakao.png);
+      size: em(28) em(26);
+    };
+    
+    &:hover {
+      background-image: url(../images/icon/kakao_on.png);
+      background-color: #fae300;
+      border-color: #fae300;
+    }
+    
+    @include mdq-max(lg){
+      background-image: url(../images/icon/kakao_on-m.png);
+      background-color: #fae300;
+      border-color: #fae300;
+      
+      &:hover {
+        background-image: url(../images/icon/kakao_on-m.png);
+      }
+    }
+  }
+  
+  &.blog {
+    background: {
+      image: url(../images/icon/blog.png);
+      size: em(26) em(24);
+    };
+    
+    &:hover {
+      background-image: url(../images/icon/blog_on.png);
+      background-color: #00c300;
+      border-color: #00c300;
+    }
+    
+    @include mdq-max(lg){
+      background-image: url(../images/icon/blog_on-m.png);
+      background-color: #00c300;
+      border-color: #00c300;
+      
+      &:hover {
+        background-image: url(../images/icon/blog_on-m.png);
+      }
+    }
+  }
+  
+  &.link {
+    background: {
+      image: url(../images/icon/link.png);
+      size: em(20) em(20);
+    };
+    
+    &:hover {
+      background-image: url(../images/icon/link_on.png);
+      background-color: #e62411;
+      border-color: #e62411;
+    }
+    
+    @include mdq-max(lg){
+      background-image: url(../images/icon/link_on-m.png);
+      background-color: #e62411;
+      border-color: #e62411;
+      
+      &:hover {
+        background-image: url(../images/icon/link_on-m.png);
+      }
+    }
+  }
+}

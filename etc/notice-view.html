@@ -1,0 +1,110 @@
+<? include "../include/head.html" ?>
+
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+	<head>
+		<?
+    $P_dp1 = '6';
+    $P_dp2 = '3';
+    include "../include/meta.html"
+		?>
+	</head>
+	<body class="sub-body pt-0">
+		<!-- S : Header -->
+		<? include "../include/header.html" ?>
+		<!-- E : Header -->
+
+		<!-- S : Main -->
+		<main class="main py-10 py-sm-15 py-lg-30" id="contents">
+			<!-- S : Section (타이틀 영역) -->
+			<section class="section">
+				<div class="container border-0 text-center mt-10 mb-8 mb-lg-14">
+					<h1 class="common-title--h1 font-weight-bold"><?=${nav_.$P_dp1._.$P_dp2}?></h1>
+				</div>
+			</section>
+			<!-- E : Section (타이틀 영역) -->
+
+			<!-- S : Section (리스트) -->
+			<section class="section">
+				<div class="container border-0">
+					<!-- S : 상세 내용 -->
+					<table class="table-view-01 txt-mt">
+						<caption>
+							<span class="hidden">상세 입니다.</span>
+						</caption>
+						<colgroup>
+							<col width="90px" />
+							<col width="*" />
+						</colgroup>
+						<tbody>
+							<tr>
+								<td colspan="2" class="clearfix tit_box">
+									<p class="tit">2022 대한민국 우표전시회 이벤트 당첨자 발표 안내 (2차)</p>
+									<p class="tbl_detail_span mt_05">
+										<span class="name">작성자</span>
+										<span class="date">2022.02.05</span>
+										<!--   <span class="check_01">조회:51</span>  -->
+									</p>
+								</td>
+							</tr>
+							<tr>
+								<td>첨부파일</td>
+								<td>
+									<p class="addfile_txt">첨부파일 없음</p>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<div class="board-box">
+										<?=$rs_edit["content"];?>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<iframe width="0" height="0" name="c_dowmload" style="display: none"></iframe>
+					<!-- E : 상세 내용 -->
+
+					<!-- S : 버튼 영역 -->
+					<div class="mt_40 text_right board_view_btn_box">
+						<a href="<?=$board_list_url;?><?=$board_list_basic_item;?>" class="btn-type-02">목록</a>
+					</div>
+					<!-- E : 버튼 영역 -->
+
+					<!-- S : 이전글/다음글 -->
+					<div class="border-list-type mt_30">
+						<ul>
+							<li>
+								<a href="javascript:;void(0);" title="이전글로 이동" style="cursor: default">
+									<a href="notice-view.html<?=$board_list_basic_item;?>&amp;uid=<?=$rs_pre["uid"];?>" title="이전글로 이동">
+
+									<div class="clearfix">
+										<div class="left list-up-bg list-title">이전</div>
+										<div class="left w-con">2022 대한민국 우표전시회 이벤트 당첨자 발표 안내 (1차)</div>
+									</div>
+								</a>
+							</li>
+							<li class="border-none">
+								<a href="javascript:;void(0);" title="다음글로 이동" style="cursor: default">
+									<a href="notice-view.html<?=$board_list_basic_item;?>&amp;uid=<?=$rs_next["uid"];?>" title="다음글로 이동">
+
+									<div class="clearfix">
+										<div class="left list-down-bg list-title">다음</div>
+										<div class="left w-con">2022 대한민국 우표전시회 이벤트 당첨자 발표 안내 (1차)</div>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<!-- E : 이전글/다음글 -->
+				</div>
+			</section>
+			<!-- E : Section (리스트) -->
+		</main>
+		<!-- E : Main -->
+
+		<? include "../include/footer.html" ?>
+
+		<? include "../include/js.html" ?>
+	</body>
+</html>

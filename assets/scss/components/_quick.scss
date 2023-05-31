@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+.quick {
+	position: fixed;
+	bottom: em(20);
+	right: em(20);
+	z-index: 999;
+
+	.btn-top {
+		display: block;
+		width: em(40);
+		height: em(40);
+		border-radius: 100%;
+		background: {
+			color: #474038;
+			image: url(../images/main/btn_top_arr.png);
+			repeat: no-repeat;
+			position: center;
+			size: em(15) auto;
+		}
+
+		@include mdq-max(lg) {
+			background-image: url(../images/main/btn_top_arr-m.png);
+		}
+	}
+}

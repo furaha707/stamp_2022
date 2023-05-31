@@ -1,0 +1,68 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+	<head>
+		<?
+    $P_dp1 = '1';
+    $P_dp2 = '1';
+    $P_dp3 = '2';
+    include "../include/meta.html"
+		?>
+		<link rel="stylesheet" href="../assets/css/about.min.css"></link>
+	</head>
+	<body class="sub-body">
+		<!-- S : Header -->
+		<? include "../include/header.html" ?>
+		<!-- E : Header -->
+
+		<!-- S : Main -->
+		<main class="main py-10 py-sm-15 py-lg-30" id="contents">
+			<!-- S : Section (타이틀 영역) -->
+			<section class="section">
+				<div class="container text-center mb-8 mb-lg-14">
+					<h1 class="common-title--h1"><?=${nav_.$P_dp1._.$P_dp2}?></h1>
+				</div>
+			</section>
+			<!-- E : Section (타이틀 영역) -->
+
+			<!-- S : Section (탭 메뉴) -->
+			<? include "../include/sub-nav.html" ?>
+			<!-- E : Section (탭 메뉴) -->
+
+			<!-- S : Section -->
+			<section class="section" style="background-color: #e3f4fc; padding:3rem 0;">
+				<div class="container wowrap">
+					<div class="about-txt mb-10 mb-lg-20 wow fadeInUp">
+						<p class="tit">한국우취연합 회장 축하메시지</p>
+					</div>
+					<div class="row wow fadeInUp">
+						<div class="col-12 col-lg-5 text-center text-lg-left">
+							<img src="../assets/images/about/ceo-img.png" alt="회장님사진" />
+						</div>
+						<div class="col-12 col-lg-7 mt-10 mt-lg-0">
+							<div class="inner pl-0 pl-lg-10">
+								<p class="text mb-10">전국의 우취인 여러분 안녕하십니까 ? 한국우취연합 회장 라제안입니다.<br> 먼저 2022년도 대한민국우표전시회에 우수한 많은 작품을 출품해 주신 우취 애호가 여러분에게 진심으로 감사의 말씀을 전합니다. 특히 우수한 작품을 출품하여 수상하신 여러분께도 축하의 말씀을 드립니다.<br> 또한 본 전시회의 개최를 위하여 물심양면으로 지원해주시는 손승현 우정사업본부장님과 우정 관계자 여러분, 그리고 전시회를 차질 없이 준비해주시는 민재석 한국우편사업진흥원 원장님께도 진심으로 감사의 말씀을 드립니다.</p>
+
+								<p class="text">코로나19 팬데믹으로 인터넷 온라인으로 전시회를 개최하게 된 지도 벌써 3년여가 경과되었습니다.<br> 그럼에도 우취인 한 분 한 분이 열정을 쏟아 심혈을 기울여 우수한 작품을 출품해 주셔서 그동안 전시회를 훌륭하게 개최하게 되었음을 감사드립니다.<br> 올해 또한 전통우취 부문을 비롯한 14개 분야와 어린이 부문에서 162개 작품, 524틀이 출품되어 어느 해 보다도 볼거리가 많고 풍성하다고 자부합니다.<br> 2022년도는 우취계에 매우 뜻깊은 한 해가 되었습니다. 우정사업의 제반 환경이 날로 어려워져 가는 중에도 우정사업본부에서 PHILAKOREA 2024 세계우표전시회 개최 지원을 약속해 주셔서 국제우취연맹(FIP)에 후원 신청을 하였으며, 2022.8.9 자카르타 총회에서 FIP 신임 회장으로 선출된 프라콥(태국)으로부터 2024 세계우표전시회를 적극적으로 지원해 주겠다는 약속을 받았습니다. 이제 우취인들은 성공적인 개최를 위하여 모두가 하나되어 노력하여야 할 것입니다.</p>
+							</div>
+						</div>
+					</div>
+					<div class="inner mt-5 wow fadeInUp">
+							<p class="text">대한민국전시회도 내년부터는 접근성이 좋고 쾌적한 환경에서 개최하게 되었으니 우취인 모두가 한자리에 모여 작품도 전시하고 정보도 교환하는 만남의 날 행사와 우취지식 함양을 위한 세미나도 개최할 것입니다. 우표전시회를 통해 한국우표의 역사를 알리고, 교육적·문화적 가치를 소개하는 행사를 개최하여 국민들이 보다 더 쉽고 재미있게 우표를 이해하고 즐길 수 있도록 노력하겠습니다. 앞으로도 우표가 작지만 큰 문화콘텐츠로 국민으로부터 계속 사랑받을 수 있도록 재미있는 소재를 발굴하여 전시회를 개최할 것을 약속드립니다. 끝으로 이번 전시회 개최를 위하여 애쓰신 우정사업본부 및 한국우편사업진흥원 관계자 여러분께 다시 한번 깊은 감사의 말씀을 드리며, 우취인 여러분 모두의 건강과 행운, 발전을 기원합니다. 감사합니다.</p>
+							<div class="about-txt mt-3">
+								<p class="date">2022년 9월 22일</p>
+								<p class="name"><b>한국우취연합 회장</b> 라 제 안</p>
+							</div>
+            </div>
+				</div>
+			</section>
+			<!-- E : Section -->
+		</main>
+		<!-- E : Main -->
+
+		<? include "../include/footer.html" ?>
+
+		<? include "../include/js.html" ?>
+	</body>
+</html>
+

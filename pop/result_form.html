@@ -1,0 +1,198 @@
+<?
+	$home = str_replace("\\", "/",$_SERVER["DOCUMENT_ROOT"]);
+	include $home."/include/check.php";
+?>
+<?
+  $tablename=escape_string($_REQUEST["eventtype"]);
+
+    switch( $tablename ){
+        case 'tb_attendance' :
+          $eventimg = "../assets/images/popup/event2.jpg";
+          $eventname = "매일매일 출석체크";
+        break;
+        case 'tb_present1' :
+          $eventimg = "../assets/images/popup/event3.jpg";
+          $eventname = "대한민국 우표를 응원해주세요";
+        break;
+        case 'tb_zep' :
+          $eventimg = "../assets/images/popup/event5-3.jpg";
+          $eventname = "신나는 우표 메타버스 이벤트 Event3";
+        break;
+        case 'tb_metaquiz' :
+          $eventimg = "../assets/images/popup/event5-2.jpg";
+          $eventname = "신나는 우표 메타버스 이벤트 Event2";
+        break;
+        case 'tb_present2' :
+          $eventimg = "../assets/images/popup/event4.jpg";
+          $eventname = "'우표를 만드는 사람들'이 선정한 우표가 아닌 것은?";
+        break;
+        case 'tb_onoff' :
+          $eventimg = "../assets/images/popup/event6.jpg";
+          $eventname = "ON&OFF 스탬프투어";
+        break;
+        case 'tb_vote' :
+          $eventimg = "../assets/images/popup/event1.jpg";
+          $eventname = "재해석 우표 NFT 대국민투표";
+        break;
+    }
+?>
+
+<div class="popup--result result--3-1">
+  <div>
+    <img src="../assets/images/sub/visual_event.jpg" alt="배너">
+  </div>
+  <div>
+  <img src="<?=$eventimg?>" alt="배너">
+   <!--
+    1) 재해석 우표 NFT 대국민투표 <img src="../assets/images/popup/event1.jpg" alt="배너">
+    2) 매일매일 출석체크 이벤트 <img src="../assets/images/popup/event2.jpg" alt="배너">
+    3) 대한민국 우표를 응원해주세요 <img src="../assets/images/popup/event3.jpg" alt="배너">
+    4) '우표를 만드는 사람들'이 선정한 우표가 아닌 것은? <img src="../assets/images/popup/event4.jpg" alt="배너">
+    5) 신나는 우표 메타버스 이벤트
+	Event1	<img src="../assets/images/popup/event5-1.jpg" alt="배너">
+	Event2	<img src="../assets/images/popup/event5-2.jpg" alt="배너">
+	Event3	<img src="../assets/images/popup/event5-3.jpg" alt="배너">
+    6) ON&OFF 스탬프투어 <img src="../assets/images/popup/event6.jpg" alt="배너">
+    7) 당신의 인생우표는? <img src="../assets/images/popup/event7.jpg" alt="배너">
+    8) 인생우표를 찾아서 <img src="../assets/images/popup/event8.jpg" alt="배너">
+   -->
+  </div>
+  <div class="result-inner">
+    <div class="popup-body border-top-0">
+          <button type="button" class="popup-close" onclick="$.magnificPopup.close()"></button>
+      <div class="winner">
+        <div class="winner-group" id="eventresult0">
+          <div class="winner-box p-0">
+            <div class="text-center common-text--22 font-weight-medium mb-5">
+             <!-- .event-name에 클릭한 버튼의 이벤트 명이 들어가도록 부탁드립니다 -->
+               <span class="event-name"><?=$eventname?></span><br class="d-none d-lg-block">이벤트 응모시 등록했던
+               <br class="d-none d-lg-block">성함과 연락처를 입력해주세요.
+            </div>
+					  <form name="theForm" id="theForm" method="post" autocomplete="off">
+              <input  type="hidden" name="tablename" id="poptablename" value="<?=$tablename?>">
+              <table class="table-form-01 type_b">
+              <colgroup>
+                <col width="20%">
+                <col width="80%">
+              </colgroup>
+                <tr>
+                  <th class="align-middle">성함</th>
+                  <td><input type="text" id="uname" name="uname" class="input_for" /></td>
+                </tr>
+                <tr>
+                  <th class="align-middle">연락처</th>
+                  <td><input type="tel" id="utel" name="utel" class="input_for" onkeyup="if(isNaN(this.value)) {alert('숫자만 입력해 주세요.');this.value=''};" /></td>
+                </tr>
+              </table>
+               <div class="text-center mt-5">
+                <button type="button" class="btn-type-01 py-3 px-12" onclick="form_check_pop()">확인</button>
+               </div>
+            </form>
+          </div>
+        </div>
+         <!-- S : 당첨된 경우 -->
+         <div class="winner-group" id="eventresult1" style="display:none;">
+          <div class="winner-box">
+            <div class="text-center common-text--22 font-weight-medium mb-5">
+              <p>이벤트 당첨을 축하드립니다!</p>
+              <!-- .winner-prize 에 당첨된 상품명이 들어가도록 부탁드립니다 -->
+              <p><span class="winner-prize eventresult_goods"></span>에</p>
+              <p>당첨되었습니다!</p>
+            </div>
+            <ul class="bullet-list bullet-list--txt bullet-type--js">
+              <li data-bullet="※" class="item">배송이 필요한 경품에 당첨되신 분들께는 카카오톡 메세지 수신 및 발신이 안정화 된 이후에 발송 정보 설문 알림톡을 발송 드릴 예정입니다.</li>
+              <li data-bullet="※" class="item">2022.10.31.까지 경품 배송을 위하여 설문에 정확한 정보를 입력해주세요.</li>
+              <li data-bullet="※" class="item">제출한 정보가 정확하지 않거나 제출하지 않은 경우에는 이벤트 당첨이 취소됩니다.</li>
+              <li data-bullet="※" class="item">경품은 11월 말에 일괄 발송될 예정입니다.</li>
+            </ul>
+          </div>
+          <div class="text-center my-5">
+           <button type="button" class="btn-type-01 py-3 px-12" onclick="$.magnificPopup.close()">확인</button>
+          </div>
+         </div>
+         <div class="winner-group" id="eventresult1_1" style="display:none;">
+          <div class="winner-box">
+            <div class="text-center common-text--22 font-weight-medium mb-5">
+              <p>이벤트 당첨을 축하드립니다!</p>
+              <!-- .winner-prize 에 당첨된 상품명이 들어가도록 부탁드립니다 -->
+              <p><span class="winner-prize eventresult_goods"></span>에</p>
+              <p>당첨되었습니다!</p>
+            </div>
+            <ul class="bullet-list bullet-list--txt bullet-type--js">
+              <li data-bullet="※" class="item">배송이 필요한 경품에 당첨되신 분들께는 카카오톡 알림톡 및 문자메세지를 통해 발송 정보 설문 알림톡을 11월 7~8일에 발송드릴 예정입니다.</li>
+              <li data-bullet="※" class="item">2022. 11. 14.까지 경품 배송을 위하여 설문에 정확한 정보를 입력해주세요.</li>
+              <li data-bullet="※" class="item">제출한 정보가 정확하지 않거나 제출하지 않은 경우에는 이벤트 당첨이 취소됩니다.</li>
+              <li data-bullet="※" class="item">경품은 11월 말에 일괄 발송될 예정입니다.</li>
+            </ul>
+          </div>
+          <div class="text-center my-5">
+           <button type="button" class="btn-type-01 py-3 px-12" onclick="$.magnificPopup.close()">확인</button>
+          </div>
+         </div>
+         <!-- E : 당첨된 경우 -->
+         <!-- S : 당첨이 안 된 경우 -->
+         <div class="winner-group" id="eventresult2" style="display:none;">
+          <div class="winner-box">
+            <div class="text-center common-text--22 font-weight-medium mb-5">
+              <p>아쉽게도 당첨되지 않았습니다.</p>
+              <br>
+              <p class="des">2022 대한민국 우표전시회에 관심을 가지고<br class="d-none d-lg-block"> 이벤트에 응모해주셔서 감사합니다.</p>
+            </div>
+          </div>
+          <div class="text-center my-5">
+           <button type="button" class="btn-type-01 py-3 px-12" onclick="$.magnificPopup.close()">확인</button>
+          </div>
+        </div>
+         <!-- E : 당첨이 안 된 경우 -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="/js/space_check.js"></script>
+<script>
+
+      function form_check_pop() {
+        var result="";
+        if (isFieldBlank(theForm.uname))	{
+          alert("이름을 입력해주세요.");
+          theForm.uname.focus();
+          return(false);
+        }
+
+        if (numValue(theForm.utel))	{
+          alert("연락처를 숫자로만 입력해주세요.");
+          theForm.utel.focus();
+          return(false);
+        }
+
+        var formData = $("#theForm").serialize();
+
+        var tablename = $('#poptablename').val();
+
+        $.ajax({
+          url : '/2022/pop/result_form_proc.php',
+          type : "post",
+          data : formData ,
+          dataType : 'JSON',
+          success:function(data) {
+            if(data.code=="0"){
+              $('#eventresult0').hide();
+              $('#eventresult1').hide();
+              $('#eventresult2').show();
+            }else{
+              $('#eventresult0').hide();
+              $('.eventresult_goods').html(data.goods);
+              $('#eventresult2').hide();
+              if(tablename == "tb_present2" || tablename == "tb_onoff" || tablename == "tb_vote"){
+                $('#eventresult1_1').show();
+              }else{
+                $('#eventresult1').show();
+              }
+            }
+          }
+        });
+        return(false);
+      }
+
+</script>

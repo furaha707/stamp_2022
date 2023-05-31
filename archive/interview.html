@@ -1,0 +1,56 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+	<head>
+		<?
+    $P_dp1 = '2';
+    $P_dp2 = '1';
+    include "../include/meta.html"
+		?>
+	</head>
+	<body class="sub-body">
+		<!-- S : Header -->
+		<? include "../include/header.html" ?>
+		<!-- E : Header -->
+
+		<!-- S : Main -->
+		<main class="main py-10 py-sm-15 py-lg-30" id="contents">
+			<!-- S : Section (타이틀 영역) -->
+			<section class="section">
+				<div class="container text-center mb-8 mb-lg-14">
+					<h1 class="common-title--h1">
+						<span class="ebook-link-wrap">
+							<span class="text"><?=${nav_.$P_dp1._.$P_dp2}?></span>
+							<a href="http://www.ebookand.com/ebook/stampex/ebook.html" class="ebook-link" target="_blank">카달로그 e-Book 보기</a>
+						</span>
+					</h1>
+				</div>
+			</section>
+			<!-- E : Section (타이틀 영역) -->
+			<section class="section">
+				<div class="container px-xl-30 border-0">
+					<div class="mb-10 mb-lg-16 text-center">
+						<h1 class="common-title--h2 text-gray-1 font-weight-bold"><?=${nav_.$P_dp1._.$P_dp2._.$P_dp3}?></h1>
+					</div>
+					<div class="embed-responsive embed-responsive-16by9">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/1eu2i0x7u4Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+					<div class="row justify-content-center text-center mt-13">
+						<div class="col-12 col-sm-auto py-2 text-center">
+							<a href="../archive/excellent-view.html" class="btn-type-01 btn-gradient-02">국무총리상 작품 관람</a>
+						</div>
+
+						<div class="col-12 col-sm-auto py-2 text-center">
+							<a href="../pop/share.html" class="btn-type-02 d-inline-block py-4 py-md-5 px-10 px-md-15 popup-link">SNS 공유하기 <i class="xi-angle-right"></i></a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<!-- E : Main -->
+
+		<? include "../include/footer.html" ?>
+
+		<? include "../include/js.html" ?>
+	</body>
+</html>

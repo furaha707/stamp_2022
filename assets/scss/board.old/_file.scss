@@ -1,0 +1,101 @@
+@charset "UTF-8";
+
+.file_box {
+  $btn: rem(126);
+  position: relative;
+  padding-right: $btn + rem(16);
+  
+  & + .file_box {
+    margin-top: em(14);
+  }
+  
+  .text_01 {
+    position: absolute;
+    top: 2px;
+    left: 0;
+  }
+  
+  p {
+    border: 1px solid #f2f2f2;
+    line-height: $input-height;
+    height: $input-height;
+    overflow: hidden;
+    padding: 0 10px;
+    background-color: #f2f2f2;
+  }
+  
+  .btn_type_file {
+    display: block;
+    width: $btn;
+    height: $input-height;
+    line-height: $input-height;
+    color: #333;
+    font-weight: 300;
+    text-align: center;
+    position: absolute;
+    font-size: em(20);
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    border: 1px solid #aaa;
+    
+    @include mdq-max(md){
+      font-size: em(18);
+    }
+    
+    @include mdq-max(sm){
+      font-size: em(16);
+    }
+  }
+  
+  input {
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%; //calc($btn + 2px);
+    height: $input-height;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    cursor: pointer;
+    -webkit-appearance: none;
+  }
+}
+
+// file 다중선택 (커스텀)
+.file-label {
+  display: inline-block;
+  position: relative;
+  $btn: rem(120);
+  
+  input[type='file'] {
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: $btn;
+    height: $input-height;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    cursor: pointer;
+    -webkit-appearance: none;
+  }
+  
+  &__btn {
+    display: block;
+    width: $btn;
+    height: $input-height;
+    line-height: $input-height;
+    text-align: center;
+    background: $gray-3;
+    color: $white;
+  }
+}
+
+#file-preview {
+  &.file-add {
+    .file-preview__txt {
+      display: none;
+    }
+  }
+}

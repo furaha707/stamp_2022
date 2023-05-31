@@ -1,0 +1,167 @@
+<? include "../include/head.html" ?>
+<?
+	include $home."/include/limit_txt.php";
+	(isset($_REQUEST["search_kind"]))? $search_kind=$_REQUEST["search_kind"]:$search_kind="";
+	(isset($_REQUEST["search_text"]))? $search_text=$_REQUEST["search_text"]:$search_text="";
+?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+  <head>
+    <?
+    $P_dp1 = '6';
+    $P_dp2 = '3';
+    include "../include/meta.html"
+		?>
+  </head>
+  <body class="sub-body pt-0">
+    <!-- S : Header -->
+    <? include "../include/header.html" ?>        
+    <!-- E : Header -->
+    
+    <!-- S : Main -->
+    <main class="main py-10 py-sm-15 py-lg-30" id="contents" style="min-height:500px;">
+      <!-- S : Section (타이틀 영역) -->
+      <section class="section">
+        <div class="container border-0 text-center mt-10 mb-8 mb-lg-14">
+          <h1 class="common-title--h1 font-weight-bold"><?=${nav_.$P_dp1._.$P_dp2}?></h1>
+        </div>
+      </section>
+      <!-- E : Section (타이틀 영역) -->
+<?
+        $search_string="";
+        
+        if (!empty($search_kind) && !empty($search_text)) {
+            $search_string .= " and ".CheckWord($search_kind)." like '%".CheckWord($search_text)."%'";
+        }
+        else {
+            $search_kind="";
+            $search_text="";
+        }
+        
+        $gotopage = (Trim($_REQUEST["gotopage"])!="")?$_REQUEST["gotopage"]:1; 
+        
+        $board_list_url="notice.html";
+        $board_list_basic_item="?search_kind=".urlencode($search_kind)."&amp;search_text=".urlencode($search_text);
+        
+        $sql= "select uid from tb_notice where viewtype='Y' ".$search_string;
+        
+        $rs_count = mysqli_query($Conn,$sql);												
+                                
+        $total_count = mysqli_num_rows($rs_count); 	// 전체 레코드 개수
+        
+        $ipp = 10;	// 한페이지 당 레코드 개수
+        
+        $nowpage = $gotopage;  // 현재 페이지
+        
+        $page_count = $total_count-($ipp * ($nowpage-1)); // 출력 페이지 첫 게시물 번호
+        
+        $total_page = ceil($total_count / $ipp);	// 전체 페이지 개수
+        
+        $offset = $ipp*($nowpage-1);				// 게시물 시작 번호
+        
+        $sql = "select * from tb_notice where viewtype='Y' ".$search_string." order by topview asc,uid desc limit $offset, $ipp";
+        
+        $rs_row = mysqli_query($Conn,$sql);
+?>       
+      <!-- S : Section (리스트) -->
+      <section class="section">
+        <div class="container border-0">
+          
+          <!-- S : 목록 -->
+          <table class="table_board_for type_d">
+            <caption><span class="hidden">일반 게시판  입니다.</span></caption>
+            <colgroup>
+              <col width="8%">
+              <col width="*%;">
+              <col width="8%;">
+              <col width="15%;">
+              <col width="8%">
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col">
+                  NO
+                </th>
+                <th scope="col">
+                  제목
+                </th>
+                <th scope="col">
+                  파일
+                </th>
+                <th scope="col">
+                  작성자
+                </th>
+                <th scope="col">
+                  작성일
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+        <?
+            if ($total_count<>0) {
+                $i=1;
+                while(($rs_record=mysqli_fetch_array($rs_row)) && ($i <= $ipp)) {
+        ?>                 
+              <tr class="">
+                <td><? echo ($rs_record["topview"]=="Y")?"<i class=\"xi-volume-up\" title=\"공지\"></i>":($page_count-($i-1));?></td>
+                <td class="text_left">
+                  <a href="notice-view.html<?=$board_list_basic_item;?>&amp;gotopage=<?=$gotopage;?>&amp;uid=<?=$rs_record["uid"];?>"><?=string_limit($rs_record["title"],90);?></a>
+                </td>
+                <td>
+                  <? if (!empty($rs_record["fileadd_name"])) {?>
+                    <a href="javascript:;void(0);" onClick="window.open('download.php?uid=<?=Trim($rs_record["uid"]);?>&board_name=notice', 'c_dowmload','width=10,height=10,marginwidth=0,marginheight=0,resizable=0,scrollbars=no');"><i class="xi-file-download"></i></a>
+                    <? }else{ ?>
+                     -
+                  <? } ?>
+                </td>
+                <td><?=$rs_record["uname"];?></td>
+                <td><?=date("Y-m-d",strtotime($rs_record["reg_date"]))?></td>
+              </tr>
+        <?
+                    $i++;
+                }
+            }
+            else {
+        ?>
+              <!-- S : 등록된 게시물이 없는 경우 노출 -->
+              <tr>
+                <td class="no_data" colspan="5">등록된 게시물이 없습니다.</td>
+              </tr>
+        <? } ?>                              
+            </tbody>
+          </table><iframe width="0" height="0" name="c_dowmload" style="display:none;"></iframe>
+          <!-- S : 목록 -->
+          
+          <!-- S : 페이징 -->
+          <div class="paging-area">
+            <? include "./list_page.php"; ?>
+            </ul>
+          </div>
+          <!-- E : 페이징 -->
+          
+          <!-- S : 검색영역 -->
+          <div class="board-search-01">
+            <form id="searchForm" method="post" action="<?=$board_list_url;?>">
+              <fieldset>
+                <legend class="hidden">검색</legend>
+                <select name="search_kind" title="search" class="select-type-01">
+                  <option value="title"<?if (Trim($search_kind)=="title") {?> selected="selected"<?}?>>제목</option>
+                  <option value="content"<?if (Trim($search_kind)=="content") {?> selected="selected"<?}?>>내용</option>
+                </select>
+                <input type="text" title="검색어" name="search_text" value="<?=Trim($search_text)?>" class="input-type-01">
+                <input type="submit" value="검색" class="btn p-0 rounded-0 btn-color-01">
+              </fieldset>
+            </form>
+          </div>
+          <!-- E : 검색영역 -->
+        </div>
+      </section>
+      <!-- E : Section (리스트) -->
+    </main>
+    <!-- E : Main -->
+    
+    <? include "../include/footer.html" ?>
+    
+    <? include "../include/js.html" ?>
+  </body>
+</html>

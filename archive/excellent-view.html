@@ -1,0 +1,86 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+	<head>
+		<?
+    $P_dp1 = '2';
+    $P_dp2 = '2';
+    $P_dp3 = '2';
+    include "../include/meta.html"
+		?>
+		<link rel="stylesheet" href="../assets/css/display.min.css" />
+	</head>
+	<body class="sub-body">
+		<!-- S : Header -->
+		<? include "../include/header.html" ?>
+		<!-- E : Header -->
+
+		<!-- S : Main -->
+		<main class="main py-10 py-sm-15 py-lg-30" id="contents">
+			<!-- S : Section (타이틀 영역) -->
+			<section class="section">
+				<div class="container text-center mb-8 mb-lg-14">
+					<h1 class="common-title--h1"><?=${nav_.$P_dp1._.$P_dp2}?></h1>
+				</div>
+			</section>
+			<!-- E : Section (타이틀 영역) -->
+
+			<!-- S : Section (뷰) -->
+			<section class="section">
+				<div class="container border-top-0">
+					<div class="display-view">
+						<span class="field-icon">한국우표</span>
+						<p class="common-text--28 text-gray-1 mt-3">[ 강태효 ] 도자기</p>
+
+						<!-- S : 작품 슬라이드 -->
+						<div class="display-swiper mt-10">
+							<div class="mt-2">
+								<img data-src="../assets/images/archive/example-img.jpg" src="../assets/images/archive/example-img.jpg" alt="" class="lazyload" />
+							</div>
+
+							<div class="mt-2">
+								<img data-src="../assets/images/archive/example-img.jpg" src="../assets/images/archive/example-img.jpg" alt="" class="lazyload" />
+							</div>
+
+							<div class="swiper-navigation mt-10 mt-lg-25">
+								<button type="button" class="display-swiper-prev" onclick="location.href='excellent-view.html?search_kind=&amp;search_text=&amp;gotopage=1&amp;uid=22';">이전작품</button>
+
+								<span class="bar"></span>
+								<button type="button" class="display-swiper-next" onclick="alert('다음 작품이 없습니다.\n마지막 작품입니다.');">다음작품</button>
+							</div>
+						</div>
+
+						<!-- S : 버튼영역 -->
+						<div class="text-center mt-10 mt-lg-20">
+							<a href="excellent.html?search_kind=&amp;search_text=&amp;gotopage=1" class="btn-type-01 p-3"><i class="xi-bars"></i> 목록</a>
+						</div>
+						<!-- E : 버튼영역 -->
+					</div>
+				</div>
+			</section>
+			<!-- E : Section (뷰) -->
+		</main>
+		<!-- E : Main -->
+
+		<? include "../include/footer.html" ?>
+
+		<? include "../include/js.html" ?>
+
+		<script>
+			/*var displaySwiper = new Swiper('.display-swiper .swiper-container', {
+        navigation: {
+          prevEl: '.display-swiper .display-swiper-prev',
+          nextEl: '.display-swiper .display-swiper-next'
+        }
+      });*/
+		</script>
+		<script>
+			lazyload();
+			$(document).on('contextmenu', function (e) {
+				e.preventDefault();
+
+				alert('저작권 보호를 위해\n마우스 우클릭은 사용하실 수 없습니다.');
+			});
+		</script>
+	</body>
+</html>

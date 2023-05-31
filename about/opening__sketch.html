@@ -1,0 +1,59 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+	<head>
+		<?
+    $P_dp1 = '1';
+    $P_dp2 = '1';
+    $P_dp3 = '4';
+    include "../include/meta.html"
+		?>
+		<link rel="stylesheet" href="../assets/css/about.min.css" />
+	</head>
+	<body class="sub-body">
+		<!-- S : Header -->
+		<? include "../include/header.html" ?>
+		<!-- E : Header -->
+
+		<!-- S : Main -->
+		<main class="main py-10 py-sm-15 py-lg-30" id="contents">
+			<!-- S : Section (타이틀 영역) -->
+			<section class="section">
+				<div class="container text-center mb-8 mb-lg-14">
+					<h1 class="common-title--h1"><?=${nav_.$P_dp1._.$P_dp2}?></h1>
+				</div>
+			</section>
+			<!-- E : Section (타이틀 영역) -->
+
+			<!-- S : Section (탭 메뉴) -->
+			<? include "../include/sub-nav.html" ?>
+			<!-- E : Section (탭 메뉴) -->
+
+			<!-- S : Section (소개글) -->
+			<section class="section mb-20">
+				<div class="container px-xl-30 text-center wowrap">
+					<h1 class="common-title--h2 font-weight-bold wow fadeInUp">2022 대한민국 우표전시회 현장스케치</h1>
+					<p class="common-text--22 text-gray-3 font-weight-light mt-5 wow fadeInUp">
+						2022년 9월 22일, 서울 포스트타워 10층 대회의실에서<br class="d-none d-xl-block" />
+						2022 대한민국 우표전시회 우수작품 시상식 및 온기우편함 우표 기증식이 진행되었습니다.<br class="d-none d-xl-block" />
+						시상식 이후 체험관 관람을 통하여 포토세션도 함께 진행되었습니다.
+					</p>
+				</div>
+			</section>
+			<!-- E : Section (소개글) -->
+			<!-- S : Section (영상) -->
+			<section class="section">
+				<div class="container wow fadeInUp border-0">
+					<div class="embed-responsive embed-responsive-16by9">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/Rth0AUBZuwk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+				</div>
+			</section>
+			<!-- E : Section (영상) -->
+		</main>
+		<!-- E : Main -->
+
+		<? include "../include/footer.html" ?>
+		<? include "../include/js.html" ?>
+	</body>
+</html>

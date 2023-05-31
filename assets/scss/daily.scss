@@ -1,0 +1,254 @@
+@charset "UTF-8";
+
+@import 'functions';
+@import 'variables';
+
+// Mixins
+@import 'mixins';
+
+.sub-color-1 {
+	color: #ffb400;
+}
+
+.sub-color-2 {
+	color: #808080;
+}
+
+.sub-color-3 {
+	color: #ff9600;
+}
+
+$sc1: #ffb400;
+$sc2: #808080;
+
+.tab--box > .tab-header {
+	@include mdq-max(lg) {
+		justify-content: center;
+		align-items: stretch;
+		flex-wrap: wrap;
+	}
+	.tab-item {
+		@include mdq-max(lg) {
+			flex: 1 0 50%;
+			max-width: 50%;
+			display: inline-block;
+			width: auto;
+			padding: 5px;
+			text-align: center;
+		}
+
+		.link {
+			border: 0;
+			background-color: #eef0f0;
+			&:hover,
+			&.on {
+				color: white !important;
+				background-color: $sc1;
+			}
+		}
+	}
+}
+
+.border-3 {
+	border: 3px solid #ddd;
+}
+
+.event-open {
+	@include mdq-max(sm) {
+		margin-bottom: 2.25em;
+	}
+}
+
+.event-tit {
+	font-size: rem(45);
+	color: #111;
+	@include mdq-max(lg) {
+		font-size: rem(32);
+	}
+}
+
+.event-subtit {
+	font-size: rem(36);
+	color: #111;
+	@include mdq-max(lg) {
+		font-size: rem(22);
+	}
+}
+
+.event-date {
+	font-size: rem(24);
+	font-weight: 500;
+	background-color: $sc1;
+	color: #111111;
+	border-radius: 30px;
+	padding: 5px 22px;
+	display: inline-block;
+	@include mdq-max(lg) {
+		font-size: rem(16);
+	}
+}
+
+.btn1 {
+	background-color: $sc1;
+	width: 100%;
+	display: inline;
+	@include mdq-max(sm) {
+		display: block;
+	}
+}
+
+.btn2 {
+	background-color: $sc2;
+	width: 100%;
+	display: inline;
+	@include mdq-max(sm) {
+		display: block;
+	}
+}
+
+.sub-nav--bar {
+	.link {
+		&:hover,
+		&.on {
+			background-color: $sc1 !important;
+		}
+	}
+}
+
+.bullet-list.bullet-list--txt > .item {
+	&:before {
+		color: $sc1;
+	}
+}
+
+input:focus {
+	border-color: $sc1 !important;
+	// outline: 1px solid $sc1 !important;
+}
+
+.vote-inner {
+	display: flex;
+	align-items: center;
+	@include mdq-max(xl) {
+		flex-direction: column;
+	}
+}
+
+.vote-txt {
+	text-align: left;
+	margin-left: 1.25rem;
+	@include mdq-max(xl) {
+		text-align: center;
+		margin-left: 0;
+	}
+}
+
+.paging-area {
+	a {
+		&.active {
+			background-color: $sc1;
+		}
+	}
+}
+
+// NFT
+.book-section {
+	background: url('../images/daily/book-bg.jpg') no-repeat;
+	background-size: contain;
+	background-position: center 75px;
+	.book-wrap {
+		max-width: 1000px;
+		width: 100%;
+		margin: 0 auto;
+		background-color: #694d43;
+		padding-top: 20px;
+		padding-left: 10px;
+		padding-right: 10px;
+		@include mdq-max(sm) {
+			padding-top: 10px;
+			padding-left: 5px;
+			padding-right: 5px;
+			.col-6 {
+				padding-left: 5px;
+				padding-right: 5px;
+			}
+		}
+		.book-item {
+			@include img-to-bg(percentage(416/307));
+			margin-bottom: 20px;
+			@include mdq-max(sm) {
+				margin-bottom: 10px;
+			}
+			.inner {
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				.thumb-bx {
+					position: relative;
+					.thumb2 {
+						position: absolute;
+						left: 50%;
+						bottom: -30px;
+						transform: translateX(-50%);
+					}
+					@include mdq-max(sm) {
+						width: 50%;
+						height: 38%;
+						margin: 0 auto;
+						.thumb2 {
+							bottom: -10px;
+							width: rem(40);
+						}
+					}
+				}
+				.name-bx {
+					text-align: center;
+					padding-top: 3rem;
+
+					.tit {
+						font-size: rem(22);
+						font-weight: 500;
+					}
+					.name {
+						font-size: rem(16);
+						font-weight: 500;
+						line-height: 1.2;
+						.eng {
+							font-family: $font-family-sub;
+							font-weight: 300;
+						}
+						@include mdq-max(lg) {
+							display: flex;
+							flex-direction: column;
+						}
+					}
+					@include mdq-max(sm) {
+						padding-top: 1rem;
+						.tit {
+							font-size: 15px;
+						}
+						.name {
+							font-size: 14px;
+						}
+					}
+				}
+				@include mdq-max(sm) {
+					width: 100%;
+					padding-left: 5px;
+					padding-right: 5px;
+					// height: 100%;
+					// display: flex;
+					// flex-direction: column;
+					// justify-content: space-between;
+					padding-top: 15px;
+					padding-bottom: 15px;
+				}
+				@include mdq-max(sm) {
+					padding-top: 10px;
+					padding-bottom: 10px;
+				}
+			}
+		}
+	}
+}

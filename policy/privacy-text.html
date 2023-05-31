@@ -1,0 +1,7 @@
+<?
+	
+    $sql = "select * from tb_yark where mode=1 order by reg_date desc limit 1";   
+    $rs_row=mysqli_query($Conn,$sql);
+    $rs_provision=mysqli_fetch_array($rs_row);                
+    echo $rs_provision["content"];
+?>

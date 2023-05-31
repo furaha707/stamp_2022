@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+html,
+body {
+	//
+	//@include mdq-max(xs){
+	//  font-size: rem(12);
+	//}
+}
+
+.main-body,
+.sub-body {
+	top: 0 !important;
+}
+
+.sub-body .section + .section {
+	.container {
+		border-top: 3px solid #ddd;
+	}
+}
+
+.sub-body {
+	@include mdq-max(md) {
+		font-size: 16px;
+	}
+
+	@include mdq-max(sm) {
+		font-size: 14px;
+	}
+}
+
+.skiptranslate {
+	display: none;
+}
+
+.event-main {
+	.btn-type-01 {
+		background-color: #dd2425;
+	}
+}

@@ -1,0 +1,252 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+	<head>
+		<?
+    $P_dp1 = '5';
+    $P_dp2 = '3';
+    include "../include/meta.html"
+		?>
+		<link rel="stylesheet" href="../assets/css/message.min.css" />
+	</head>
+	<body class="sub-body message">
+		<!-- S : Header -->
+		<? include "../include/header.html" ?>
+		<!-- E : Header -->
+
+		<!-- S : Sub visual -->
+		<? include "../include/sub-visual.html" ?>
+		<!-- E : Sub visual -->
+
+		<!-- S : Main -->
+		<main class="main py-10 py-sm-15 py-lg-30" id="contents">
+			<!-- S : Section (타이틀 영역) -->
+			<section class="section">
+				<div class="container text-center mb-8 mb-lg-14">
+					<h1 class="common-title--h1">신나는 우표게임을 하면서 인생우표를 찾으러 떠나볼까요</h1>
+					<p class="common-text--30 font-weight-light text-gray-3 mt-2">
+						인스타그램에 해시태그(#인생우표찾기#2022대한민국우표전시회)를 통해<br class="d-none d-lg-block" />
+						인증해주시면 추첨을 통해 경품을 드립니다.
+					</p>
+					<div class="row state-intro mt-15 justify-content-center">
+						<div class="col-12 col-sm-3 item">
+							<div class="state-thumb--1"></div>
+							<div class="state-desc">
+								<p class="common-text--24 font-weight-medium text-gray-1 mt-2">이벤트 기간</p>
+								<p class="common-text--22 font-weight-light text-gray-3 mt-1">
+									2022년<br />
+									9월 22일 ~ 10월 20일
+								</p>
+							</div>
+						</div>
+						<div class="col-12 col-sm-3 item">
+							<div class="state-thumb--2"></div>
+							<div class="state-desc">
+								<p class="common-text--24 font-weight-medium text-gray-1 mt-2">이벤트 경품</p>
+								<p class="common-text--22 font-weight-light text-gray-3 mt-1">
+									치킨 모바일 상품권(5장)<br />
+									커피 모바일 상품권(20장)<br />
+									화조영모병풍키트(50매)<br />
+									우표패킷(50매)
+								</p>
+							</div>
+						</div>
+						<div class="col-12 col-sm-3 item">
+							<div class="state-thumb--3"></div>
+							<div class="state-desc">
+								<p class="common-text--24 font-weight-medium text-gray-1 mt-2">당첨자 수</p>
+								<p class="common-text--22 font-weight-light text-gray-3 mt-1">125명</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- E : Section (타이틀 영역) -->
+			<div class="container border-0">
+				<div class="row justify-content-center text-center mt-13">
+					<div class="col-12 col-sm-auto py-2">
+						<a href="https://game-stampex.kr/" target="_blank" class="btn-type-01 py-4 px-15"> GAME <span class="font-weight-bold ml-2">START!</span></a>
+					</div>
+					<!-- <div class="col-12 col-sm-auto py-2">
+					<a href="http://game-stampex.kr/ranking" onclick="window.open('http://stampex-game.kr/ranking');" class="btn-type-02 py-4 px-15">GAME <span class="font-weight-bold ml-2">랭킹보기</span></a>
+				</div> -->
+				</div>
+			</div>
+			<!-- S : Section (폼) -->
+			<section class="section hidden">
+				<div class="container border-top-0">
+					<form name="theForm" id="theForm" method="post" autocomplete="off">
+						<h2 class="common-text--2 font-weight-medium text-gray-3">멸종위기 동물 구하러 가기</h2>
+						<!--<p class="font-weight-light text-gray-6 mt-1">* 럭키스템프 이벤트 응모를 위하여 이름과 전화번호를 바르게 등록해주세요.</p>
+			<p class="item text-color-1" >※ 1명*500원 기부액 적립. 최대 목표 기부 300만원 (적립된 기부액만큼 환경단체 기부예정)</p>-->
+						<div class="bullet-list-box mt-13">
+							<ul class="bullet-list bullet-list--txt bullet-type--js">
+								<li class="item" data-bullet="*">모든 항목 필수 입력입니다.</li>
+								<li class="item" data-bullet="*">정보가 맞지 않을 경우 이벤트 당첨이 취소 될 수 있습니다. 정확히 입력해주세요.</li>
+								<li class="item" data-bullet="*">수집된 개인정보는 이벤트 당첨자는 당첨자 발표 2주 후 삭제됩니다.</li>
+								<li class="item text-color-1" data-bullet="*">최초 출석체크시 보너스 스탬프 1개 제공</li>
+								<li class="item text-color-1" data-bullet="※">1명*500원 기부액 적립. 최대 목표 기부 300만원 (적립된 기부액만큼 환경단체 기부예정)</li>
+							</ul>
+						</div>
+						<table class="table-form-01 mt-2">
+							<colgroup>
+								<col width="140px" />
+								<col width="*" />
+							</colgroup>
+							<tbody>
+								<tr>
+									<th>이름</th>
+									<td>
+										<input type="text" name="uname" id="uname" title="이름" maxlength="50" />
+									</td>
+								</tr>
+								<tr>
+									<th>연락처</th>
+									<td>
+										<input type="tel" name="utel" id="utel" title="연락처" maxlength="11" class="input_num" required="" placeholder="'-'을 제외 후 입력해주세요." />
+									</td>
+								</tr>
+								<tr>
+									<th>개인정보처리방침동의</th>
+									<td>
+										<ul class="clause_list">
+											<li>
+												<h5>개인정보처리방침</h5>
+												<div class="textarea_box_border">
+													<div class="textarea_box">
+														2021 대한민국 온라인 우표전시회 홈페이지는 이벤트 운영에 필요한 최소한의 개인정보만을 취득하며, 수집된 개인정보는 당첨자 확인, 경품 배송 등 이벤트 운영을 위한 용도로만 사용됩니다. 이와 같은 개인정보 수집·이용 목적에 대해 동의하실 경우에만 참여 부탁드립니다. 이벤트 당첨자가 제공하는 개인정보(성명, 연락처)는 개인정보보호법에 따라 수집·이용 시 정보주체 본인의동의를 얻어야 하는 정보이며, 보유 및 이용기간 동안 안전하게 보호됩니다.
+
+														<ul class="bullet-list bullet-list--txt mt-5">
+															<li class="item" data-bullet="1.">개인정보 수집 및 이용목적- 이벤트 당첨자 확인 및 경품 발송</li>
+															<li class="item" data-bullet="2.">개인정보 수집 항목 - 필수항목: 성명, 연락처, 주소</li>
+															<li class="item" data-bullet="3.">개인정보 보유 및 이용기간- 수집한 개인정보는 경품 수령 관련 분쟁이 있을 경우를 대비해 이벤트 종료(2021. 11. 15)후 2주까지 보관 후 모두 파기합니다. 또한 이벤트 발송 문자에는 만족도 설문조사가 함께 발송될 예정입니다.</li>
+															<li class="item" data-bullet="4.">수집된 전화번호로 우표전시회 만족도 조사 참여문자가 전송됩니다.</li>
+															<li class="item" data-bullet="5.">개인정보 수집 동의 거부의 권리- 귀하는 개인정보 수집·이용에 동의하지 않을 권리가 있습니다. 다만, 귀하가 필수 기재사항을 입력하지 않으실 경우 이벤트 응모가 불가능함을 양지하시기 바랍니다.</li>
+															<li class="item" data-bullet="6.">개인정보를 정확하게 적지 않았을 경우 이벤트 당첨 및 발송이 취소될 수 있으며, 연락처 1개당 1번의 참여가 가능합니다.</li>
+															<li class="item" data-bullet="7.">이벤트 성격에 맞지 않는 내용이나 과도한 도배성 댓글은 임의 삭제할 수 있습니다.</li>
+														</ul>
+													</div>
+												</div>
+												<div class="agree_box mt_10">
+													<input type="checkbox" name="yark" value="ok" id="yark" title="개인정보처리방침에 동의" class="mr_05" />
+													<label for="yark">개인정보처리방침 동의</label>
+												</div>
+											</li>
+										</ul>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<p class="common-text--18 font-weight-light text-color-1 mt-2">* 본 이벤트는 럭키 스탬프가 발급되는 이벤트이니 개인 정보를 정확히 입력해주세요</p>
+						<!-- moa 모바일 버튼 잘림현상으로 주석처리후 다른 소스 삽입
+            <div class="row justify-content-center mt-10">
+              <div class="col-4">
+                
+                ### 고객사 요청으로 alert 창으로 수정 ###
+                <a href="javascript:;void(0);" class="btn-type-01 btn-lg w-100 py-6" onclick="form_check();">
+                   GAME <span class="font-weight-bold ml-2">START!</span>
+                </a>
+               
+                <a href="javascript:void(0);" class="btn-type-01 btn-lg w-100 py-6" onclick="alert('준비 중입니다. 조금만 기다려주세요.');">
+                   GAME <span class="font-weight-bold ml-2">START!</span>
+                </a>
+              </div>
+              <div class="col-4">
+                <a href="https://stamepx-game.kr/ranking" class="btn-type-02 btn-lg w-100 py-6" target="_blank">GAME <span
+                  class="font-weight-bold ml-2">랭킹보기</span></a>
+              </div>
+            </div>
+			 -->
+
+						<div class="row justify-content-center text-center mt-13">
+							<div class="col-12 col-sm-auto py-2">
+								<a href="javascript:void(0)" onclick="form_check();" class="btn-type-01 py-4 px-15"> GAME <span class="font-weight-bold ml-2">START!</span></a>
+							</div>
+							<div class="col-12 col-sm-auto py-2">
+								<a href="http://stampex-game.kr/ranking" onclick="window.open('http://stampex-game.kr/ranking');" class="btn-type-02 py-4 px-15" style="height: 74px !important">GAME <span class="font-weight-bold ml-2">랭킹보기</span></a>
+							</div>
+						</div>
+
+						<div class="text-center mt-9">
+							<a href="../pop/share.html" class="btn-type-12 popup-link">SNS 공유하기</a>
+						</div>
+					</form>
+				</div>
+			</section>
+			<!-- E : Section (폼) -->
+		</main>
+		<!-- E : Main -->
+
+		<? include "../include/footer.html" ?>
+
+		<? include "../include/js.html" ?>
+		<script type="text/javascript" src="/js/space_check.js"></script>
+		<script type="text/javascript" language="JavaScript">
+			$(document).ready(function () {
+				$('.input_num').on('keyup', function () {
+					$(this).val(
+						$(this)
+							.val()
+							.replace(/[^0-9]/g, '')
+					);
+				});
+			});
+			function form_check() {
+				var result = '';
+				if (isFieldBlank(theForm.uname)) {
+					alert('이름을 입력해주세요.');
+					theForm.uname.focus();
+					return false;
+				}
+
+				if (numValue(theForm.utel)) {
+					alert('연락처를 숫자로만 입력해주세요.');
+					theForm.utel.focus();
+					return false;
+				}
+				if (theForm.yark.checked != true) {
+					alert('개인정보처리방침에 동의하셔야 참여/확인이 가능합니다.');
+					return false;
+				}
+
+				var formData = $('#theForm').serialize();
+				$.ajax({
+					url: 'animal_ok.php',
+					type: 'post',
+					async: false,
+					data: formData,
+					success: function (data) {
+						result = $.trim(data);
+					},
+				});
+
+				if (result == 'OK' || result == 'OK2') {
+					theForm.reset();
+					alert('확인을 누르시면 게임참여가 가능합니다.');
+					window.open('http://stampex-game.kr');
+				} else {
+					alert('등록중 에러가 발생하였습니다.');
+				}
+				return false;
+			}
+		</script>
+		<script>
+			function onCopy(id) {
+				$(id).select();
+				document.execCommand('copy');
+				alert('복사되었습니다.');
+				$(id).blur();
+			}
+
+			var btn = $('.btn_symbol');
+			var des = $('.symbol_bx');
+			$(btn).click(function () {
+				$(des).toggle(200);
+
+				return false;
+			});
+		</script>
+		<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+	</body>
+</html>

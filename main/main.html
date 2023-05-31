@@ -1,0 +1,634 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+  <head>
+    <?
+    $P_dp0 = 'main';
+    include "../include/meta.html" 
+    ?>
+    <link rel="stylesheet" href="../assets/css/main.min.css?211022v1"/>
+    <link rel="stylesheet" href="../assets/css/add-0922.css"/>
+  </head>
+  <body class="main-body">
+    <? include "../include/header.html" ?>    
+    <main class="main" id="contents">
+			<!-- S : main-visual -->
+
+			<section class="section main-section main-visual wow fadeInUp">
+				<h1 class="sr-only">메인비주얼 영역</h1>
+				<div class="main-tit">
+					<img src="../assets/images/main/balloon1.png" alt="풍선" class="balloon1" />
+					<h2 class="tit">2022 대한민국 우표전시회</h2>
+					<img src="../assets/images/main/balloon2.png" alt="풍선" class="balloon2" />
+				</div>
+				<div class="swiper-container">
+					<div class="cloud-item">
+						<img src="../assets/images/main/cloud.png" alt="구름" class="cloud cloud1" />
+						<img src="../assets/images/main/cloud.png" alt="구름" class="cloud cloud2" />
+						<img src="../assets/images/main/cloud.png" alt="구름" class="cloud cloud3" />
+						<img src="../assets/images/main/cloud.png" alt="구름" class="cloud cloud4" />
+					</div>
+					<div class="swiper-wrapper">
+						<!-- 
+              pc: 1920x640
+              m: 1440x620 
+            -->
+						<!-- <div class="swiper-slide item">
+							<a href="https://zep.us/play/yWVvOn" class="link" target="_blank">
+								<div class="img-bx">
+									<img class="" src="../assets/images/main/banner-metabus.png" alt="메인배너" />
+								</div>
+							</a>
+						</div> -->
+						<div class="swiper-slide item">
+							<div class="link">
+                <div class="img-bx">
+									<img src="../assets/images/main/banner-b.png" alt="여름혜택" />
+								</div>
+                <div class="video-inner w-70 w-xl-55 m-auto">
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/NBVmTHZTNrU?playlist=NBVmTHZTNrU&autoplay=1&mute=1&autohide=1&rel=0&controls=1&loop=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+              </div>
+							</div>
+						</div>
+            <!-- <div class="swiper-slide item">
+							<div class="link">
+                <div class="img-bx">
+									<img src="../assets/images/main/banner-b.png" alt="여름혜택" />
+								</div>
+                <div class="video-inner w-70 w-xl-55 m-auto">
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/gWSnn1RVU6A?autoplay=1&mute=1&autohide=1&rel=0?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+              </div>
+							</div>
+						</div> -->
+					</div>
+
+					<!--
+            TODO: 퍼블 작업 시 가이드
+            TODO: .swiper-control 엘리먼트에 각각 추가 클래스 부여하여 스타일 변경.
+            TODO: .swiper-control 만 선언 시 기본 형태 유지
+            TODO: .swiper-control--progress = 기본 프로그레스 바 형태 ( * scss만 변경 )
+            TODO: .swiper-control--progress-no = 숫자 포함 프로그레스 바 ( * script 커스텀 필요 )
+          -->
+					<div class="swiper-control">
+						<div class="container">
+							<!-- S : Swiper Pagination -->
+							<div class="swiper-pagination"></div>
+							<!-- E : Swiper Pagination -->
+						</div>
+					</div>
+				</div>
+				<div class="main-des mt-40 mt-lg-20 wow fadeInUp">
+          <div class="container">
+					<p><b>대한민국 우표전시회에 소풍오신 여러분 환영합니다.</b></p>
+					<p>인생 우표를 찾으러 떠나볼까요?</p>
+        </div>
+				</div>
+			</section>
+			<!-- E : main-visual -->
+
+			<!-- S : section -->
+			<section class="section display-section">
+				<div class="container">
+					<div class="display-wrap">
+						<div class="img-bx">
+							<img src="../assets/images/main/truck.png" alt="트럭" />
+							<div class="txt-bx">
+								<div class="display-bx swiper-container">
+									<div class="display-inner swiper-wrapper">
+									<div class="block swiper-slide">
+										<a href="../about/opening__congratulation.html" class="display-item">
+											<div class="inner">
+												<p class="tit">행사안내</p>
+												<img src="../assets/images/main/display-ico1.png" alt="아이콘" />
+											</div>
+										</a>
+									</div>
+									<div class="block swiper-slide">
+										<a href="../archive/excellent.html" class="display-item">
+											<div class="inner">
+												<p class="tit">우수작품<br />전시</p>
+												<img src="../assets/images/main/display-ico2.png" alt="아이콘" />
+											</div>
+										</a>
+									</div>
+									<div class="block swiper-slide">
+										<a href="../archive/interview.html" class="display-item">
+											<div class="inner">
+												<p class="tit">우수작품<br />인터뷰</p>
+												<img src="../assets/images/main/display-ico3.png" alt="아이콘" />
+											</div>
+										</a>
+									</div>
+									<div class="block swiper-slide">
+										<a href="../daily/present__intro.html" class="display-item">
+											<div class="inner">
+												<p class="tit">우표를 만드는<br />사람들</p>
+												<img src="../assets/images/main/display-ico4.png" alt="아이콘" />
+											</div>
+										</a>
+									</div>
+									<div class="block swiper-slide">
+										<a href="../daily/future__1st.html" class="display-item">
+											<div class="inner">
+												<p class="tit">NFT<br />작품전시</p>
+												<img src="../assets/images/main/display-ico5.png" alt="아이콘" />
+											</div>
+										</a>
+									</div>
+									<div class="block swiper-slide">
+										<a href="../remake/stamp__display.html" class="display-item">
+											<div class="inner">
+												<p class="tit">초록우표</p>
+												<img src="../assets/images/main/display-ico6.png" alt="아이콘" />
+											</div>
+										</a>
+									</div>
+									<div class="block swiper-slide">
+										<a href="../remake/voice__display.html" class="display-item">
+											<div class="inner">
+												<p class="tit">목소리 우표</p>
+												<img src="../assets/images/main/display-ico7.png" alt="아이콘" />
+											</div>
+										</a>
+									</div>
+									<div class="block swiper-slide">
+										<a href="../message/video.html" class="display-item">
+											<div class="inner">
+												<p class="tit">영상콘텐츠</p>
+												<img src="../assets/images/main/display-ico8.png" alt="아이콘" />
+											</div>
+										</a>
+									</div>
+								</div>
+	
+							</div>
+						</div>
+						<div class="tit-bx">
+							<img src="../assets/images/main/gifani_display.gif" alt="전시회 둘러보기" />
+						</div>
+
+					</div>
+				</div>
+			</section>
+			<!-- E : section -->
+
+      <section class="section m-display-section pb-20">
+        <div class="m-tit-bx">
+          <img src="../assets/images/main/gifani_display.gif" alt="전시회 둘러보기" />
+        </div>
+					<div class="m-display-wrap">
+						<div class="m-img-bx">
+							<img src="../assets/images/main/truck-m.png" alt="트럭" />
+							<div class="m-txt-bx">
+								<div class="m-display-bx swiper-container">
+									<div class="m-display-inner swiper-wrapper">
+									<div class="m-block swiper-slide">
+										<a href="../about/opening__congratulation.html" class="m-display-item">
+											<div class="inner">
+												<p class="tit">행사안내</p>
+												<img src="../assets/images/main/display-ico1.png" alt="아이콘" />
+											</div>
+										</a>
+									</div>
+									<div class="m-block swiper-slide">
+										<a href="../archive/excellent.html" class="m-display-item">
+											<div class="inner">
+												<p class="tit">우수작품<br />전시</p>
+												<img src="../assets/images/main/display-ico2.png" alt="아이콘" />
+											</div>
+										</a>
+									</div>
+									<div class="m-block swiper-slide">
+										<a href="../archive/interview.html" class="m-display-item">
+											<div class="inner">
+												<p class="tit">우수작품<br />인터뷰</p>
+												<img src="../assets/images/main/display-ico3.png" alt="아이콘" />
+											</div>
+										</a>
+									</div>
+									<div class="m-block swiper-slide">
+										<a href="../daily/present__intro.html" class="m-display-item">
+											<div class="inner">
+												<p class="tit">우표를 만드는<br />사람들</p>
+												<img src="../assets/images/main/display-ico4.png" alt="아이콘" />
+											</div>
+										</a>
+									</div>
+									<div class="m-block swiper-slide">
+										<a href="../daily/future__1st.html" class="m-display-item">
+											<div class="inner">
+												<p class="tit">NFT<br />작품전시</p>
+												<img src="../assets/images/main/display-ico5.png" alt="아이콘" />
+											</div>
+										</a>
+									</div>
+									<div class="m-block swiper-slide">
+										<a href="../remake/stamp__display.html" class="m-display-item">
+											<div class="inner">
+												<p class="tit">초록우표</p>
+												<img src="../assets/images/main/display-ico6.png" alt="아이콘" />
+											</div>
+										</a>
+									</div>
+									<div class="m-block swiper-slide">
+										<a href="../remake/voice__display.html" class="m-display-item">
+											<div class="inner">
+												<p class="tit">목소리 우표</p>
+												<img src="../assets/images/main/display-ico7.png" alt="아이콘" />
+											</div>
+										</a>
+									</div>
+									<div class="m-block swiper-slide">
+										<a href="../message/video.html" class="m-display-item">
+											<div class="inner">
+												<p class="tit">영상콘텐츠</p>
+												<img src="../assets/images/main/display-ico8.png" alt="아이콘" />
+											</div>
+										</a>
+									</div>
+								</div>
+	
+							</div>
+						</div>
+
+
+					</div>
+			</section>
+
+			<!-- S : section -->
+			<section class="section meta-section my-20">
+				<div class="container wowrap">
+					<div class="meta-wrap">
+						<a href="../pop/guidemap.html" class="meta-item1 wow fadeInUp popup-link" target="_blank">
+							<img src="../assets/images/main/meta-guide.png" alt="가이드보기" class="meta-guide"  />
+						</a>
+						<a href="https://zep.us/play/yWVvOn" class="meta-item2 wow fadeInUp" target="_blank">
+							<img src="../assets/images/main/meta1.png" alt="메타버스관" class="meta-board" />
+              <img src="../assets/images/main/girl.png" alt="여자" class="girl d-none d-xxl-block">
+						</a>
+					</div>
+				</div>
+			</section>
+			<!-- E : section -->
+
+			<!-- S : section -->
+			<section class="section event-section my-40 wow fadeInUp d-none d-lg-block">
+				<div class="container">
+					<div class="event-wrap">
+						<div class="img-bx">
+							<img src="../assets/images/main/gifani_event.gif" alt="이벤트 모아보기" />
+							<div class="txt-bx">
+								<div class="event-inner">
+									<div class="event-bx">
+											<div class="inner">
+												<a href="../daily/total_vote.html" class="event-item">
+													<img src="../assets/images/main/event-ico1.png" alt="아이콘" />
+													<p class="txt">국민투표</p>
+													<i class="xi-long-arrow-right"></i>
+												</a>
+											</div>
+											<div class="inner">
+												<a href="../daily/present__1st.html" class="event-item">
+													<img src="../assets/images/main/event-ico2.png" alt="아이콘" />
+													<p class="txt">우표<br>응원댓글</p>
+													<i class="xi-long-arrow-right"></i>
+												</a>
+											</div>
+											<div class="inner">
+												<a href="../daily/present__2nd.html" class="event-item">
+													<img src="../assets/images/main/event-ico3.png" alt="아이콘" />
+													<p class="txt">우표<br>매칭이벤트</p>
+													<i class="xi-long-arrow-right"></i>
+												</a>
+											</div>
+											<div class="inner">
+												<a href="../remake/letter__display.html" class="event-item">
+													<img src="../assets/images/main/event-ico4.png" alt="아이콘" />
+													<p class="txt">마음<br>편지쓰기</p>
+													<i class="xi-long-arrow-right"></i>
+												</a>
+											</div>
+											<div class="inner">
+												<a href="../message/sustainable.html" class="event-item">
+													<img src="../assets/images/main/event-ico5.png" alt="아이콘" />
+													<p class="txt">스탬프 투어</p>
+													<i class="xi-long-arrow-right"></i>
+												</a>
+											</div>
+											<div class="inner">
+												<a href="../message/psychology.html" class="event-item">
+													<img src="../assets/images/main/event-ico6.png" alt="아이콘" />
+													<p class="txt">심리테스트</p>
+													<i class="xi-long-arrow-right"></i>
+												</a>
+											</div>
+											<div class="inner">
+												<a href="../message/endangered_animal.html" class="event-item">
+													<img src="../assets/images/main/event-ico7.png" alt="아이콘" />
+													<p class="txt">우표게임</p>
+													<i class="xi-long-arrow-right"></i>
+												</a>
+											</div>
+											<div class="inner">
+												<a href="../message/attendance_check.html" class="event-item">
+													<img src="../assets/images/main/event-ico8.png" alt="아이콘" />
+													<p class="txt">출석체크</p>
+													<i class="xi-long-arrow-right"></i>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+              <div class="pc-people">
+                <img src="../assets/images/main/pc-people.png" alt="사람들" class="d-none d-lg-block">
+                <img src="../assets/images/main/m-people.png" alt="사람들" class="d-block d-lg-none">
+              </div>
+						</div>
+
+					</div>
+				</div>
+			</section>
+			<!-- E : section -->
+
+      			<!-- S : section -->
+			<section class="section m-event-section my-40 wow fadeInUp d-block d-lg-none">
+				<div class="container">
+					<div class="m-event-wrap">
+						<div class="img-bx">
+							<img src="../assets/images/main/m-event.png" alt="이벤트 모아보기" />
+							<div class="txt-bx">
+								<div class="m-event-inner swiper-container">
+									<div class="m-event-bx swiper-wrapper">
+                    <div class="swiper-slide">
+											<div class="inner">
+												<a href="../daily/total_vote.html" class="m-event-item">
+													<img src="../assets/images/main/event-ico1.png" alt="아이콘" />
+													<p class="txt">국민투표</p>
+													<i class="xi-long-arrow-right"></i>
+												</a>
+
+												<a href="../daily/present__1st.html" class="m-event-item">
+													<img src="../assets/images/main/event-ico2.png" alt="아이콘" />
+													<p class="txt">우표<br>응원댓글</p>
+													<i class="xi-long-arrow-right"></i>
+												</a>
+                      </div>
+                      <div class="inner">
+                        
+												<a href="../daily/present__2nd.html" class="m-event-item">
+													<img src="../assets/images/main/event-ico3.png" alt="아이콘" />
+													<p class="txt">우표<br>매칭이벤트</p>
+													<i class="xi-long-arrow-right"></i>
+												</a>
+
+												<a href="../remake/letter__display.html" class="m-event-item">
+													<img src="../assets/images/main/event-ico4.png" alt="아이콘" />
+													<p class="txt">마음<br>편지쓰기</p>
+													<i class="xi-long-arrow-right"></i>
+												</a>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+											<div class="inner">
+												<a href="../message/sustainable.html" class="m-event-item" >
+													<img src="../assets/images/main/event-ico5.png" alt="아이콘" />
+													<p class="txt">스탬프 투어</p>
+													<i class="xi-long-arrow-right"></i>
+												</a>
+
+												<a href="http://stampex.freewebclub.com/remake/psychology.html" class="m-event-item">
+													<img src="../assets/images/main/event-ico6.png" alt="아이콘" />
+													<p class="txt">심리테스트</p>
+													<i class="xi-long-arrow-right"></i>
+												</a>
+                      </div>
+                      <div class="inner">
+                        
+												<a href="http://stampex.freewebclub.com/message/endangered_animal.html" class="m-event-item">
+													<img src="../assets/images/main/event-ico7.png" alt="아이콘" />
+													<p class="txt">우표게임</p>
+													<i class="xi-long-arrow-right"></i>
+												</a>
+
+												<a href="../message/attendance_check.html" class="m-event-item">
+													<img src="../assets/images/main/event-ico8.png" alt="아이콘" />
+													<p class="txt">출석체크</p>
+													<i class="xi-long-arrow-right"></i>
+												</a>
+                      </div>
+                    </div>
+										</div>
+                      <div class="swiper-pagination"></div>
+									</div>
+								</div>
+							</div>
+              <div class="pc-people">
+                <img src="../assets/images/main/pc-people.png" alt="사람들" class="d-none d-lg-block">
+                <img src="../assets/images/main/m-people.png" alt="사람들" class="d-block d-lg-none">
+              </div>
+						</div>
+
+					</div>
+				</div>
+			</section>
+			<!-- E : section -->
+
+			<div class="space-lg d-none d-lg-block"></div>
+
+			<!-- S : section -->
+			<section class="section survey-section pt-40 wow fadeInUp">
+				<div class="container text-left">
+					<a href="../etc/survey.html" class="survey" onclick="javascript:alert('이벤트가 마감되었습니다.'); return false">
+						<img src="../assets/images/main/survey.png" alt="만족도조사">
+					</a>
+				</div>
+			</section>
+			<!-- E : section -->
+
+						<!-- S : section -->
+						<section class="section sns-section mt-40 mt-xl-n40 text-right wow fadeInUp">
+								<a href="https://www.instagram.com/korea.stamp/" class="sns-board" target="_blank">
+									<img src="../assets/images/main/sns.png" alt="우표 전시회 sns">
+								</a>
+                <section class="section horse-section pb-40 text-left horse-section--mobile">
+                  <img src="../assets/images/main/gifanihorse.gif" alt="회전목마" class="anihorse">
+              </section>
+						</section>
+            <section class="section horse-section pb-40 text-left horse-section--pc">
+                <img src="../assets/images/main/gifanihorse.gif" alt="회전목마" class="anihorse">
+            </section>
+						<!-- E : section -->
+						<div class="space-xl d-block d-lg-none"></div>
+						<div class="space-lg d-block d-lg-none"></div>
+
+		</main>
+ <!-- S: 시작팝업 -->
+<?
+	$sql = "select * from tb_popup where viewtype='Y' and DateDiff(sdate,now()) <= 0 and DateDiff(edate,now()) >= 0 order by sortnum asc,uid desc";
+
+	$rs_p = mysqli_query($Conn,$sql);
+	$i=0;
+	while($rs_pop=mysqli_fetch_array($rs_p)) {
+	(isset($_COOKIE["pop".$rs_pop["uid"]]))? $temp_pop_up=$_COOKIE["pop".$rs_pop["uid"]]:$temp_pop_up="";
+	if ($temp_pop_up!="ok") {
+
+?>
+    <div class="modal fade in start_pop Pop1 ui-draggable" id="modal<?=$i;?>" aria-hidden="false" style="z-index:<?=(99900+$i*1);?>;left:<?=$rs_pop["left_v"];?>px; top:<?=$rs_pop["top_v"];?>px;display:block;">
+      <div class="modal_standard">
+        <div class="modal_wrap">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header"><?=$rs_pop["title"]?></div>
+              <div class="modal-body">
+                <?	if (Trim($rs_pop["mode"])=="I") {?>
+                <div class="inner">
+                    <a href="<?=$rs_pop["moveurl"]?>" target="<?=$rs_pop["actiontype"]?>">
+                    	<img src="/upload/popup/<?=$rs_pop["fileadd_name"];?>" alt="">
+                	</a>
+                </div>
+                <? } else {?>
+                <div class="ml_10 mr_10">
+                  <?=$rs_pop["content"];?>
+                </div>
+                <? } ?>
+              </div>
+              <div class="modal-footer clearfix">
+                <div class="check-area left">
+                  <input type="checkbox" id="pop<?=$i;?>" onClick="setCookie('pop<?=Trim($rs_pop["uid"])?>','ok','<?=$i;?>');">
+			  	  <label for="pop<?=$i;?>">오늘 열지 않기</label>
+                </div>
+                <div class="pop-close right" style="cursor: pointer" onclick="modal<?=$i;?>.style.display='none';">닫기</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<?
+			$i++;
+	 	}
+	}
+?>     
+
+	<!-- <div class="main-notice">
+		<div class="swiper-navigation">
+			<button type="button" title="이전 게시글" class="swiper-button-prev">
+				<i class="xi-angle-left"></i> 이전
+			</button>
+			<button type="button" title="다음 게시글" class="swiper-button-next">
+				다음 <i class="xi-angle-right"></i>
+			</button>
+		</div>
+		<h1 class="main-notice__title">공지사항</h1>
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<a href="#" class="link">
+						<span class="title">제목 영역입니다</span>
+						<span class="date">2022.08.30</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div> -->
+</div>
+    <? include "../include/footer.html" ?>
+    <? include "../include/quick.html" ?>
+    <? include "../include/js.html" ?>
+    
+    <script>
+      
+			var visualSwiper = new Swiper('.main-visual .swiper-container', {
+				loop: true,
+				effect: 'fade',
+				fadeEffect: {
+					crossFade: true,
+				},
+				autoplay: {
+					delay: 5000,
+					disableOnInteraction: false,
+				},
+				autoHeight: true,
+				pagination: {
+					el: '.main-visual .swiper-pagination',
+					type: 'bullets',
+					clickable: true,
+					/*
+          TODO: .swiper-control--progress-no 적용 시에만 주석 해제
+          renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + '0' + (index + 1) + '</span>';
+          },
+          */
+				},
+				navigation: {
+					nextEl: '.main-visual .swiper-button--next',
+					prevEl: '.main-visual .swiper-button--prev',
+				},
+			});
+
+
+			  var displaySwiper = new Swiper('.m-display-section .swiper-container', {
+				loop: true,
+				// effect: 'fade',
+				// fadeEffect: {
+				// 	crossFade: true,
+				// },
+        slidesPerView: 1.5,
+				spaceBetween: 15,
+				// autoplay: {
+				// 	delay: 5000,
+				// 	disableOnInteraction: false,
+				// },
+				autoHeight: true,
+        breakpoints: {
+        768: {
+						slidesPerView: 2.5,
+						spaceBetween: 30,
+					}
+        }
+			});
+
+
+      
+			  var eventSwiper = new Swiper('.m-event-section .swiper-container', {
+				// loop: true,
+				// effect: 'fade',
+				// fadeEffect: {
+				// 	crossFade: true,
+				// },
+        slidesPerView: 1,
+				// spaceBetween: 15,
+				// autoplay: {
+				// 	delay: 5000,
+				// 	disableOnInteraction: false,
+				// },
+				autoHeight: true,
+        pagination: {
+					el: '.m-event-section .swiper-pagination',
+					type: 'bullets',
+					clickable: true,
+					/*
+          TODO: .swiper-control--progress-no 적용 시에만 주석 해제
+          renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + '0' + (index + 1) + '</span>';
+          },
+          */
+				},
+        // breakpoints: {
+        // 768: {
+				// 		slidesPerView: 2.5,
+				// 		spaceBetween: 30,
+				// 	}
+        // }
+			});
+
+
+
+    </script>
+  </body>
+</html>

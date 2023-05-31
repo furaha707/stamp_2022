@@ -1,0 +1,847 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+  <head>
+    <?
+    $P_dp1 = '4';
+    $P_dp2 = '2';
+    include "../include/meta.html"
+		?>
+    <link rel="stylesheet" href="../assets/css/remake.css">
+  </head>
+  <body class="sub-body pt-0">
+  
+    <!-- S : Header -->
+    <? include "../include/header.html" ?>    
+    <!-- E : Header -->
+    
+    <!-- S : Sub visual -->
+    <? include "../include/sub-visual.html" ?>
+    <!-- E : Sub visual -->
+    
+    <!-- S : Main -->
+    <main class="main pb-20 pb-lg-25" id="contents">
+      <!-- S : Section (우표카드뉴스만들기 소개) -->
+      <section class="section">
+        <div class="container py-10 py-lg-17">
+          <div class="text-center">
+            <h1 class="common-title--h1 hidden">
+              우표카드뉴스 만들기
+            </h1>
+            <p class="common-text--26 font-weight-light text-gray-3 mt-2">
+              당신도 카드뉴스 디자이너가 될 수 있습니다.<br>
+              특별한 날에 대해 우표를 사용하여 카드뉴스로 만들고 자랑해보세요.<br>
+              참가자 전원에게 럭키스탬프 발급,<br>
+              추첨을 통해 총 63분에게 경품을 드립니다.
+            </p>
+          </div>
+          
+          <div class="row remake-intro mt-15">
+            <div class="col-6 col-sm-3 item">
+              <div class="intro-thumb--1"></div>
+              <p class="common-text-24 font-weight-medium text-gray-1 mt-2">이벤트 기간</p>
+              <p class="common-text-22 font-weight-light text-gray-3 mt-1">
+                2021년<br>
+                10월 12일 ~ 11월 7일
+              </p>
+            </div>
+            <div class="col-6 col-sm-3 item">
+              <div class="intro-thumb--2"></div>
+              <p class="common-text-24 font-weight-medium text-gray-1 mt-2">이벤트 경품</p>
+              <p class="common-text-22 font-weight-light text-gray-3 mt-1">
+                갤럭시버즈2<br>
+                배스킨라빈스 파인트<br>
+				        스타벅스 아메리카노
+              </p>
+            </div>
+            <div class="col-6 col-sm-3 item">
+              <div class="intro-thumb--3"></div>
+              <p class="common-text-24 font-weight-medium text-gray-1 mt-2">당첨자 수</p>
+              <p class="common-text-22 font-weight-light text-gray-3 mt-1">
+                총 63명
+              </p>
+            </div>
+            <div class="col-6 col-sm-3 item">
+              <div class="intro-thumb--4"></div>
+              <p class="common-text-24 font-weight-medium text-gray-1 mt-2">당첨자 발표</p>
+              <p class="common-text-22 font-weight-light text-gray-3 mt-1">
+                2021년 11월 12일
+              </p>
+            </div>
+          </div>
+		<?
+          	$siteDomain = (!isset($_SERVER["HTTPS"]) || $_SERVER["HTTPS"] != "on")?"http://":"https://";
+    		$siteDomain .= $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+            $sitetitle = "우표카드뉴스 만들기 |".$SS[sitename];
+		?>
+          <div class="row justify-content-center text-center mt-13">
+            <div class="col-12 col-sm-auto py-2">
+              <a href="../pop/remake-giveaway.html" class="btn-type-01 py-5 px-15 popup-link">경품 자세히 보기</a>
+            </div>
+            <div class="col-12 col-sm-auto py-2">
+              <a href="../pop/share.html?siteDomain=<?=Encrypt($siteDomain);?>&sitetitle=<?=$sitetitle;?>" class="btn-type-02 py-5 px-15 popup-link">SNS 공유하기</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- E : Section (우표카드뉴스만들기 소개) -->
+      
+      <!-- S : Section (우표카드뉴스만들기 참여방법) -->
+      <section class="section">
+        <div class="container py-10 py-lg-17">
+          <div class="text-center">
+            <h1 class="common-title--h1 text-color-1">참여방법</h1>
+          </div>
+          
+          <div class="row remake-step mt-10">
+            <div class="col-6 col-sm-3 item">
+              <div class="step-thumb--1"></div>
+              <p class="common-text--22 font-weight-bold mt-2">Step 1.</p>
+              <p class="common-text--common-text--22 font-weight-light mt-1 mb-3">
+                나만의 우표 카드뉴스<br>
+                디자인
+              </p>
+              <a href="../pop/remake-sample.html" class="d-inline-block py-1 px-2 common-text--18 text-white bg-color-1 popup-link">
+                카드뉴스 예시 보기
+              </a>
+            </div>
+            <div class="col-6 col-sm-3 item">
+              <div class="step-thumb--2"></div>
+              <p class="common-text--22 font-weight-bold mt-1">Step 2.</p>
+              <p class="common-text--common-text--22 font-weight-light mt-2">
+                디자인 이미지<br>
+                첨부하기(최대 6장)
+              </p>
+            </div>
+            <div class="col-6 col-sm-3 item">
+              <div class="step-thumb--3"></div>
+              <p class="common-text--22 font-weight-bold mt-1">Step 3.</p>
+              <p class="common-text--common-text--22 font-weight-light mt-2">
+                참여자 정보 입력
+              </p>
+            </div>
+            <div class="col-6 col-sm-3 item">
+              <div class="step-thumb--4"></div>
+              <p class="common-text--22 font-weight-bold mt-1">Step 4.</p>
+              <p class="common-text--common-text--22 font-weight-light mt-2">
+                이벤트 참여완료
+              </p>
+            </div>
+          </div>
+          
+          <div class="row remake-bnr mx-n2 mx-sm-n5 mt-15 mt-md-20">
+            <div class="col-12 col-sm-6 py-6 px-2 px-md-5">
+              <div class="item">
+                <h2 class="remake-bnr__title--1">우표 카드뉴스 주제</h2>
+                <p class="common-text--26 text-gray-1 font-weight-medium mt-n4">
+                  ‘특별한 날’, ‘우표시간여행’
+                </p>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 py-6 px-2 px-md-5">
+              <div class="item">
+                <h2 class="remake-bnr__title--2">우표이미지</h2>
+                <p class="common-text--26 text-gray-1 font-weight-medium mt-n4">
+                  한국우표포털(<a href="http://www.kstamp.go.kr" class="text-info">www.kstamp.go.kr</a>),<br>
+                  포털사이트 등 에서 다운 후 활용 가능
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <h2 class="common-text--20 text-color-1 mt-5">안내사항</h2>
+          <p class="common-text--18 font-weight-light text-gray-3 mt-2">
+            * 카드뉴스 제작툴은 자유롭게 사용하여 제작 가능합니다.<br>
+            (아래 예시의 미리캔버스는 이미지 무료 클라우드편집툴로 필수 사용 사항은 아닙니다.)<br>
+            ※ 등록된 카드뉴스는 한국우편사업진흥원 우정문화 활동에 사용될 수도 있습니다.
+          </p>
+        </div>
+      </section>
+      <!-- E : Section (우표카드뉴스만들기 참여방법) -->
+      
+      <!-- S : Section (광고배너) -->
+      <section class="section">
+        <div class="container py-10 py-lg-17">
+          <div class="adv-bnr">
+            <h1 class="adv-bnr__title">
+              디자인이 어렵다면 <span class="em">미리캔버스</span>에서 디자인 해보세요.
+            </h1>
+            
+            <div class="adv-bnr__btn-group">
+              <a href="https://www.miricanvas.com/s/853" class="adv-bnr__btn" target="_blank">미리캔버스 바로가기</a>
+              <a href="../pop/canvas.html" class="adv-bnr__btn mt-1 mt-sm-0 popup-link" target="_blank">미리캔버스 사용방법</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- E : Section (광고배너) -->
+      
+      <!-- S : Section (내 작품 자랑하기) -->
+      <section class="section">
+        <div class="container py-10 py-lg-17">
+          <div class="text-center">
+            <h1 class="common-title--h1">
+              내 작품 자랑하기
+            </h1>
+            <p class="common-text--26 font-weight-light text-gray-3 mt-2">
+              디자인 한 카드뉴스 이미지를 등록하고 이벤트에 참여해보세요.
+            </p>
+          </div>
+          
+          <div class="bullet-list-box mt-13">
+            <ul class="bullet-list bullet-list--txt">
+              <li class="item" data-bullet="*">모든 항목 필수 입력입니다.</li>
+              <li class="item" data-bullet="*">정보가 맞지 않을 경우 이벤트 당첨이 취소 될 수 있습니다. 정확히 입력해주세요.</li>
+              <li class="item" data-bullet="*">수집된 개인정보는 이벤트 당첨자는 당첨자 발표 2주 후 삭제됩니다.</li>
+              <li class="item" data-bullet="*">등록된 카드뉴스 작품은 수정이 불가합니다.</li>
+              <li class="item" data-bullet="*">중복이미지 또는 부적절한 카드뉴스는 노출 이후라도 삭제 할 수 있습니다.</li>
+			  <li class="item text-color-1" data-bullet="※">1명*500원 기부액 적립. 최대 목표 기부 300만원 (적립된 기부액만큼 환경단체 기부예정)</li>
+            </ul>
+          </div>
+          
+          <p class="font-weight-light text-color-1 mt-2">* 본 이벤트는 럭키스탬프가 지급되는 이벤트입니다.</p>
+          
+         <form name="theForm" id="theForm" method="post" action="" enctype="multipart/form-data" autocomplete="off" onsubmit="return form_check();">
+            <table class="table-form-01">
+              <colgroup>
+                <col width="50%">
+                <col width="50%">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <td>
+                    <h2 class="common-text--22 font-weight-medium text-gray-1 mb-3">이름</h2>
+                    <input type="text" name="uname" id="uname" title="이름" maxlength="50" class="w-100" required="" maxlength="10">
+                  </td>
+                  <td>
+                    <h2 class="common-text--22 font-weight-medium text-gray-1 mb-3">연락처</h2>
+                    <input type="tel" name="utel" id="utel" title="연락처" maxlength="11" class="w-100 input_num" required="" placeholder="‘-’을 제외 후 입력해주세요.">
+                    <p class="font-weight-light text-color-1 mt-2">* 이벤트 당첨시 안내받으실 전화번호를 입력해주세요.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <th colspan="2">
+                    <h2 class="common-text--22 font-weight-medium text-gray-1 mb-3">카드뉴스 제목</h2>
+                    <input type="text" name="title" id="title" title="제목" maxlength="100" class="w-100" required="">
+                  </th>
+                </tr>
+                <tr>
+                  <th colspan="2">
+                  	<div class="remaining">
+                        <h2 class="common-text--22 font-weight-medium text-gray-1 mb-3">카드뉴스 설명</h2>
+                        <span class="red count">0</span> / 2,000자
+                        <textarea type="textarea" name="content" id="content" title="설명" class="area_for content" required=""></textarea>
+                        <a href="javascript:;" class="btn_symbol" id="btn_symbol">특수문자 <i class="xi-plus"></i></a>
+                        <div class="symbol_bx">
+                            <ul>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','｛');">｛</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','｝');">｝</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','〔');">〔</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','〕');">〕</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','〈');">〈</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','〉');">〉</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','《');">《</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','》');">》</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','「');">「</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','」');">」</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','『');">『</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','』');">』</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','【');">【</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','】');">】</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content',''');">'</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content',''');">'</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','"');">"</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','"');">"</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','、');">、</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','。');">。</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','·');">·</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','‥');">‥</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','…');">…</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','§');">§</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','※');">※</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','☆');">☆</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','★');">★</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','○');">○</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','●');">●</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','◎');">◎</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','◇');">◇</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','◆');">◆</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','□');">□</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','■');">■</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','△');">△</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','▲');">▲</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','▽');">▽</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','▼');">▼</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','◁');">◁</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','◀');">◀</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','▷');">▷</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','▶');">▶</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','♤');">♤</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','♠');">♠</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','♡');">♡</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','♥');">♥</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','♧');">♧</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','♣');">♣</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','⊙');">⊙</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','◈');">◈</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','▣');">▣</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','◐');">◐</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','◑');">◑</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','▒');">▒</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','▤');">▤</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','▥');">▥</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','▨');">▨</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','▧');">▧</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','▦');">▦</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','▩');">▩</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','±');">±</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','×');">×</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','÷');">÷</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','≠');">≠</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','≤');">≤</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','≥');">≥</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','∞');">∞</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','∴');">∴</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','°');">°</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','′');">′</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','″');">″</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','∠');">∠</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','⊥');">⊥</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','⌒');">⌒</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','∂');">∂</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','≡');">≡</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','≒');">≒</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','≪');">≪</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','≫');">≫</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','√');">√</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','∽');">∽</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','∝');">∝</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','∵');">∵</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','∫');">∫</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','∬');">∬</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','∈');">∈</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','∋');">∋</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','⊆');">⊆</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','⊇');">⊇</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','⊂');">⊂</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','⊃');">⊃</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','∪');">∪</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','∩');">∩</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','∧');">∧</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','∨');">∨</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','￢');">￢</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','⇒');">⇒</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','⇔');">⇔</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','∀');">∀</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','∃');">∃</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','´');">´</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','～');">～</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','ˇ');">ˇ</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','˘');">˘</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','˝');">˝</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','˚');">˚</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','˙');">˙</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','¸');">¸</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','˛');">˛</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','¡');">¡</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','¿');">¿</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','ː');">ː</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','∮');">∮</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','∑');">∑</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','∏');">∏</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','♭');">♭</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','♩');">♩</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','♪');">♪</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','♬');">♬</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','→');">→</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','←');">←</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','↑');">↑</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','↓');">↓</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','↔');">↔</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','↕');">↕</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','↗');">↗</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','↙');">↙</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','↖');">↖</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','↘');">↘</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','№');">№</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','㏇');">㏇</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','™');">™</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','㏂');">㏂</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','㏘');">㏘</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','♨');">♨</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','☏');">☏</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','☎');">☎</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','☜');">☜</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','☞');">☞</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','¶');">¶</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','†');">†</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','‡');">‡</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','®');">®</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','ª');">ª</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','º');">º</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','♂');">♂</a></li>
+                                <li><a href="javascript:;void(0);" onclick="insertAtCursor('content','♀');">♀</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                  </th>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <h2 class="common-text--22 font-weight-medium text-gray-1 mb-3">파일첨부</h2>
+                    
+                    <div class="input_wrap file_box">
+                      <p>
+                      </p>
+                      <span class="btn_type_file">찾아보기</span>
+                      <input type="file" name="add_file1" id="add_file1">
+                    </div>
+                    <div class="input_wrap file_box">
+                      <p>
+                      </p>
+                      <span class="btn_type_file">찾아보기</span>
+                      <input type="file" name="add_file2" id="add_file2">
+                    </div>
+                    <div class="input_wrap file_box">
+                      <p>
+                      </p>
+                      <span class="btn_type_file">찾아보기</span>
+                      <input type="file" name="add_file3" id="add_file3">
+                    </div>
+                    <div class="input_wrap file_box">
+                      <p>
+                      </p>
+                      <span class="btn_type_file">찾아보기</span>
+                      <input type="file" name="add_file4" id="add_file4">
+                    </div>
+                    <div class="input_wrap file_box">
+                      <p>
+                      </p>
+                      <span class="btn_type_file">찾아보기</span>
+                      <input type="file" name="add_file5" id="add_file5">
+                    </div>
+                    <div class="input_wrap file_box">
+                      <p>
+                      </p>
+                      <span class="btn_type_file">찾아보기</span>
+                      <input type="file" name="add_file6" id="add_file6">
+                    </div>
+                    
+                    <p class="font-weight-light text-color-1 mt-1">* 첨부파일은 6개까지 첨부가능합니다.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <ul class="clause_list">
+                      <li>
+                        <h5>개인정보처리방침</h5>
+                        <div class="textarea_box_border">
+                          <div class="textarea_box">
+                           <? include "../policy/privacy-text.html" ?>
+                          </div>
+                        </div>
+                        <div class="agree_box mt_10">
+                          <input type="checkbox" name="yark" value="ok" id="yark" title="개인정보처리방침에 동의" class="mr_05" required="">
+                          <label for="yark">개인정보처리방침 동의</label>
+                        </div>
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            
+            <div class="board_btn_bx text_center mt-5 mt-lg-10">
+              <a href="javascript:;void(0);" onclick="form_check();" class="btn-type-01 py-4 px-15">이벤트 참여하기</a>
+            </div>
+          </form>
+        </div>
+      </section>
+      <!-- E : Section (내 작품 자랑하기) -->
+      
+      <!-- S : Section (카드뉴스 갤러리) -->
+      <section class="section">
+        <div class="container py-10 py-lg-17 container_list">
+ <?
+        include $home."/include/limit_txt.php";
+		$search_kind=(isset($_REQUEST["search_kind"]))?$_REQUEST["search_kind"]:"";
+		$search_text=(isset($_REQUEST["search_text"]))?$_REQUEST["search_text"]:"";
+    
+        $search_string="";
+        
+        if (!empty($search_kind) && !empty($search_text)) {
+            $search_string .= " and ".CheckWord($search_kind)." like '%".CheckWord($search_text)."%'";
+        }
+        else {
+            $search_kind="";
+            $search_text="";
+        }
+        
+        if (Trim($sort_kind)=="oldsort") {
+            $sort_string .= " order by RM.reg_date asc ";
+        } elseif (Trim($sort_kind)=="likesort") {
+            $sort_string .= " order by (select ifnull(count(uid),0) from tb_remake_like where board_name='remake' and p_uid=RM.uid) desc,RM.uid desc ";
+        } else {
+            $sort_string .= " order by uid desc ";
+        }
+        
+        $gotopage = (Trim($_REQUEST["gotopage"])!="")?$_REQUEST["gotopage"]:1;
+        
+        $sql= "select uid from tb_remake RM where RM.viewtype='Y' ".$search_string;
+        
+        $rs_count = mysqli_query($Conn,$sql);
+        
+        $total_count = mysqli_num_rows($rs_count); 	// 전체 레코드 개수
+        
+        $ipp = 12;	// 한페이지 당 레코드 개수
+        
+        $nowpage = $gotopage;  // 현재 페이지
+        
+        $page_count = $total_count-($ipp * ($nowpage-1)); // 출력 페이지 첫 게시물 번호
+        
+        $total_page = ceil($total_count / $ipp);	// 전체 페이지 개수
+        
+        $offset = $ipp*($nowpage-1);				// 게시물 시작 번호
+        
+        $sql = "select * from tb_remake RM where RM.viewtype='Y' ".$search_string.$sort_string." limit $offset, $ipp";
+        
+        $rs_row = mysqli_query($Conn,$sql);
+?>
+		<form method="post" name="listsearch_Form" id="listsearch_Form">
+      	<input type="hidden" name="gotopage" value="<?=$gotopage;?>" />
+      	<input type="hidden" name="search_kind" value="<?=$search_kind;?>">
+      	<input type="hidden" name="search_text" value="<?=$search_text;?>">
+          <div class="common-title-box">
+            <h1 class="common-title--h1">
+              카드뉴스 갤러리
+            </h1>
+            <select name="sort_kind" id="sort_kind" class="sort-select" onchange="list_go('1');">
+              <option value="">구분</option>
+              <option value="likesort">인기순</option>
+              <option value="newsort">최신순</option>
+              <option value="oldsort">오래된 순</option>
+            </select>
+          </div>
+          
+          
+          <ul class="img_board_list">
+          
+          
+    <?
+        if ($total_count<>0) {
+            $i=1;
+            while(($rs_record=mysqli_fetch_array($rs_row)) && ($i <= $ipp)) {
+                $sql_img = "select * from tb_remake_add where p_uid=".CheckWord($rs_record["uid"])." order by sort_num asc,uid desc limit 1";
+                $rs_row_img=mysqli_query($Conn,$sql_img);
+                $rs_img=mysqli_fetch_array($rs_row_img);
+                
+                $sql0 = "select uid from tb_remake_like where board_name='remake' and p_uid=".CheckWord($rs_record["uid"]);
+    			$rs_row0=mysqli_query($Conn,$sql0);
+    			$rs_like_count=mysqli_num_rows($rs_row0);
+                
+                $sql1 = "select uid from tb_remake_like where board_name='remake' and  p_uid=".CheckWord($rs_record["uid"])." and into_ip='".$_SERVER["REMOTE_ADDR"]."'";
+    			$rs_row1=mysqli_query($Conn,$sql1);
+    			$rs_mylike=mysqli_fetch_array($rs_row1);
+    ?>
+            <li class="col-xs-6 col-sm-2 col-md-3 col-lg-4 mx-lg-">
+              <a href="../pop/remake-view.html?uid=<?=Encrypt($rs_record["uid"]);?>" class="wrap popup-link">
+                <div class="img_box">
+                  <!--리스트 이미지 기본 사이즈  270x 207  -->
+                  <span class="img_src" style="background-image: url('<? echo (Trim($rs_img["remake_file_name"])!="")?"/upload/remake/".$rs_img["remake_file_name"]:"../images/board/no_img.jpg";?>')"></span>
+                </div>
+              </a>
+              
+              <div class="link_box">
+                <a href="javascript:void(0);" class="btn-wish<? echo ($rs_mylike!=null)?" on":"";?>" data-value="<?=Encrypt($rs_record["uid"]);?>">
+                  <span class="icon"></span>
+                  <span class="text like_count"><?=number_format($rs_like_count);?></span>
+                </a>
+                
+                <!--<a href="../pop/share.html" class="btn-share popup-link">
+                  <span class="icon"></span>
+                  <span class="text">12,578</span>
+                </a>-->
+              </div>
+              <a href="../pop/remake-view.html" class="popup-link">
+                <div class="txt_box">
+                  <p class="tit"><?=string_limit($rs_record["title"],150)?></p>
+                  <p class="date">Design by. <?=mb_substr($rs_record["uname"],0,1,"UTF-8")."*".mb_substr($rs_record["uname"],2,1,"UTF-8");?></p>
+                </div>
+              </a>
+            </li>
+    <?
+                $i++;
+            }
+        }
+        else {
+    ?>
+        <!-- S : 등록된 게시물이 없는 경우 -->
+        <li class="no_data">
+          등록된 게시물이 없습니다.
+        </li>
+        <!-- E : 등록된 게시물이 없는 경우 -->
+    <? } ?>
+          </ul>
+          
+          <!-- S : 페이징 -->
+          <div class="paging-area">
+             <? include "./list_pages.php"; ?>
+          </div>
+          <!-- E : 페이징 -->
+        </form>
+        </div>
+      </section>
+      <!-- E : Section (카드뉴스 갤러리) -->
+    </main>
+  
+    <!-- E : Main -->
+    
+    <? include "../include/footer.html" ?>
+    
+    <? include "../include/js.html" ?>
+<script type="text/javascript" src="/js/space_check.js"></script>
+<script type="text/javascript" language="JavaScript">
+var maximumByte=2000;
+$(document).ready(function(){
+	$(".input_num").on("keyup", function() {
+		$(this).val($(this).val().replace(/[^0-9]/g,""));
+	});
+	
+	$('.remaining').each(function () {
+	// count 정보 및 count 정보와 관련된 textarea/input 요소를 찾아내서 변수에 저장한다.
+
+		var $count = $('.count', this);
+		var $input = $(".content", this);
+	
+		// update 함수는 keyup, paste, input 이벤트에서 호출한다.
+		var update = function () {
+			var str_len = $input.val().length;
+			var cbyte = 0;
+			var li_len = 0;
+			for (i = 0; i < str_len; i++) {
+				cbyte++; //글자수를 더한다
+				if (cbyte <= maximumByte) {
+					li_len = i + 1;
+				}
+			}
+			// 사용자가 입력한 값이 제한 값을 초과하는지를 검사한다.
+			if (parseInt(cbyte) > parseInt(maximumByte)) {
+				alert('2,000자가 초과되었습니다.');
+				var str = $input.val();
+				var str2 = $input.val().substr(0, li_len);
+				$input.val(str2);
+				var cbyte = 0;
+				for (i = 0; i < $input.val().length; i++) {
+					cbyte++; //글자수를 더한다
+				}
+			}
+			$count.text(cbyte);
+		};
+		// input, keyup, paste 이벤트와 update 함수를 바인드한다
+		$input.bind('input keyup keydown paste change', function () {
+			setTimeout(update, 0)
+		});
+		update();
+	});
+});
+
+function insertAtCursor(areaId,text) {
+		var txtarea = document.getElementById(areaId);
+		var scrollPos = txtarea.scrollTop;
+		var strPos = 0;
+		var br = ((txtarea.selectionStart || txtarea.selectionStart =='0') ? "ff" : (document.selection ? "ie" : false ) );
+		if (br == "ie") {
+			txtarea.focus();
+			var range = document.selection.createRange();
+			range.moveStart ('character', -txtarea.value.length);
+			strPos = range.text.length;
+		}
+		else if (br == "ff") strPos = txtarea.selectionStart;
+		var front = (txtarea.value).substring(0,strPos);
+		var back = (txtarea.value).substring(strPos,txtarea.value.length);
+		txtarea.value=front+text+back;
+		strPos = strPos + text.length;
+		if (br == "ie") {
+			txtarea.focus();
+			var range = document.selection.createRange();
+			range.moveStart ('character', -txtarea.value.length);
+			range.moveStart ('character', strPos);
+			range.moveEnd ('character', 0);
+			range.select();
+		}
+		else if (br == "ff") {
+			txtarea.selectionStart = strPos;
+			txtarea.selectionEnd = strPos;
+			txtarea.focus();
+		}
+		txtarea.scrollTop = scrollPos;
+		
+		var $count = $('.count');
+		var $input = $(".content");
+	
+		var str_len = $input.val().length;
+		var cbyte = 0;
+		var li_len = 0;
+		for (i = 0; i < str_len; i++) {
+			cbyte++; //글자수를 더한다
+			if (cbyte <= maximumByte) {
+				li_len = i + 1;
+			}
+		}
+		// 사용자가 입력한 값이 제한 값을 초과하는지를 검사한다.
+		if (parseInt(cbyte) > parseInt(maximumByte)) {
+			alert('2,000자가 초과되었습니다.');
+			var str = $input.val();
+			var str2 = $input.val().substr(0, li_len);
+			$input.val(str2);
+			var cbyte = 0;
+			for (i = 0; i < $input.val().length; i++) {
+				cbyte++; //글자수를 더한다
+			}
+		}
+		$count.text(cbyte);
+	}
+function form_check() {
+	var result="";
+	if (isFieldBlank(theForm.uname))	{
+		alert("이름을 입력해주세요.");
+		theForm.uname.focus();
+		return(false);
+	}
+	
+	if (numValue(theForm.utel))	{
+		alert("연락처를 숫자로만 입력해주세요.");
+		theForm.utel.focus();
+		return(false);
+	}
+	
+	if (isFieldBlank(theForm.title))	{
+		alert("제목을 입력해주세요.");
+		theForm.title.focus();
+		return(false);
+	}
+	
+	if (isFieldBlank(theForm.content))	{
+		alert("내용을 입력해주세요.");
+		theForm.content.focus();
+		return(false);
+	}
+	
+	if (isFieldBlank2($("#add_file1").val()) && isFieldBlank2($("#add_file2").val()) && isFieldBlank2($("#add_file3").val()) && isFieldBlank2($("#add_file4").val())) {
+		alert("파일을 1개이상 첨부해 주세요.");
+		$("#add_file1").focus();
+		return(false);
+	}
+	
+	var str = theForm.content.value
+	if (str.length > 2000) {
+		alert("내용을 2,000자이하로 입력해주세요.");
+		theForm.content.focus();
+		return(false);
+	}
+	if (theForm.yark.checked!=true) {
+		alert("개인정보처리방침에 동의하셔야 상담이 가능합니다.");
+		return(false);
+	}
+	
+	var formd = $('#theForm')[0];
+	var formData = new FormData(formd);
+ 
+	$.ajax({
+		url : 'view_ok.php',
+		type : "post",
+		processData: false,
+		contentType: false,
+		async: false,
+		data : formData ,
+		success:function(data){
+			result = $.trim(data);
+		}
+	});
+	
+	if(result=="OK") {
+		$("#add_file1").siblings('p').text('');
+		$("#add_file2").siblings('p').text('');
+		$("#add_file3").siblings('p').text('');
+		$("#add_file4").siblings('p').text('');
+		$("#add_file5").siblings('p').text('');
+		$("#add_file6").siblings('p').text('');
+		theForm.reset();
+		alert("등록이 완료되었습니다.\n작품확인은 노출 승인 후 가능합니다.\n* 노출 승인일시: 익일(영업일 기준) 오전 11시");
+	} else {
+		alert("등록중 에러가 발생하였습니다.");
+	}
+	return(false);
+}
+
+function list_go(gotopage) {
+	listsearch_Form.gotopage.value=gotopage;
+	result="";
+	var formData = $("#listsearch_Form").serialize();
+	$.ajax({
+		url : 'list.php',
+		type : "post",
+		async: false,
+		data : formData ,
+		success:function(data){
+			result=$.trim(data)
+		}
+	});
+	
+	$(".container_list").text('');
+	$(".container_list").append(result);
+
+}
+
+function sort_go(gotopage) {
+	listsearch_Form.gotopage.value=1;
+	listsearch_Form.action="list.php";
+	listsearch_Form.submit();
+}
+
+$(document).on("click",".btn-wish",function() {
+	if ( $(this).hasClass('on') ) {
+		$(this).removeClass('on'); // on 클래스 있는 경우 제거
+    } else {
+		$(this).addClass('on'); // on 클래스 없는 경우 추가
+	}
+	var temp_no=$(this).attr("data-value");
+	var choose_index=$(".btn-wish").index(this);
+	$.ajax({
+		url : 'remake_like.php',
+		type : "post",
+		async: false,
+		data : {temp_no:temp_no},
+		contentType: "application/x-www-form-urlencoded; charset=utf-8",
+		success:function(data){
+			$(".like_count").eq(choose_index).text($.trim(data));
+		}
+	});
+});
+</script>
+    <script>
+      function onCopy(id) {
+        $(id).select();
+        document.execCommand('copy');
+        alert('복사되었습니다.')
+        $(id).blur();
+      }
+    
+      var btn = $('.btn_symbol');
+      var des = $('.symbol_bx');
+      $(btn).click(function () {
+        $(des).toggle(200);
+      
+        return false;
+      });
+    </script>
+    <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+    <script>
+      $(document).on('contextmenu', function (e) {
+        e.preventDefault();
+    
+        alert('저작권 보호를 위해\n마우스 우클릭은 사용하실 수 없습니다.');
+      });
+    </script>
+  </body>
+</html>

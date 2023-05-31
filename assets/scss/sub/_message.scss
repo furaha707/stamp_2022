@@ -1,0 +1,711 @@
+@charset "UTF-8";
+
+.sub-body.message {
+	.table-form-01 {
+		border-top: 2px solid #111;
+		border-bottom: 1px solid #ccc;
+	}
+
+	/* 2022-09-05 */
+	.red {
+		color: #ee3126;
+	}
+	.line {
+		border: 3px solid #ddd;
+	}
+	.line-1 {
+		border: 1px solid #ddd;
+	}
+	//스탬프 투어
+	.btn-type-01 {
+		background: #ee3126;
+		@include mdq-max(sm) {
+			width: 100%;
+		}
+	}
+	.btn-type-02 {
+		background: #808080;
+		@include mdq-max(sm) {
+			width: 100%;
+		}
+	}
+
+	.map-txt {
+		background: #ee3126;
+		width: rem(240);
+		margin: auto;
+		border-radius: 50px;
+	}
+	.link {
+		font-size: rem(20);
+		color: #666;
+	}
+	.color-red {
+		font-size: rem(18);
+		color: #ee3126;
+		@include mdq-max(sm) {
+			font-size: rem(15);
+		}
+	}
+
+	//출석체크
+	.list-bx {
+		display: flex;
+		justify-content: center;
+		max-width: 1240px;
+		width: 100%;
+		margin: auto;
+		padding-top: rem(35);
+	}
+	.list-item {
+		flex: 1 0 33.33%;
+		max-width: 33.33%;
+	}
+	.bullet-list {
+		&.color {
+			> .item {
+				&::before {
+					color: #ee3126;
+				}
+			}
+		}
+	}
+	@include mdq-max(md) {
+		.list-bx {
+			flex-wrap: wrap;
+		}
+		.list-item {
+			flex: 1 0 100%;
+			max-width: 100%;
+			padding-bottom: rem(30);
+			&:last-child {
+				padding-bottom: 0;
+			}
+		}
+	}
+}
+
+input:focus {
+	border-color: #ee3126 !important;
+	// outline: 1px solid $sc1 !important;
+}
+
+.paging-area {
+	a {
+		&.active {
+			background-color: #ee3126 !important;
+		}
+	}
+}
+
+// 스탬프
+
+// 스탬프 영역
+/* Made by Masstige */
+.bullet-list-box {
+	padding: 1em 0;
+	border-top: 2px solid #333;
+	border-bottom: 1px solid #c1c1c1;
+}
+
+.remake-intro > .item {
+	text-align: center;
+}
+.remake-intro > .item + .item {
+	border-left: 1px solid #ddd;
+}
+@media screen and (max-width: 576px) {
+	.remake-intro > .item:nth-child(n + 3) {
+		margin-top: 2.25em;
+	}
+	.remake-intro > .item:nth-child(3n) {
+		border-left: 0;
+	}
+}
+.remake-intro [class^='intro-thumb'],
+.remake-intro [class*=' intro-thumb'] {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 6.25em;
+	height: 6.25em;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 100%;
+	background-color: #292e34;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: auto 2.625em;
+}
+.remake-intro .intro-thumb--1 {
+	background-image: url(../images/remake/intro_ico_1.svg);
+}
+.remake-intro .intro-thumb--2 {
+	background-image: url(../images/remake/intro_ico_2.svg);
+}
+.remake-intro .intro-thumb--3 {
+	background-image: url(../images/remake/intro_ico_3.svg);
+}
+.remake-intro .intro-thumb--4 {
+	background-image: url(../images/remake/intro_ico_4.svg);
+}
+
+.remake-step > .item {
+	text-align: center;
+}
+.remake-step > .item + .item {
+	position: relative;
+}
+.remake-step > .item + .item::before {
+	content: '';
+	display: block;
+	width: 1.5em;
+	height: 2.375em;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translate(-50%, -50%);
+	background-image: url(../images/remake/step_arr.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100% auto;
+}
+@media screen and (max-width: 576px) {
+	.remake-step > .item:nth-child(n + 3) {
+		margin-top: 2.25em;
+	}
+	.remake-step > .item:nth-child(3n)::before {
+		display: none;
+	}
+}
+.remake-step [class^='step-thumb'],
+.remake-step [class*=' step-thumb'] {
+	width: 9.375em;
+	height: 5.125em;
+	margin-left: auto;
+	margin-right: auto;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: auto 100%;
+}
+.remake-step .step-thumb--1 {
+	background-image: url(../images/remake/step_ico_1.svg);
+}
+.remake-step .step-thumb--2 {
+	background-image: url(../images/remake/step_ico_2.svg);
+}
+.remake-step .step-thumb--3 {
+	background-image: url(../images/remake/step_ico_3.svg);
+}
+.remake-step .step-thumb--4 {
+	background-image: url(../images/remake/step_ico_4.svg);
+}
+
+.remake-bnr [class^='remake-bnr__title'] {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 11.6428571429em;
+	height: 3.6428571429em;
+	text-align: center;
+	color: #fff;
+	font-weight: 700;
+	font-size: 1.75em;
+	letter-spacing: -0.02em;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100% auto;
+	margin-left: auto;
+	margin-right: auto;
+	transform: translateY(-48%);
+}
+@media screen and (max-width: 768px) {
+	.remake-bnr [class^='remake-bnr__title'] {
+		font-size: 1.375em;
+	}
+}
+@media screen and (max-width: 576px) {
+	.remake-bnr [class^='remake-bnr__title'] {
+		font-size: 1.125em;
+	}
+}
+.remake-bnr .remake-bnr__title--1 {
+	background-image: url(../images/remake/bnr_title_bg_1.svg);
+}
+.remake-bnr .remake-bnr__title--2 {
+	background-image: url(../images/remake/bnr_title_bg_2.svg);
+}
+.remake-bnr .item {
+	text-align: center;
+	height: 100%;
+	padding: 0 1.25em 3.25em 1.25em;
+	background-image: url(../images/remake/bnr_bg.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100% 100%;
+}
+
+.adv-bnr {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	padding-top: 2em;
+	padding-bottom: 2em;
+	padding-left: 8.75em;
+	background-color: #f4f4f4;
+	background-image: url(../images/remake/adv_bnr_ico.svg);
+	background-repeat: no-repeat;
+	background-position: bottom 0 left 1.25em;
+	background-size: 5.375em auto;
+}
+.adv-bnr__title {
+	flex: 0 0 auto;
+	width: auto;
+	font-size: 1.375em;
+	font-weight: 500;
+	letter-spacing: -0.02em;
+	color: #111;
+}
+.adv-bnr__title .em {
+	color: #1ca66f;
+}
+@media screen and (max-width: 1200px) {
+	.adv-bnr__title {
+		flex: 1 0 100%;
+		width: 100%;
+	}
+}
+.adv-bnr__btn-group {
+	flex: 1 1 auto;
+	width: 1%;
+	padding-left: 1.75em;
+}
+@media screen and (max-width: 1200px) {
+	.adv-bnr__btn-group {
+		padding-left: 0;
+		width: 100%;
+		padding-top: 1em;
+	}
+}
+@media screen and (max-width: 576px) {
+	.adv-bnr__btn-group {
+		padding-right: 1em;
+	}
+}
+.adv-bnr__btn {
+	display: inline-block;
+	flex: 1 0 50%;
+	max-width: 50%;
+	font-size: 1.25em;
+	font-weight: 500;
+	letter-spacing: -0.014em;
+	color: #111;
+	background-color: #fff;
+	border: 1px solid #aaa;
+	padding: 0.4em 1.3em;
+	transition: all 0.3s ease-in-out;
+}
+@media screen and (max-width: 576px) {
+	.adv-bnr__btn {
+		flex: 1 0 100%;
+		max-width: 100%;
+	}
+}
+.adv-bnr__btn:hover {
+	color: #fff;
+	background-color: #1ca66f;
+	border-color: #1ca66f;
+}
+
+.btn-wish {
+	display: inline-flex;
+	align-items: center;
+	font-size: 1em;
+	font-weight: 300;
+	letter-spacing: 0;
+	color: #333;
+}
+.btn-wish .icon {
+	flex: 0 0 1.125em;
+	width: 1.125em;
+	height: 1em;
+	margin-right: 4px;
+	background-image: url(../images/icon/wish.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100% auto;
+}
+@media screen and (max-width: 1024px) {
+	.btn-wish .icon {
+		background-image: url(../images/icon/wish-m.png);
+	}
+}
+.btn-wish.on .icon {
+	background-image: url(../images/icon/wish_on.png);
+}
+@media screen and (max-width: 1024px) {
+	.btn-wish.on .icon {
+		background-image: url(../images/icon/wish_on-m.png);
+	}
+}
+
+.btn-share {
+	display: inline-flex;
+	align-items: center;
+	font-size: 1em;
+	font-weight: 300;
+	letter-spacing: 0;
+	color: #333;
+}
+.btn-share .icon {
+	flex: 0 0 1.125em;
+	width: 1.125em;
+	height: 1.25em;
+	margin-right: 4px;
+	background-image: url(../images/icon/share.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100% auto;
+}
+@media screen and (max-width: 1024px) {
+	.btn-share .icon {
+		background-image: url(../images/icon/share-m.png);
+	}
+}
+
+.img_board_list .link_box {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-top: 16px;
+}
+
+.attend-stamp-wrap {
+	padding: 40px 80px 0;
+	max-width: 615px;
+	margin-left: auto;
+	margin-right: auto;
+	background: {
+		image: url(../images/remake/stamp_bg.png);
+		repeat: repeat;
+		position: top center;
+		size: cover;
+	}
+	@include mdq-max(lg) {
+		padding: 40px 20px 0;
+	}
+}
+
+.attend-stamp-top {
+	display: block;
+	width: 100%;
+	max-width: 615px;
+	margin-left: auto;
+	margin-right: auto;
+	background: {
+		image: url(../images/remake/stamp_bg_top.png);
+		repeat: no-repeat;
+		position: bottom center;
+		size: 100% auto;
+	}
+
+	&::after {
+		content: '';
+		display: block;
+		padding-bottom: percentage(99/864);
+	}
+}
+
+.attend-stamp-btm {
+	display: block;
+	width: 100%;
+	max-width: 615px;
+	margin-left: auto;
+	margin-right: auto;
+	height: 50px;
+	background: {
+		image: url(../images/remake/stamp_bg_btm.png);
+		repeat: no-repeat;
+		position: bottom center;
+		size: 100% auto;
+	}
+}
+
+.attend-stamp-row {
+	display: flex;
+	align-items: stretch;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-left: -10px;
+	margin-right: -10px;
+}
+
+.attend-stamp-col {
+	flex: 1 0 percentage(1/3);
+	max-width: percentage(1/3);
+	padding: 10px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+
+	@include mdq-max(sm) {
+		flex: 1 0 percentage(1/3);
+		max-width: percentage(1/3);
+	}
+}
+
+.attend-stamp {
+	user-select: none;
+	border-radius: 100%;
+	background-color: #fff;
+	border: 4px solid #c9c9c9;
+	width: 100px;
+	max-width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: 'yg-jalnan', sans-serif;
+	font-size: em(15);
+	color: #999;
+	letter-spacing: letterSpacing(-14);
+	line-height: (18/15);
+	text-align: center;
+
+	&::after {
+		content: '';
+		display: block;
+		padding-bottom: 100%;
+	}
+
+	&.on {
+		border: 0;
+		color: #e62411;
+		background: {
+			image: url(../images/bg/stamp_bg.svg);
+			repeat: no-repeat;
+			position: center;
+			size: cover;
+		}
+	}
+
+	&.attend-stamp--2.on {
+		position: relative;
+
+		&::before {
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translate(-50%, 50%);
+			color: #fff;
+			font-weight: 700;
+			font-size: 12px;
+			line-height: 1;
+			padding: 5px 6px;
+			background-color: $color-2;
+		}
+	}
+}
+
+.attend-stamp__title {
+	position: relative;
+	display: inline-block;
+
+	.inner {
+		position: relative;
+		z-index: 2;
+	}
+
+	&::before {
+		content: '';
+		display: block;
+		z-index: 1;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: em(122, 38);
+		height: em(80, 38);
+		background: {
+			image: url(../images/bg/stamp_text_bg.png);
+			repeat: no-repeat;
+			position: center;
+			size: cover;
+		}
+	}
+}
+
+.check-tit {
+	font-size: rem(48);
+	font-weight: bold;
+	color: #111;
+	text-align: center;
+	letter-spacing: letterSpacing(-25);
+	padding-bottom: 1.75rem;
+}
+
+.my-stamp-wrap {
+	position: relative;
+	text-align: center;
+	max-width: 680px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px em(60);
+
+	@include mdq-max(sm) {
+		padding: 10px em(24);
+	}
+
+	.bars {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+
+		span {
+			display: block;
+
+			&:nth-child(1) {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 10px;
+				background: {
+					color: #eee6d2;
+					repeat: no-repeat;
+					position: center;
+					size: 100% 100%;
+				}
+				z-index: 2;
+			}
+
+			&:nth-child(2) {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: 10px;
+				background: {
+					color: #eee6d2;
+					repeat: no-repeat;
+					position: center;
+					size: 100% 100%;
+				}
+				z-index: 2;
+			}
+
+			&:nth-child(3) {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 10px;
+				height: 100%;
+				background: {
+					color: #eee6d2;
+					repeat: repeat;
+					position: center;
+					size: 100% auto;
+				}
+				z-index: 1;
+			}
+
+			&:nth-child(4) {
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 10px;
+				height: 100%;
+				background: {
+					color: #eee6d2;
+					repeat: repeat;
+					position: center;
+					size: 100% auto;
+				}
+				z-index: 1;
+			}
+		}
+	}
+}
+
+.my-stamp {
+	&-inner {
+		display: inline-flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.attend-stamp {
+		margin-top: 8px;
+		font-size: em(28);
+	}
+
+	.row {
+		margin-left: em(-40);
+		margin-right: em(-40);
+
+		[class^='col-'] {
+			padding: em(20) em(40);
+
+			&:nth-child(2) {
+				position: relative;
+
+				&::before {
+					position: absolute;
+					top: 55%;
+					left: 0;
+					transform: translate(-50%, -50%);
+					content: '';
+					display: block;
+					width: em(38);
+					height: em(38);
+					background: {
+						image: url(../images/remake/stamp_plus.png);
+						repeat: no-repeat;
+						position: center;
+						size: cover;
+					}
+				}
+			}
+
+			&:nth-child(3) {
+				position: relative;
+
+				&::before {
+					position: absolute;
+					top: 55%;
+					left: 0;
+					transform: translate(-50%, -50%);
+					content: '';
+					display: block;
+					width: em(38);
+					height: em(14);
+					background: {
+						image: url(../images/remake/stamp_equal.png);
+						repeat: no-repeat;
+						position: center;
+						size: cover;
+					}
+				}
+			}
+		}
+
+		@include mdq-max(md) {
+			margin-left: em(-20);
+			margin-right: em(-20);
+
+			[class^='col-'] {
+				padding: em(20);
+			}
+		}
+	}
+}
+
+.container_list {
+	.btn-type-01 {
+		@include mdq-max(sm) {
+			display: inline;
+		}
+	}
+}

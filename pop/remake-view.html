@@ -1,0 +1,78 @@
+<?
+	$home = str_replace("\\", "/",$_SERVER["DOCUMENT_ROOT"]);
+	include $home."/include/check.php";
+
+	header("Pragma: no-cache");
+	header("Expires: 0");
+	header("Cache-Control: no-cache,must-revalidate");
+	header("Content-Type: text/html; charset=utf-8");
+
+	$uid=Decrypt($_REQUEST["uid"]);
+	$error_num=0;
+    
+    $sql = "select * from tb_remake where viewtype='Y' and uid=".CheckWord($uid); 
+    $rs_row=mysqli_query($Conn,$sql);
+    $rs_remake=mysqli_fetch_array($rs_row);
+  	if($rs_remake==null) $error_num++;
+    $sql_img = "select * from tb_remake_add where p_uid=".CheckWord($rs_remake["uid"])." order by sort_num asc,uid desc";
+    $rs_row_img=mysqli_query($Conn,$sql_img);
+    $rs_img_count = mysqli_num_rows($rs_row_img);   
+    if($rs_img_count<1) $error_num++;
+
+?> 
+<div class="view-pop">
+  <button type="button" class="mfp-close" title="팝업 닫기" onclick="$.magnificPopup.close();"></button>
+  <div class="thumb">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+<?	
+	while($rs_img=mysqli_fetch_array($rs_row_img)) { 
+    	if(Trim($rs_img["remake_file_name"])!="") {
+?> 
+        <div class="swiper-slide">
+          <figure class="img">
+            <img src="/upload/remake/<?=$rs_img["remake_file_name"];?>" alt="">
+          </figure>
+        </div>
+<? 		
+		} 
+	}        
+?>
+      </div>      
+      <button type="button" class="swiper-button-prev" title="이전 슬라이드로 이동"></button>
+      <button type="button" class="swiper-button-next" title="다음 슬라이드로 이동"></button>
+    </div>
+  </div>
+  <div class="desc">
+    <div class="inner scrollbar-outer">
+      <h1 class="title"><?=$rs_remake["title"];?></h1>
+      <p class="date">Design by. <?=mb_substr($rs_remake["uname"],0,1,"UTF-8")."*".mb_substr($rs_remake["uname"],2,1,"UTF-8");?></p>      
+      <div class="text-area">
+        <?=nl2br($rs_remake["content"]);?>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" language="JavaScript">
+<!-- 
+	<? if($error_num >0) { ?>    
+	$.magnificPopup.close();
+	<? } ?>				
+//-->
+</script>
+
+<script>
+  $('.inner').scrollbar();
+  
+  var thumb = new Swiper('.swiper-container', {
+    loop: true,
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true
+    },
+    navigation: {
+      prevEl: '.swiper-button-prev',
+      nextEl: '.swiper-button-next'
+    }
+  });  
+</script>

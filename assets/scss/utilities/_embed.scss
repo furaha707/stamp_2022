@@ -1,0 +1,52 @@
+// Credit: Nicolas Gallagher and SUIT CSS.
+
+.embed-responsive {
+	position: relative;
+	display: block;
+	width: 100%;
+	padding: 0;
+	overflow: hidden;
+
+	&::before {
+		display: block;
+		content: '';
+	}
+
+	.embed-responsive-item,
+	iframe,
+	embed,
+	object,
+	video {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border: 0;
+	}
+}
+
+@each $embed-responsive-aspect-ratio in $embed-responsive-aspect-ratios {
+	$embed-responsive-aspect-ratio-x: nth($embed-responsive-aspect-ratio, 1);
+	$embed-responsive-aspect-ratio-y: nth($embed-responsive-aspect-ratio, 2);
+
+	.embed-responsive-#{$embed-responsive-aspect-ratio-x}by#{$embed-responsive-aspect-ratio-y} {
+		&::before {
+			padding-top: percentage($embed-responsive-aspect-ratio-y / $embed-responsive-aspect-ratio-x);
+		}
+	}
+}
+
+.embed-post {
+	max-width: 1160px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: em(20);
+	background: {
+		image: url(../images/message/embed_post_bg.jpg);
+		repeat: no-repeat;
+		position: center;
+		size: contain;
+	}
+}

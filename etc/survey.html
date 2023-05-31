@@ -1,0 +1,243 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+	<head>
+		<?
+    $P_dp1 = '6';
+    $P_dp2 = '2';
+    include "../include/meta.html"
+		?>
+	</head>
+	<body class="sub-body">
+		<!-- S : Header -->
+		<? include "../include/header.html" ?>
+		<!-- E : Header -->
+
+		<!-- S : Sub visual -->
+		<? include "../include/sub-visual.html" ?>
+		<!-- E : Sub visual -->
+
+		<!-- S : Main -->
+		<main class="main py-10 py-sm-15 py-lg-30" id="contents">
+			<!-- S : Section (만족도 조사) -->
+			<section class="section">
+				<div class="container" style="max-width: 1200px">
+					<h1 class="common-title--h1 font-weight-bold text-center mb-8 mb-lg-14">2022 대한민국 우표전시회 만족도 조사</h1>
+          <h2 class="text-center common-text--26 font-weight-light text-gray-3">
+        안녕하십니까?<br>
+        2022 대한민국 우표전시회를 찾아주셔서 감사드립니다.<br class="d-none d-lg-block">
+        성원에 힘입어, 현재 준비된 리워드가 모두 소진되어 만족도조사가 종료되었습니다.<br class="d-none d-lg-block">
+        우표전시회에 관심을 갖고 참여해주신 모든 분들께 진심으로 감사드립니다.
+        </h2>
+					<!-- <p class="text-center common-text--26 font-weight-light text-gray-3">
+						우정사업본부에서는 ‘2022 대한민국 우표전시회’ 관람객을 대상으로<br />
+						만족도 조사를 진행하고 있습니다.<br />
+						응답해주신 귀한 자료는 통계적 분석에만 이용하오니<br />
+						잠시만 시간을 내시어 참여해주시면 대단히 감사하겠습니다.
+					</p> -->
+
+					<div class="row state-intro mt-15">
+						<div class="col-12 col-sm-3 item">
+							<div class="state-thumb--1"></div>
+							<div class="state-desc">
+								<p class="common-text--24 font-weight-medium text-gray-1 mt-2">이벤트 기간</p>
+								<p class="common-text--22 font-weight-light text-gray-3 mt-1">
+									조기종료
+								</p>
+							</div>
+						</div>
+						<div class="col-12 col-sm-3 item">
+							<div class="state-thumb--2"></div>
+							<div class="state-desc">
+								<p class="common-text--24 font-weight-medium text-gray-1 mt-2">이벤트 경품</p>
+								<p class="common-text--22 font-weight-light text-gray-3 mt-1">
+                  치킨 모바일상품권(20명)<br>
+                  커피 모바일 상품권(500명)<br>
+                  화조영모병풍 키트(300명)<br />
+                  우표패킷(100명)<br />
+                  우체국쇼핑몰 10% 할인쿠폰
+								</p>
+							</div>
+						</div>
+						<div class="col-12 col-sm-3 item">
+							<div class="state-thumb--3"></div>
+							<div class="state-desc">
+								<p class="common-text--24 font-weight-medium text-gray-1 mt-2">당첨자 수</p>
+								<p class="common-text--22 font-weight-light text-gray-3 mt-1">랜덤 추첨</p>
+							</div>
+						</div>
+						<div class="col-12 col-sm-3 item">
+							<div class="state-thumb--4"></div>
+							<div class="state-desc">
+								<p class="common-text--24 font-weight-medium text-gray-1 mt-2">당첨자 발표</p>
+								<p class="common-text--22 font-weight-light text-gray-3 mt-1">2022년 11월 3일</p>
+							</div>
+						</div>
+					</div>
+					<?
+          	$siteDomain = (!isset($_SERVER["HTTPS"]) || $_SERVER["HTTPS"] != "on")?"http://":"https://";
+    		$siteDomain .= $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+            $sitetitle = "2022대한민국 우표전시회 만족도 조사 | ".$SS[sitename];
+		?>
+					<div class="row justify-content-center text-center mt-13">
+						<div class="col-12 col-sm-auto py-2">
+							<a href="../pop/survey-giveaway.html" class="btn-type-01 py-5 px-15 popup-link">경품 자세히 보기</a>
+						</div>
+						<div class="col-12 col-sm-auto py-2">
+							<a href="../pop/share.html?siteDomain=<?=Encrypt($siteDomain);?>&sitetitle=<?=$sitetitle;?>" class="btn-type-02 py-5 px-15 popup-link">SNS 공유하기</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- E : Section (만족도 조사) -->
+
+      <!-- <section class="section mt-8 mt-lg-15">
+        <div class="container pt-0 border-0">
+        <h2 class="common-text--22 font-weight-medium text-gray-3 text-center">
+        안녕하십니까?<br>
+        2022 대한민국 우표전시회를 찾아주셔서 감사드립니다.<br class="d-none d-lg-block">
+        성원에 힘입어, 현재 준비된 리워드가 모두 소진되어 만족도조사가 종료되었습니다.<br class="d-none d-lg-block">
+        우표전시회에 관심을 갖고 참여해주신 모든 분들께 진심으로 감사드립니다.
+        </h2>
+        </div>
+      </section> -->
+
+			<!-- S : Section (폼) -->
+			<!-- <section class="section mt-8 mt-lg-15">
+				<div class="container pt-0 border-0">
+					<form name="theForm" id="theForm" method="post" autocomplete="off">
+						<h2 class="common-text--22 font-weight-medium text-gray-3">이름, 연락처, 개인정보수집 동의 후 설문참여를 누르면 카카오 ‘알림톡’으로 설문이 도착합니다.</h2>
+
+						<table class="table-form-01 mt-2">
+							<colgroup>
+								<col width="140px" />
+								<col width="*" />
+							</colgroup>
+							<tbody>
+								<tr>
+									<th>이름</th>
+									<td>
+										<input type="text" name="uname" id="uname" title="이름" maxlength="50" class="w-100 w-lg-50" />
+									</td>
+								</tr>
+								<tr>
+									<th>연락처</th>
+									<td>
+										<input type="tel" name="utel" id="utel" title="연락처" maxlength="11" class="w-100 w-lg-50 input_num" required="" placeholder="'-'을 제외 후 입력해주세요." />
+									</td>
+								</tr>
+								<tr>
+									<th>개인정보처리방침동의</th>
+									<td>
+										<ul class="clause_list">
+											<li>
+												<div class="textarea_box_border">
+													<div class="textarea_box">
+														2022 대한민국 온라인 우표전시회 홈페이지는 이벤트 운영에 필요한 최소한의 개인정보만을 취득하며, 수집된 개인정보는 당첨자 확인, 경품 배송 등 이벤트 운영을 위한 용도로만 사용됩니다. 이와 같은 개인정보 수집·이용 목적에 대해 동의하실 경우에만 참여 부탁드립니다. 이벤트 당첨자가 제공하는 개인정보(성명, 연락처)는 개인정보보호법에 따라 수집·이용 시 정보주체 본인의동의를 얻어야 하는 정보이며, 보유 및 이용기간 동안 안전하게 보호됩니다.
+
+														<ul class="bullet-list bullet-list--txt mt-5">
+															<li class="item" data-bullet="1.">개인정보 수집 및 이용목적- 이벤트 당첨자 확인 및 경품 발송</li>
+															<li class="item" data-bullet="2.">개인정보 수집 항목 - 필수항목: 성명, 연락처, 주소</li>
+															<li class="item" data-bullet="3.">개인정보 보유 및 이용기간- 수집한 개인정보는 경품 수령 관련 분쟁이 있을 경우를 대비해 이벤트 종료(2022. 11. 3)후 2주까지 보관 후 모두 파기합니다. 또한 이벤트 발송 문자에는 만족도 설문조사가 함께 발송될 예정입니다.</li>
+															<li class="item" data-bullet="4.">수집된 전화번호로 우표전시회 만족도 조사 참여문자가 전송됩니다.</li>
+															<li class="item" data-bullet="5.">개인정보 수집 동의 거부의 권리- 귀하는 개인정보 수집·이용에 동의하지 않을 권리가 있습니다. 다만, 귀하가 필수 기재사항을 입력하지 않으실 경우 이벤트 응모가 불가능함을 양지하시기 바랍니다.</li>
+															<li class="item" data-bullet="6.">개인정보를 정확하게 적지 않았을 경우 이벤트 당첨 및 발송이 취소될 수 있으며, 연락처 1개당 1번의 참여가 가능합니다.</li>
+															<li class="item" data-bullet="7.">이벤트 성격에 맞지 않는 내용이나 과도한 도배성 댓글은 임의 삭제할 수 있습니다.</li>
+														</ul>
+													</div>
+												</div>
+												<div class="agree_box mt_10">
+													<input type="checkbox" name="yark" value="ok" id="yark" title="개인정보처리방침에 동의" class="mr_05" />
+													<label for="yark">개인정보처리방침 동의</label>
+												</div>
+											</li>
+										</ul>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<div class="text-center mt-9">
+							<button type="button" class="btn-type-01 px-20" onclick="form_check();">설문참여</button>
+						</div>
+					</form>
+				</div>
+			</section> -->
+			<!-- E : Section (폼) -->
+		</main>
+		<!-- E : Main -->
+
+		<? include "../include/footer.html" ?>
+
+		<? include "../include/js.html" ?>
+		<script type="text/javascript" src="/js/space_check.js"></script>
+		<script type="text/javascript" language="JavaScript">
+			$(document).ready(function () {
+				$('.input_num').on('keyup', function () {
+					$(this).val(
+						$(this)
+							.val()
+							.replace(/[^0-9]/g, '')
+					);
+				});
+			});
+			function form_check() {
+				var result = '';
+				if (isFieldBlank(theForm.uname)) {
+					alert('이름을 입력해주세요.');
+					theForm.uname.focus();
+					return false;
+				}
+
+				if (numValue(theForm.utel)) {
+					alert('연락처를 숫자로만 입력해주세요.');
+					theForm.utel.focus();
+					return false;
+				}
+				if (theForm.yark.checked != true) {
+					alert('개인정보처리방침에 동의하셔야 이벤트에 참여 가능합니다.');
+					return false;
+				}
+
+				var formData = $('#theForm').serialize();
+				$.ajax({
+					url: 'survey_ok.php',
+					type: 'post',
+					async: false,
+					data: formData,
+					success: function (data) {
+						result = $.trim(data);
+					},
+				});
+
+				if (result == 'OK') {
+					theForm.reset();
+					alert('등록이 완료되었습니다.');
+				} else if (result == 'OK2') {
+					alert('이미 이벤트에 참여하였습니다.\n이벤트에 중복참여가 불가능합니다.');
+				} else {
+					alert('등록중 에러가 발생하였습니다.');
+				}
+				return false;
+			}
+		</script>
+		<script>
+			function onCopy(id) {
+				$(id).select();
+				document.execCommand('copy');
+				alert('복사되었습니다.');
+				$(id).blur();
+			}
+
+			var btn = $('.btn_symbol');
+			var des = $('.symbol_bx');
+			$(btn).click(function () {
+				$(des).toggle(200);
+
+				return false;
+			});
+		</script>
+		<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+	</body>
+</html>
+
